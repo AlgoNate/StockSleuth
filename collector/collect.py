@@ -7,8 +7,11 @@ import finnhub
 API_KEY = os.getenv("FINNHUB_API_KEY")
 client = finnhub.Client(api_key=API_KEY)
 
-# Load the pre-generated watchlist
-with open("collector/watchlist.json", "r") as f:
+WATCHLIST_FILE = "collector/watchlist.json"
+OUTPUT_FILE = "collector/daily_stock_data.json"
+
+# Load the watchlist
+with open(WATCHLIST_FILE, "r") as f:
     watchlist = json.load(f)
 
 top_stocks = []
@@ -40,19 +43,33 @@ for stock in watchlist:
 
 # Sort top movers descending by percent change
 top_stocks.sort(key=lambda x: x["percent_change"], reverse=True)
-
-# Keep top 25
-top_stocks = top_stocks[:25]
+top_stocks = top_stocks[:25]  # Keep top 25
 
 # Add timestamp
-output = {
-    "timestamp": datetime.utcnow().isoformat() + "Z",
+timestamp = datetime.utcnow().isoformat() + "Z"
+run_data = {
+    "timestamp": timestamp,
     "stocks": top_stocks
 }
 
-# Save JSON
+# Ensure collector folder exists
 os.makedirs("collector", exist_ok=True)
-with open("collector/daily_stock_data.json", "w") as f:
-    json.dump(output, f, indent=2)
 
-print(f"Saved {len(top_stocks)} top penny stocks to collector/daily_stock_data.json")
+# Load existing history if exists
+if os.path.exists(OUTPUT_FILE):
+    with open(OUTPUT_FILE, "r") as f:
+        history = json.load(f)
+else:
+    history = []
+
+# Append this run
+history.append(run_data)
+
+# Keep only last 7 days (optional)
+# history = [h for h in history if datetime.fromisoformat(h["timestamp"][:-1]) > datetime.utcnow() - timedelta(days=7)]
+
+# Save full history
+with open(OUTPUT_FILE, "w") as f:
+    json.dump(history, f, indent=2)
+
+print(f"Saved top 25 penny stocks for {timestamp} to {OUTPUT_FILE}")
