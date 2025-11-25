@@ -1,0 +1,3 @@
+{
+  "expo": { "name": "Penny Momentum Mobile", "slug": "penny-momentum-mobile", "version": "1.0.0", "sdkVersion": "50.0.0", "platforms": ["ios","android"] }
+}
