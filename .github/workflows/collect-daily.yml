@@ -17,10 +17,10 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: Run collector
         run: python collector/collect.py
-      - name: Commit JSON
+      - name: Commit and Push JSON
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add collector/daily_stock_data.json
-          git commit -m "Update daily stock data [skip ci]" || echo "No changes"
-          git push
+          git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
