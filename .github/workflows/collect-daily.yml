@@ -1,9 +1,15 @@
 name: Daily Stock Collector
 
+# Schedule runs at:
+# 9:30 AM ET (open) → 13:30 UTC
+# 1:00 PM ET (mid-day) → 18:00 UTC
+# 4:05 PM ET (close) → 21:05 UTC
 on:
   schedule:
-    - cron: "30 14 * * *"
-  workflow_dispatch:
+    - cron: "30 13 * * 1-5"   # 9:30 AM ET
+    - cron: "0 18 * * 1-5"    # 1:00 PM ET
+    - cron: "5 21 * * 1-5"    # 4:05 PM ET
+  workflow_dispatch:           # allows manual run
 
 jobs:
   collect:
@@ -12,18 +18,21 @@ jobs:
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
 
     steps:
+      # 1️⃣ Checkout repo
       - uses: actions/checkout@v3
 
+      # 2️⃣ Setup Python 3.10
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # Install dependencies from requirements.txt
+      # 3️⃣ Install dependencies
       - run: pip install -r requirements.txt
 
-      # Run your collector script
+      # 4️⃣ Run the collector script
       - run: python collector/collect.py
 
+      # 5️⃣ Commit and push JSON to repo
       - name: Commit and Push JSON
         run: |
           git config --global user.name "github-actions"
@@ -31,4 +40,3 @@ jobs:
           git add collector/daily_stock_data.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
-
