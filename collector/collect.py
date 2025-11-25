@@ -3,52 +3,59 @@ import json
 import finnhub
 from datetime import datetime
 
+# Load API key from GitHub Actions secret
 API_KEY = os.getenv("FINNHUB_API_KEY")
+if not API_KEY:
+    raise Exception("FINNHUB_API_KEY environment variable not set")
+
 client = finnhub.Client(api_key=API_KEY)
 
-# 1. Get ALL US Stocks
-all_stocks = client.stock_symbols("US")
+print("Fetching full US stock list…")
+
+# 1. Get ALL US stock symbols from Finnhub
+try:
+    all_stocks = client.stock_symbols("US")
+except Exception as e:
+    print("Error fetching US stock list:", e)
+    raise
 
 results = []
+
+print(f"Total symbols returned: {len(all_stocks)}")
+print("Filtering for penny stocks…")
 
 for stock in all_stocks:
     symbol = stock.get("symbol")
     name = stock.get("description", "")
 
-    # Skip ETFs and symbols with weird formats
+    # Skip symbols with '.' (preferred classes, ETFs, etc.)
     if "." in symbol:
-        continue  
+        continue
 
     try:
         quote = client.quote(symbol)
+        price = quote.get("c")      # current price
+        prev_close = quote.get("pc")  # previous close
 
-        price = quote.get("c")          # current price
-        prev = quote.get("pc")         # previous close
-
-        # skip if missing data
-        if price is None or prev is None or prev == 0:
+        if price is None or prev_close in (None, 0):
             continue
 
-        percent = (price - prev) / prev * 100
+        percent_change = (price - prev_close) / prev_close * 100
 
         # FILTER RULES:
-        if price < 1 and percent > 10:
+        # 1. Price must be under $1.00
+        # 2. Percent change must be above +10%
+        if price < 1 and percent_change > 10:
             results.append({
                 "symbol": symbol,
                 "name": name,
-                "price": price,
-                "percent_change": percent,
+                "price": round(price, 4),
+                "percent_change": percent_change,
                 "timestamp": datetime.utcnow().isoformat()
             })
 
     except Exception as e:
         print(f"Error fetching {symbol}: {e}")
+        continue
 
-# Sort top 25 by percent change descending
-results = sorted(results, key=lambda x: x["percent_change"], reverse=True)[:25]
-
-# Save output
-with open("collector/daily_stock_data.json", "w") as f:
-    json.dump(results, f, indent=2)
-
-print("Saved", len(results), "top penny stocks.")
+# Sort stoc
