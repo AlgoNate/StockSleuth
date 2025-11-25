@@ -3,7 +3,7 @@ import TopMoversTable from "./components/TopMoversTable";
 
 export default function App() {
   const [stocks, setStocks] = useState([]);
-  const DATA_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/penny-momentum-screener/main/collector/daily_stock_data.json";
+  const DATA_URL = "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
   useEffect(() => {
     fetch(DATA_URL)
