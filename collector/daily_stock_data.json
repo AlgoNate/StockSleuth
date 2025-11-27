@@ -17487,5 +17487,2836 @@
         "percent_change": 0
       }
     ]
+  },
+  {
+    "timestamp": "2025-11-27T14:36:07.403064",
+    "stocks": [
+      {
+        "symbol": "LNTO",
+        "name": "LELANTOS HOLDINGS INC",
+        "price": 0.016,
+        "percent_change": -58.97
+      },
+      {
+        "symbol": "CYLC",
+        "name": "COUNTY LINE ENERGY CORP",
+        "price": 1e-06,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "BITRF",
+        "name": "BIOTRON LTD",
+        "price": 0.0012,
+        "percent_change": -90.77
+      },
+      {
+        "symbol": "TNGNQ",
+        "name": "TENGION INC",
+        "price": 1e-06,
+        "percent_change": -99.0
+      },
+      {
+        "symbol": "CRUCF",
+        "name": "COLIBRI RESOURCES CORP",
+        "price": 0.12,
+        "percent_change": 20.0
+      },
+      {
+        "symbol": "VFSWW",
+        "name": "VINFAST AUTO LTD-28",
+        "price": 0.172,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "TCRI",
+        "name": "TECHCOM INC",
+        "price": 0.174,
+        "percent_change": -12.12
+      },
+      {
+        "symbol": "BSPK",
+        "name": "BESPOKE EXTRACTS INC",
+        "price": 0.1301,
+        "percent_change": -34.95
+      },
+      {
+        "symbol": "CRYBF",
+        "name": "DYNAMITE BLOCKCHAIN CORP",
+        "price": 0.026,
+        "percent_change": 15.56
+      },
+      {
+        "symbol": "WERDF",
+        "name": "BOBA MINT HOLDINGS LTD",
+        "price": 0.0297,
+        "percent_change": -8.05
+      },
+      {
+        "symbol": "MSN",
+        "name": "EMERSON RADIO CORP",
+        "price": 0.424,
+        "percent_change": 1.92
+      },
+      {
+        "symbol": "GPOTF",
+        "name": "GOLD PORT CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OPITQ",
+        "name": "OFFICE PROPERTIES INCOME TRU",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FSHPR",
+        "name": "FLAG SHIP ACQUISITION CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IBRLF",
+        "name": "IBERAMERICAN LITHIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BMTLF",
+        "name": "BEMETALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HUSIF",
+        "name": "NICOLA MINING INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BYNEF",
+        "name": "BANYAN TREE HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BNET",
+        "name": "BION ENVIRONMENTAL TECH INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EXXBF",
+        "name": "EXEBLOCK TECHNOLOGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ILLR",
+        "name": "TRILLER GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CRCUF",
+        "name": "CANAGOLD RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VTMTF",
+        "name": "VERTU MOTORS PLC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ARWYF",
+        "name": "ARWAY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ERBB",
+        "name": "AMERICAN GREEN INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ARXRF",
+        "name": "IMAGINE LITHIUM INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FMHS",
+        "name": "FARMHOUSE INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ANGCF",
+        "name": "EON LITHIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VMTF",
+        "name": "VMT SCIENTIFIC INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FUSEW",
+        "name": "CSLM HOLDINGS INC - 30",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WINTW",
+        "name": "WINDTREE THERAPEUTICS -CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ABNAF",
+        "name": "ABEN GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BRGC",
+        "name": "BRIGHTROCK GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PGPM",
+        "name": "PILGRIM PETROLEUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "QUMSR",
+        "name": "QUANTUMSPHERE ACQUISITION CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RVSNW",
+        "name": "RAIL VISION LTD-CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "USAQ",
+        "name": "QHSLAB INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ERAO",
+        "name": "ENERGY RESOURCE ABUNDANCE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SHWZ",
+        "name": "MEDICINE MAN TECHNOLOGIES IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RLBY",
+        "name": "RELIABILITY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AFGYF",
+        "name": "AFC ENERGY PLC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STMXF",
+        "name": "STEARMAN RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BMVLF",
+        "name": "BLUEBIRD MINING VENTURES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EJH",
+        "name": "E-HOME HOUSEHOLD SERVICE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MCHHF",
+        "name": "MACMAHON HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BIOE",
+        "name": "BIO ESSENCE CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CMHZ",
+        "name": "BANNY COSMIC INTERNATIONAL H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ETEK",
+        "name": "ECO-TEK GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "JSPRW",
+        "name": "JASPER THERAPEUTICS INC-CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GLABF",
+        "name": "GEMINA LABORATORIES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FTSP",
+        "name": "FINTRADE SHERPA INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BIGGQ",
+        "name": "BIG LOTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SPCNF",
+        "name": "SPC NICKEL CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GMPW",
+        "name": "GIVEMEPOWER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ADNWW",
+        "name": "AMCI ACQUISITION CORP-CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OPMXF",
+        "name": "OPERADORA DE SITES MEX- A-1",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TLLTF",
+        "name": "TILT HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VIEWF",
+        "name": "VIEWTRAN GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NDMCF",
+        "name": "NEW DESTINY MINING CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ISEYF",
+        "name": "WI2WI CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FKMCF",
+        "name": "FOKUS MINING CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AATV",
+        "name": "ADAPTIVE AD SYSTEMS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VLMZF",
+        "name": "VOLCANIC GOLD MINES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NGCG",
+        "name": "NEW GENERATION CONSUMER GROU",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MGWFF",
+        "name": "MAPLE LEAF GREEN WORLD INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MCGAW",
+        "name": "YORKVILLE ACQUISITION - 30",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SGDHD",
+        "name": "SGD HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GEGYF",
+        "name": "GENEL ENERGY PLC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DNABW",
+        "name": "GINKGO BIOWORKS      -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CITLF",
+        "name": "CRITICAL INFRASTRUCTURE TECH",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RDYFF",
+        "name": "NEWPATH RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MDXL",
+        "name": "MEDIXALL GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STWC",
+        "name": "STWC HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FAGI",
+        "name": "FULL ALLIANCE GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SPKLW",
+        "name": "SPARK I ACQUISITION CORP-28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BBCMD",
+        "name": "LIR LIFE SCIENCES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BDCM",
+        "name": "BROADCAST MARKETING GROUP IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ZIMCF",
+        "name": "ZIM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DATI",
+        "name": "DIGITAL ASSET MONETARY NETWO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UMEWF",
+        "name": "UMEWORLD LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GNOLF",
+        "name": "GENOIL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SGRP",
+        "name": "SPAR GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GEGI",
+        "name": "GENESIS ELECTRONICS GROUP IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ALFIQ",
+        "name": "ALFI INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FSPM",
+        "name": "FUSION PHARM INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KLTOW",
+        "name": "ANEW MEDICAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SYEV",
+        "name": "SEYCHELLE ENVIRO TECH INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ENZC",
+        "name": "ENZOLYTICS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NWAU",
+        "name": "NOWAUTO INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MLRT",
+        "name": "METALERT  INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SMME",
+        "name": "SMARTMETRIC INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SHFSW",
+        "name": "NORTHERN LIGHTS ACQUIS -CW22",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CDAWF",
+        "name": "COMPASS DIGITAL ACQ -CW28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WCYN",
+        "name": "WEST CANYON ENERGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IAUFF",
+        "name": "AIC MINES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OIGLF",
+        "name": "CHARIOT LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CISO",
+        "name": "CISO GLOBAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ISCNF",
+        "name": "ISRACANN BIOSCIENCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KXIN",
+        "name": "KAIXIN HOLDINGS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GTTCW",
+        "name": "GTT COMMUNICATIONS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ENHD",
+        "name": "ENERGROUP HOLDINGS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OLVRF",
+        "name": "OLIVUT RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IMJX",
+        "name": "IMAGEXPRES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DTMXF",
+        "name": "DATAMETREX AI LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PUPS",
+        "name": "PICK-UPS PLUS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AIRE",
+        "name": "REALPHA TECH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CLSKW",
+        "name": "CLEANSPARK INC-29",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SYVN",
+        "name": "SYCAMORE VENTURES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LSDIF",
+        "name": "LUCY SCIENTIFIC DISCOVERY IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NKGFF",
+        "name": "NEVADA KING GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WECFF",
+        "name": "WHITE ENERGY CO LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NTWOW",
+        "name": "NEWBURY STREET II ACQ - 29",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TGGI",
+        "name": "TRANS GLOBAL GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BYRG",
+        "name": "BUYER GROUP INTERNATIONAL",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TSWCF",
+        "name": "THE SMARTER WEB COMPANY PLC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MDIA",
+        "name": "MEDIACO HOLDING INC-CL A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WCIG",
+        "name": "WEE-CIG INTERNATIONAL CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PCRCF",
+        "name": "BOLT METALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CYRNQ",
+        "name": "CYREN LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TSDRF",
+        "name": "TSODILO RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UEEC",
+        "name": "UNITED HEALTH PRODUCTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IMUC",
+        "name": "EOM PHARMACEUTICAL HOLDINGS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RLAB",
+        "name": "REAL AMERICAN CAPITAL CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BNXTF",
+        "name": "BIONXT SOLUTIONS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PGIE",
+        "name": "PGI ENERGY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KAPA",
+        "name": "KAIROS PHARMA LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CNXS",
+        "name": "CONNEXUS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AURE",
+        "name": "AURELION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EMRH",
+        "name": "EMERGING HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CCGWW",
+        "name": "CHECHE GROUP INC - 28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GTENW",
+        "name": "GORES HOLDINGS X INC-31",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RBSY",
+        "name": "ROBOSERVER SYSTEMS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FOMTF",
+        "name": "FORMATION METALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LFLRF",
+        "name": "LAFLEUR MINERALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EVGUF",
+        "name": "EVERGOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LAFAR",
+        "name": "LAFAYETTE ACQUISITION CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GMBLP",
+        "name": "Esports Entertainment Group Inc",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TPGVF",
+        "name": "TOP GLOVE CORP BHD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DAAT",
+        "name": "DAC TECH GROUP INTL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PPCB",
+        "name": "PROPANC BIOPHARMA INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BIEL",
+        "name": "BIOELECTRONICS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CYAN",
+        "name": "CYANOTECH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GLNLF",
+        "name": "GALAN LITHIUM LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CPMD",
+        "name": "CANNAPHARMARX INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DMIFF",
+        "name": "DIAMCOR MINING INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SOPV",
+        "name": "SOLAR PARK INITIATIVES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GDDFF",
+        "name": "GOODFOOD MARKET CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CMFO",
+        "name": "CHINA MARINE FOOD GROUP LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MCOMW",
+        "name": "HELBIZ INC-CW24",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FARYF",
+        "name": "FAR LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CYBL",
+        "name": "CYBERLUX CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SPTY",
+        "name": "SPECIFICITY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KDAGF",
+        "name": "KDA GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HEMP",
+        "name": "HEMP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LXGTF",
+        "name": "LEXINGTON BIOSCIENCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CITAF",
+        "name": "COSCO SHIPPING DEVELOPMENT-H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TOVX",
+        "name": "THERIVA BIOLOGICS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AAIRF",
+        "name": "AMERICAN AIRES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CMPY",
+        "name": "COMEPAY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SSLVF",
+        "name": "SUN SILVER LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EQMEF",
+        "name": "EQUITY METALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TTHG",
+        "name": "TITANIUM HOLDINGS GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HBIO",
+        "name": "HARVARD BIOSCIENCE INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ALFFF",
+        "name": "ALFA S.A.B.-A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ACDXF",
+        "name": "AMERICAN COPPER DEVELOPMENT",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GRHI",
+        "name": "GOLD ROCK HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CXXIF",
+        "name": "C21 INVESTMENTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OCEA",
+        "name": "OCEAN BIOMEDICAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GIBOW",
+        "name": "GIBO HOLDINGS LTD-30",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DTWOF",
+        "name": "D2 LITHIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PFFOF",
+        "name": "PORTOFINO RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PSTRQ",
+        "name": "POSTROCK ENERGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AVSR",
+        "name": "AVISTAR COMMUNICATIONS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CGNO",
+        "name": "COGNOGROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CWPE",
+        "name": "CW PETROLEUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WMELF",
+        "name": "WESTMOUNT ENERGY LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SHPSQ",
+        "name": "SHAPEWAYS HOLDINGS INC-CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BTZI",
+        "name": "BOTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MFRVF",
+        "name": "MINERA FRISCO SAB DE CV-A1",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OPTXW",
+        "name": "OMNILIT ACQUISITION CL A -23",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BDCC",
+        "name": "BLACKWELL 3D CONSTRUCTION CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ECDAW",
+        "name": "EF HUTTON ACQUISITION COR-27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MMMM",
+        "name": "QUAD M SOLUTIONS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FIGXW",
+        "name": "FIGX CAPITAL ACQUISITION COR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BANT",
+        "name": "BANTEK INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VOBIF",
+        "name": "VOBILE GROUP LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SQLLW",
+        "name": "SEQLL INC -CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BWMY",
+        "name": "BORROWMONEY.COM INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AMDOF",
+        "name": "AMEDEO AIR FOUR PLUS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UUUFF",
+        "name": "VANGUARD MINING CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BRIOF",
+        "name": "MAGNA TERRA MINERALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NWPG",
+        "name": "NEWPORT GOLD INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NRRWF",
+        "name": "NURAN WIRELESS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TBLT",
+        "name": "TOUGHBUILT INDUSTRIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OCLN",
+        "name": "ORIGINCLEAR INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LPTI",
+        "name": "LONGPORT INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BURU",
+        "name": "NUBURU INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CNSUF",
+        "name": "CANASIL RESOURCES",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DFTC",
+        "name": "DEFENTECT GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LIXTW",
+        "name": "LIXTE BIOTECHNOLOGY H -CW25",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SJRNF",
+        "name": "ARCWEST EXPLORATION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CGNMF",
+        "name": "CGN MINING CO LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MJGCF",
+        "name": "MAJESTIC GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CGLCF",
+        "name": "CASSIAR GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EMEXF",
+        "name": "EMERALD PLANTATION HOLDINGS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NGRBF",
+        "name": "NEXTGEN FOOD ROBOTICS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NRTSF",
+        "name": "NOBILIS HEALTH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UREKF",
+        "name": "EUREKA LITHIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WKGFF",
+        "name": "WESTKAM GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GSFI",
+        "name": "GREEN STREAM HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GBDX",
+        "name": "GLOBAL DIAMOND EXCHANGE INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GGII",
+        "name": "GREEN GLOBE INTERNATIONAL IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CAPT",
+        "name": "CAPTIVISION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TRCK",
+        "name": "TRACK GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NIVF",
+        "name": "NEWGENIVF GROUP LTD-A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PACHW",
+        "name": "PIONEER ACQUISITION I CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MMEX",
+        "name": "MMEX RESOURCES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RSHMF",
+        "name": "RUSH RARE METALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NEWDF",
+        "name": "NEWFOUNDLAND DISCOVERY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ONMDW",
+        "name": "DATA KNIGHTS ACQ CL A -CW28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GFMH",
+        "name": "GOLIATH FILM & MEDIA HOLDING",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NSURF",
+        "name": "NORTH SHORE URANIUM LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SODE",
+        "name": "SOCIAL DETENTION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LOCM",
+        "name": "LOCAL CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WTCZF",
+        "name": "COPPER LAKE RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AGLDF",
+        "name": "AUSTRAL GOLD LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SOUL.RT",
+        "name": "Soulpower Acquisition Corporation",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IMTH",
+        "name": "INNOVATIVE MEDTECH INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PSYCF",
+        "name": "PSYCHED WELLNESS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EGPLF",
+        "name": "EAGLE PLAINS RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AMMJ",
+        "name": "AMERICAN CANNABIS CO INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DZSIQ",
+        "name": "DZS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SCDCF",
+        "name": "SCANDIUM CANADA LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MHRE",
+        "name": "MESA HOME RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WELWF",
+        "name": "INTEGRATED WELLNESS -CW28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TUTH",
+        "name": "STANDARD DENTAL LABS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LPPI",
+        "name": "LEEP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LTHIF",
+        "name": "INZINC MINING LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HYEG",
+        "name": "HYDROGEN ENGINE CENTER INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PXGYF",
+        "name": "PAX GLOBAL TECHNOLOGY LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NICOF",
+        "name": "NICO RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DGTEF",
+        "name": "DIGITAL ASSET TECHNOLOGIES I",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ASWRF",
+        "name": "GUNGNIR RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MGAFF",
+        "name": "MEGA URANIUM LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ALXPF",
+        "name": "ALPHA EXPLORATION LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NDLS",
+        "name": "NOODLES & CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ACDBF",
+        "name": "AC/DC BATTERY METALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SASKF",
+        "name": "ATHA ENERGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KCHVR",
+        "name": "KOCHAV DEFENSE ACQUISITION-R",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CHELF",
+        "name": "CHAMPION ELECTRIC METALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BKTH",
+        "name": "BREAKTHROUGH CHEMISTRY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CBRF",
+        "name": "CYBERFUELS HOLDING COMPANY I",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TACI",
+        "name": "TRANSATLANTIC CAPITAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SPODF",
+        "name": "SPOD LITHIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ZTLLF",
+        "name": "ZONETAIL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "THRA",
+        "name": "THERMA-MED INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CNUCF",
+        "name": "CANUC RESOURCES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NATM",
+        "name": "NATAMA INVESTMENT GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EHGRF",
+        "name": "STAR ENTERTAINMENT GRP LTD/T",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GADS",
+        "name": "GADSDEN PROPERTIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PNTZF",
+        "name": "TRIGON METALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "INKW",
+        "name": "GREENE CONCEPTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STCB",
+        "name": "STARCO BRANDS INC-CLASS A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KIQSF",
+        "name": "KELSO TECHNOLOGIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GTLA",
+        "name": "GT LEGEND AUTOMOTIVE HOLDING",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "APPCF",
+        "name": "APAC RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EESO",
+        "name": "ENZYME ENVIRONMENTAL SOLUTIO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CBAT",
+        "name": "CBAK ENERGY TECHNOLOGY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FDMSF",
+        "name": "FANDIFI TECHNOLOGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ATCH",
+        "name": "ATLASCLEAR HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AGMWF",
+        "name": "SILVER MOUNTAIN RESOURCES-28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CNTM",
+        "name": "CONNECTM TECHNOLOGY SOLUTION",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BFCH",
+        "name": "BITFRONTIER CAPITAL HOLDINGS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VARXF",
+        "name": "BOE VARITRONIX LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ECPN",
+        "name": "EL CAPITAN PRECIOUS METALS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CRWOF",
+        "name": "CHINA RAILWAY GROUP LTD-H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MSPRZ",
+        "name": "MSP RECOVERY -CW26",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "XTMIF",
+        "name": "XTM INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RSMXD",
+        "name": "REGENCY SILVER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UNLRF",
+        "name": "UNILEVER INDONESIA TBK PT",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FUNR",
+        "name": "FUNR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MITQ",
+        "name": "MOVING IMAGE TECHNOLOGIES IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FITX",
+        "name": "CREATIVE EDGE NUTRITION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BOYAF",
+        "name": "BOYAA INTERACTIVE INTERNATIO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SYMQY",
+        "name": "SYMBIO PHARMACEUTIC-SPON ADR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RSHN",
+        "name": "RUSHNET INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SVMFF",
+        "name": "SILVER VALLEY METALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IGTAR",
+        "name": "INCEPTION GROWTH ACQ LTD -RT",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WLFFF",
+        "name": "WOLFDEN RESOURCES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NXPLW",
+        "name": "ORBSAT CORP -CW23",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PTUUF",
+        "name": "PUREPOINT URANIUM GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VRBFF",
+        "name": "VANADIUMCORP RESOURCE INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CSTXF",
+        "name": "CRYPTOSTAR CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SBLRF",
+        "name": "SABLE RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HENI",
+        "name": "HINTO ENERGY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BSPM",
+        "name": "BIOSTAR PHARMACEUTICALS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PJET",
+        "name": "PRIORITY AVIATION INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SGLN",
+        "name": "SURGLINE INTERNATIONAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DKAM",
+        "name": "DRINKS AMERICAS HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WTER",
+        "name": "ALKALINE WATER CO INC/THE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HNDI",
+        "name": "HANDENI GOLD INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ECTM",
+        "name": "ECA MARCELLUS TRUST I",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PVLEF",
+        "name": "PO VALLEY ENERGY LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MYCOF",
+        "name": "MYDECINE INNOVATIONS GROUP I",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FITY",
+        "name": "FIFTY 1 LABS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GIPRW",
+        "name": "GENERATION INCOME PROPER -CW",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GCAN",
+        "name": "GREATER CANNABIS CO INC/THE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OPUS",
+        "name": "OPUS MAGNUM AMERIS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TBEV",
+        "name": "HIGH PERFORMANCE BEVERAGES C",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AIIOW",
+        "name": "NWTN INC -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GTGHF",
+        "name": "GT GOLD HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CCCP",
+        "name": "CRONA CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "XCPT",
+        "name": "XCANA PETROLEUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GWBK",
+        "name": "GATEWAY BANK FSB",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SRNW",
+        "name": "STRATOS RENEWABLES CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TKLS",
+        "name": "TRUTANKLESS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LBRA",
+        "name": "1847 HOLDINGS LLC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BAYAR",
+        "name": "BAYVIEW ACQUISITION CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PNXP",
+        "name": "PINEAPPLE EXPRESS CANNABIS C",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MUNMF",
+        "name": "MUNDORO CAPITAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CAPS",
+        "name": "CAPSTONE HOLDING CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ABVEW",
+        "name": "ABOVE FOOD INGREDIENTS- 29",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HOLOW",
+        "name": "GOLDEN PATH ACQ -CW28",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CTKYY",
+        "name": "COOTEK CAYMAN INC-ADR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MITJF",
+        "name": "MINT CORP/THE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OSRHW",
+        "name": "BELLEVUE LIFE SCIENCES-WRNT",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CAULF",
+        "name": "CAULDRON ENERGY LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CSRNF",
+        "name": "CANSTAR RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BDGR",
+        "name": "BLACK DRAGON RESOURCE COS IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FMTOF",
+        "name": "FEMTO TECHNOLOGIES INC-SVS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IOBT",
+        "name": "IO BIOTECH INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BELDF",
+        "name": "BATERO GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OPVS",
+        "name": "NANOFLEX POWER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UFABQ",
+        "name": "UNIQUE FABRICATING INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "YOOIF",
+        "name": "YANGAROO INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RSAGS",
+        "name": "RSE ARCHIVE LLC MEMBERSHIP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MRAI",
+        "name": "MARPAI INC-CLASS A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WWPW",
+        "name": "WIND WORKS POWER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CGHC",
+        "name": "CAPITAL GROUP HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GFR.RT",
+        "name": "Greenfire Resources Ltd",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SOUTF",
+        "name": "SOUTHERN ENERGY CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RBOT.WS",
+        "name": "VICARIOUS SURGICAL INC-CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ACONW",
+        "name": "ACLARION INC -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FRCML",
+        "name": "First Republic Bank",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CEOS",
+        "name": "CECORS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FOXO",
+        "name": "FOXO TECHNOLOGIES INC-CL A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SNTW",
+        "name": "SUMMIT NETWORKS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IEGCF",
+        "name": "INDEPENDENCE GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CRRTF",
+        "name": "CRESCITA THERAPEUTICS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NLPXF",
+        "name": "NOBLE MINERAL EXPLORATION IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MPML",
+        "name": "MPM TECHNOLOGIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BKFCF",
+        "name": "BANK OF COMMUNICATIONS CO-H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SRGXF",
+        "name": "SURGE COPPER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HMBL",
+        "name": "HUMBL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ROYL",
+        "name": "ROYALE ENERGY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GIPR",
+        "name": "GENERATION INCOME PROPERTIES",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WARM",
+        "name": "COOL TECHNOLOGIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STAL",
+        "name": "STAR ALLIANCE INTERNATIONAL",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EVSV",
+        "name": "ENVIRO SERV INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NHLG",
+        "name": "NATIONAL HEALTHCARE LOGISTIC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DREM",
+        "name": "DREAM HOMES & DEVELOPMENT CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "JTBK",
+        "name": "JETBLACK CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STFS",
+        "name": "STAR FASHION CULTURE HLDG-A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BURUW",
+        "name": "TAILWIND ACQUISITION -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RSCF",
+        "name": "REFLECT SCIENTIFIC INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GASE",
+        "name": "GASE ENERGY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NCPLW",
+        "name": "NETCAPITAL INC -27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ENDO",
+        "name": "ENDOCAN CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ZTSTF",
+        "name": "ZTEST ELECTRONICS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PGXFF",
+        "name": "PROSPER GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CNXXW",
+        "name": "CONX CORP-CLASS A -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NIOMF",
+        "name": "NORTH AMERICAN NIOBIUM AND C",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GAWK",
+        "name": "GAWK INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EMCRF",
+        "name": "EMBRACE CHANGE ACQ-RIGHTS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WRSLF",
+        "name": "WINSOME RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EVLI",
+        "name": "EVERLERT INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CLPS",
+        "name": "CLPS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "RMESF",
+        "name": "RED METAL RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BRST",
+        "name": "BROAD STREET REALTY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CVWFF",
+        "name": "CVW SUSTAINABLE ROYALTIES IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MALG",
+        "name": "MICROALLIANCE GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GATEW",
+        "name": "Marblegate Acquisition Corporation",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TTTMF",
+        "name": "TOTAL METALS CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DFSCW",
+        "name": "KWESST MICRO SYSTEMS INC-27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PIFR",
+        "name": "PREMIER INFORMATION MANAGEME",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WONDF",
+        "name": "WONDERFI TECHNOLOGIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STLXF",
+        "name": "STELLAR AFRICAGOLD INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SGGTF",
+        "name": "SIGNATURE RESOURCES LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UTRK",
+        "name": "UNIVERSAL TRACKING SOLUTIONS",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "REE",
+        "name": "REE AUTOMOTIVE LTD - CLASS A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ADXDF",
+        "name": "ADEX MINING INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PASO",
+        "name": "PATIENT ACCESS SOLUTIONS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ADAPY",
+        "name": "ADAPTIMMUNE THERAPEUTICS-ADR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TWELF",
+        "name": "TOKENWELL PLATFORMS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SSHT",
+        "name": "SSHT S&T GROUP LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GURFF",
+        "name": "GLOBAL URANIUM CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TBIIF",
+        "name": "TOBII AB",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "XTCYF",
+        "name": "PEGASUS MERCANTILE INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UNEH",
+        "name": "UNIVERSAL NEW ENERGY HOLDING",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NXTDF",
+        "name": "NEXTGEN DIGITAL PLATFORMS IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SFRT",
+        "name": "APPRECIATE HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ELVG",
+        "name": "ELVICTOR GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EESE",
+        "name": "ENERGY & ENVIRONMENTAL SERVI",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MEDH",
+        "name": "MEDX HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "APHP",
+        "name": "AMERICAN PICTURE HOUSE CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NTRR",
+        "name": "NEUTRA CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NTPR",
+        "name": "NUTRAPRODUCTS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AETHD",
+        "name": "AETHER GLOBAL INNOVATIONS CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MTWO",
+        "name": "M2I GLOBAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PLKT",
+        "name": "SOLAR GOLD LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UDOCF",
+        "name": "UNIDOC HEALTH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EXEO",
+        "name": "EXEO ENTERTAINMENT INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GP",
+        "name": "GREENPOWER MOTOR CO INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "EEMMF",
+        "name": "E3 LITHIUM LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VCNX",
+        "name": "VACCINEX INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NRHI",
+        "name": "NATURAL RESOURCE HOLDINGS IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VMSXF",
+        "name": "NINE MILE METALS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AMVIF",
+        "name": "AUMOVIO SE",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "XBOR",
+        "name": "CROSS BORDER RESOURCES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VACBF",
+        "name": "NYKODE THERAPEUTICS ASA",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "COPL.WS",
+        "name": "COPLEY ACQUISITION CORP -30",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VSME",
+        "name": "VS MEDIA HOLDINGS LTD-CL A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SPOWF",
+        "name": "STRATA POWER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TMPWQ",
+        "name": "TEMPO AUTOMATION HOLDINGS IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LTNC",
+        "name": "LABOR SMART INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HGLD",
+        "name": "PATAGONIA GOLD CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SCAXF",
+        "name": "SPARTA CAPITAL LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MEHA",
+        "name": "FUNCTIONAL BRANDS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BJCHF",
+        "name": "BEIJING CAPITAL INTL AIRPO-H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CTSWF",
+        "name": "CACTUS ACQUISITION CORP-CW23",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AGTEF",
+        "name": "AGTECH HOLDINGS LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IGNT",
+        "name": "INGEN TECHNOLOGIES INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TMPOQ",
+        "name": "TEMPO AUTOMATION HOLDINGS IN",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "KUKEY",
+        "name": "KUKE MUSIC HOLDING LTD-ADR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PTOS",
+        "name": "P2 SOLAR INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PEFDF",
+        "name": "DELFI LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HPIFF",
+        "name": "HUADIAN POWER INTL CORP-H",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "VSEEW",
+        "name": "DIGITAL HEALTH ACQUIST-CW23",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LNBY",
+        "name": "LANDBAY INC - CL A",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "UPCO",
+        "name": "UNIVERSAL POTASH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "MSSRF",
+        "name": "METAL SKY STAR ACQUISI-RIGHT",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "ALVOW",
+        "name": "ALVOTECH SA -27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "STTO",
+        "name": "SITO MOBILE LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "NVLPF",
+        "name": "NOVA LEAP HEALTH CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "COGNY",
+        "name": "COGNA EDUCACAO SA",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IVDAW",
+        "name": "IVEDA SOLUTIONS INC -CW27",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "AIMV",
+        "name": "AI MAVERICK INTEL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SSPLF",
+        "name": "SAFE SUPPLY STREAMING CO LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "IPDQF",
+        "name": "IMPEDIMED LTD",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GRWC",
+        "name": "GROW CAPITAL INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LWACW",
+        "name": "LIGHTWAVE ACQUISITION CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CBDY",
+        "name": "TARGET GROUP INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GGBXF",
+        "name": "GREEN GROWTH BRANDS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "TGIC",
+        "name": "TRIAD GUARANTY INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "BETRF",
+        "name": "BETTERLIFE PHARMA INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PRRSF",
+        "name": "PROSPECT RIDGE RESOURCES COR",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "GMNI",
+        "name": "GEMINI GROUP GLOBAL CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "HPTN",
+        "name": "HAPPY TOWN HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PGLDF",
+        "name": "P2 GOLD INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LTRE",
+        "name": "LEARNING TREE INTERNATIONAL",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FLWBF",
+        "name": "FLOW BEVERAGE CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CENN",
+        "name": "CENNTRO INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "SLXNW",
+        "name": "BIOMOTION SCIENCES-CW29",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "DRGV",
+        "name": "DRAGON CAPITAL GROUP CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "FRCN",
+        "name": "FIREMANS CONTRACTORS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PRCNF",
+        "name": "PURE GLOBAL CANNABIS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "PNSTQ",
+        "name": "PINSTRIPES HOLDINGS INC",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "CHECW",
+        "name": "CHENGHE ACQUISITION III CO",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "LDXHF",
+        "name": "LUMOS DIAGNOSTICS HOLDINGS L",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "WGNR",
+        "name": "WEGENER CORP",
+        "price": 0,
+        "percent_change": 0
+      },
+      {
+        "symbol": "OTOW",
+        "name": "O2 SECURE WIRELESS INC",
+        "price": 0,
+        "percent_change": 0
+      }
+    ]
   }
 ]
