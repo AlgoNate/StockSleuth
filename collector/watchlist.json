@@ -20,10 +20,6 @@
     "name": "Adicet Bio, Inc."
   },
   {
-    "symbol": "ACONW",
-    "name": "ACONW"
-  },
-  {
     "symbol": "ADGM",
     "name": "Adagio Medical Holdings, Inc"
   },
@@ -44,24 +40,12 @@
     "name": "Advanced Biomed Inc."
   },
   {
-    "symbol": "AENTW",
-    "name": "Adara Acquisition Corp. Redeema"
-  },
-  {
     "symbol": "AERT",
     "name": "Aeries Technology, Inc."
   },
   {
-    "symbol": "AERTW",
-    "name": "AERTW"
-  },
-  {
     "symbol": "AEVAW",
     "name": "Aeva Technologies, Inc. Warrant"
-  },
-  {
-    "symbol": "AFJKR",
-    "name": "Aimei Health Technology Co., Lt"
   },
   {
     "symbol": "AFRIW",
@@ -80,10 +64,6 @@
     "name": "AIIOW"
   },
   {
-    "symbol": "AIMDW",
-    "name": "AINOS INC C/WTS 29/07/2027 (TO "
-  },
-  {
     "symbol": "AIRE",
     "name": "reAlpha Tech Corp."
   },
@@ -100,40 +80,12 @@
     "name": "Akari Therapeutics Plc"
   },
   {
-    "symbol": "ALDFW",
-    "name": "Aldel Financial II Inc. Warrant"
-  },
-  {
-    "symbol": "ALFUW",
-    "name": "Centurion Acquisition Corp. War"
-  },
-  {
-    "symbol": "ALVOW",
-    "name": "Alvotech Warrant"
-  },
-  {
-    "symbol": "AMIX",
-    "name": "Autonomix Medical, Inc."
-  },
-  {
     "symbol": "AMOD",
     "name": "Alpha Modus Holdings, Inc."
   },
   {
     "symbol": "AMPGW",
     "name": "Amplitech Group, Inc."
-  },
-  {
-    "symbol": "ANGHW",
-    "name": "Anghami Inc. Warrants"
-  },
-  {
-    "symbol": "ANNAW",
-    "name": "AleAnna, Inc. Warrant"
-  },
-  {
-    "symbol": "ANSCW",
-    "name": "Agriculture & Natural Solutions"
   },
   {
     "symbol": "ANY",
@@ -150,10 +102,6 @@
   {
     "symbol": "APLT",
     "name": "Applied Therapeutics, Inc."
-  },
-  {
-    "symbol": "AQB",
-    "name": "AquaBounty Technologies, Inc."
   },
   {
     "symbol": "ARBEW",
@@ -184,10 +132,6 @@
     "name": "ASBPW"
   },
   {
-    "symbol": "ASPCR",
-    "name": "A SPAC III Acquisition Corp."
-  },
-  {
     "symbol": "ASPSW",
     "name": "ASPSW"
   },
@@ -206,18 +150,6 @@
   {
     "symbol": "ATER",
     "name": "Aterian, Inc."
-  },
-  {
-    "symbol": "ATIIW",
-    "name": "Archimedes Tech SPAC Partners I"
-  },
-  {
-    "symbol": "ATMCR",
-    "name": "AlphaTime Acquisition Corp"
-  },
-  {
-    "symbol": "ATMCW",
-    "name": "AlphaTime Acquisition Corp Warr"
   },
   {
     "symbol": "ATMVR",
@@ -248,14 +180,6 @@
     "name": "Auddia Inc."
   },
   {
-    "symbol": "AUUDW",
-    "name": "Auddia Inc."
-  },
-  {
-    "symbol": "AXINR",
-    "name": "Axiom Intelligence Acquisition "
-  },
-  {
     "symbol": "AZI",
     "name": "Autozi Internet Technology (Glo"
   },
@@ -276,16 +200,8 @@
     "name": "CBL International Limited"
   },
   {
-    "symbol": "BAYAR",
-    "name": "Bayview Acquisition Corp"
-  },
-  {
     "symbol": "BCAB",
     "name": "BioAtla, Inc."
-  },
-  {
-    "symbol": "BCARW",
-    "name": "D. Boral ARC Acquisition I Corp"
   },
   {
     "symbol": "BCGWW",
@@ -296,16 +212,8 @@
     "name": "BriaCell Therapeutics Corp."
   },
   {
-    "symbol": "BCTXZ",
-    "name": "BriaCell Therapeutics Corp. War"
-  },
-  {
     "symbol": "BDCIW",
     "name": "BTC Development Corp. Warrant"
-  },
-  {
-    "symbol": "BEAGR",
-    "name": "Bold Eagle Acquisition Corp."
   },
   {
     "symbol": "BEAT",
@@ -328,16 +236,16 @@
     "name": "BETRW"
   },
   {
+    "symbol": "BFRG",
+    "name": "Bullfrog AI Holdings, Inc."
+  },
+  {
     "symbol": "BFRGW",
     "name": "Bullfrog AI Holdings, Inc. Warr"
   },
   {
     "symbol": "BFRI",
     "name": "Biofrontera Inc."
-  },
-  {
-    "symbol": "BFRIW",
-    "name": "Biofrontera Inc. Warrants"
   },
   {
     "symbol": "BGLWW",
@@ -376,10 +284,6 @@
     "name": "BNAIW"
   },
   {
-    "symbol": "BNCWW",
-    "name": "BNCWW"
-  },
-  {
     "symbol": "BNKK",
     "name": "Bonk, Inc."
   },
@@ -402,10 +306,6 @@
   {
     "symbol": "BRRWW",
     "name": "BRRWW"
-  },
-  {
-    "symbol": "BSAAR",
-    "name": "BEST SPAC I Acquisition Corp."
   },
   {
     "symbol": "BSLKW",
@@ -432,24 +332,8 @@
     "name": "Beyond Meat, Inc."
   },
   {
-    "symbol": "BZAIW",
-    "name": "Blaize Holdings, Inc. Warrants"
-  },
-  {
     "symbol": "BZFD",
     "name": "BuzzFeed, Inc."
-  },
-  {
-    "symbol": "BZFDW",
-    "name": "BZFDW"
-  },
-  {
-    "symbol": "CAN",
-    "name": "Canaan Inc."
-  },
-  {
-    "symbol": "CAPNR",
-    "name": "Cayson Acquisition Corp"
   },
   {
     "symbol": "CAPS",
@@ -460,10 +344,6 @@
     "name": "Captivision Inc."
   },
   {
-    "symbol": "CAPTW",
-    "name": "Captivision Inc. Warrant"
-  },
-  {
     "symbol": "CBAT",
     "name": "CBAK Energy Technology, Inc."
   },
@@ -472,12 +352,12 @@
     "name": "Cheche Group Inc."
   },
   {
-    "symbol": "CCIIW",
-    "name": "Cohen Circle Acquisition Corp. "
+    "symbol": "CCGWW",
+    "name": "Cheche Group Inc. Warrant"
   },
   {
-    "symbol": "CCIXW",
-    "name": "Churchill Capital Corp IX Warra"
+    "symbol": "CCIIW",
+    "name": "Cohen Circle Acquisition Corp. "
   },
   {
     "symbol": "CCTG",
@@ -496,6 +376,10 @@
     "name": "CDT Environmental Technology In"
   },
   {
+    "symbol": "CDTTW",
+    "name": "CDTTW"
+  },
+  {
     "symbol": "CELUW",
     "name": "CELUW"
   },
@@ -512,14 +396,6 @@
     "name": "Crane Harbor Acquisition Corp."
   },
   {
-    "symbol": "CHARR",
-    "name": "Charlton Aria Acquisition Corpo"
-  },
-  {
-    "symbol": "CHPGR",
-    "name": "ChampionsGate Acquisition Corpo"
-  },
-  {
     "symbol": "CHR",
     "name": "Cheer Holding, Inc."
   },
@@ -528,16 +404,16 @@
     "name": "Tianci International, Inc."
   },
   {
+    "symbol": "CINGW",
+    "name": "Cingulate Inc. Warrants"
+  },
+  {
     "symbol": "CISO",
     "name": "CISO Global, Inc."
   },
   {
     "symbol": "CLIR",
     "name": "ClearSign Technologies Corporat"
-  },
-  {
-    "symbol": "CLNNW",
-    "name": "Clene Inc."
   },
   {
     "symbol": "CLPS",
@@ -568,20 +444,12 @@
     "name": "COCHW"
   },
   {
-    "symbol": "COCP",
-    "name": "Cocrystal Pharma, Inc."
-  },
-  {
     "symbol": "CODX",
     "name": "Co-Diagnostics, Inc."
   },
   {
     "symbol": "COEPW",
     "name": "COEPW"
-  },
-  {
-    "symbol": "COLAR",
-    "name": "Columbus Acquisition Corp"
   },
   {
     "symbol": "COOT",
@@ -600,16 +468,8 @@
     "name": "Pop Culture Group Co., Ltd"
   },
   {
-    "symbol": "CRAQR",
-    "name": "Cal Redwood Acquisition Corp."
-  },
-  {
     "symbol": "CRE",
     "name": "Cre8 Enterprise Limited"
-  },
-  {
-    "symbol": "CRESW",
-    "name": "Cresud S.A.C.I.F. y A. Warrant"
   },
   {
     "symbol": "CREVW",
@@ -652,10 +512,6 @@
     "name": "Cycurion, Inc. Warrant"
   },
   {
-    "symbol": "DAAQW",
-    "name": "DAAQW"
-  },
-  {
     "symbol": "DAICW",
     "name": "CID HoldCo, Inc. Warrants"
   },
@@ -676,10 +532,6 @@
     "name": "DIH Holding US, Inc."
   },
   {
-    "symbol": "DHAIW",
-    "name": "DIH Holding US, Inc."
-  },
-  {
     "symbol": "DKI",
     "name": "DarkIris Inc."
   },
@@ -688,20 +540,8 @@
     "name": "Delixy Holdings Limited"
   },
   {
-    "symbol": "DMAAR",
-    "name": "Drugs Made In America Acquisiti"
-  },
-  {
     "symbol": "DRCT",
     "name": "Direct Digital Holdings, Inc."
-  },
-  {
-    "symbol": "DRDBW",
-    "name": "Roman DBDR Acquisition Corp. II"
-  },
-  {
-    "symbol": "DRTSW",
-    "name": "Alpha Tau Medical Ltd. Warrant"
   },
   {
     "symbol": "DSY",
@@ -714,10 +554,6 @@
   {
     "symbol": "DTCK",
     "name": "Davis Commodities Limited"
-  },
-  {
-    "symbol": "DTSQR",
-    "name": "DT Cloud Star Acquisition Corpo"
   },
   {
     "symbol": "DTSTW",
@@ -740,1907 +576,11 @@
     "name": "ECDAW"
   },
   {
-    "symbol": "ECXWW",
-    "name": "ECARX Holdings Inc. Warrants"
-  },
-  {
-    "symbol": "EDBLW",
-    "name": "EDIBLE GARDEN AG INC C/WTS (TO "
-  },
-  {
     "symbol": "EDHL",
     "name": "Everbright Digital Holding Limi"
   },
   {
     "symbol": "EEIQ",
     "name": "EpicQuest Education Group Inter"
-  },
-  {
-    "symbol": "EGHAR",
-    "name": "EGH Acquisition Corp."
-  },
-  {
-    "symbol": "EHGO",
-    "name": "Eshallgo Inc."
-  },
-  {
-    "symbol": "EJH",
-    "name": "E-Home Household Service Holdin"
-  },
-  {
-    "symbol": "ELBM",
-    "name": "Electra Battery Materials Corpo"
-  },
-  {
-    "symbol": "ELPW",
-    "name": "Elong Power Holding Limited"
-  },
-  {
-    "symbol": "ELUT",
-    "name": "Elutia, Inc."
-  },
-  {
-    "symbol": "EMISR",
-    "name": "Emmis Acquisition Corp."
-  },
-  {
-    "symbol": "ENLV",
-    "name": "Enlivex Therapeutics Ltd."
-  },
-  {
-    "symbol": "EQ",
-    "name": "Equillium, Inc."
-  },
-  {
-    "symbol": "ESHAR",
-    "name": "ESH Acquisition Corp."
-  },
-  {
-    "symbol": "ESLAW",
-    "name": "ESLAW"
-  },
-  {
-    "symbol": "ETS",
-    "name": "Elite Express Holding Inc."
-  },
-  {
-    "symbol": "EUDAW",
-    "name": "EUDAW"
-  },
-  {
-    "symbol": "EURKR",
-    "name": "Eureka Acquisition Corp"
-  },
-  {
-    "symbol": "EVGOW",
-    "name": "EVgo Inc. Warrants"
-  },
-  {
-    "symbol": "EVLVW",
-    "name": "EVLVW"
-  },
-  {
-    "symbol": "FACTW",
-    "name": "FACT II Acquisition Corp. Warra"
-  },
-  {
-    "symbol": "FAT",
-    "name": "FAT Brands Inc."
-  },
-  {
-    "symbol": "FBGL",
-    "name": "FBS Global Limited"
-  },
-  {
-    "symbol": "FBLG",
-    "name": "FibroBiologics, Inc."
-  },
-  {
-    "symbol": "FCHL",
-    "name": "Fitness Champs Holdings Limited"
-  },
-  {
-    "symbol": "FEBO",
-    "name": "Fenbo Holdings Limited"
-  },
-  {
-    "symbol": "FEMY",
-    "name": "Femasys Inc."
-  },
-  {
-    "symbol": "FERAR",
-    "name": "Fifth Era Acquisition Corp I"
-  },
-  {
-    "symbol": "FFAIW",
-    "name": "FFAIW"
-  },
-  {
-    "symbol": "FGL",
-    "name": "Founder Group Limited"
-  },
-  {
-    "symbol": "FGMCR",
-    "name": "FG Merger II Corp."
-  },
-  {
-    "symbol": "FIGXW",
-    "name": "FIGX Capital Acquisition Corp. "
-  },
-  {
-    "symbol": "FLDDW",
-    "name": "FLDDW"
-  },
-  {
-    "symbol": "FMFC",
-    "name": "Kandal M Venture Limited"
-  },
-  {
-    "symbol": "FMSTW",
-    "name": "Foremost Lithium Resource & Tec"
-  },
-  {
-    "symbol": "FOXXW",
-    "name": "FOXXW"
-  },
-  {
-    "symbol": "FRGT",
-    "name": "Freight Technologies, Inc."
-  },
-  {
-    "symbol": "FSHPR",
-    "name": "Flag Ship Acquisition Corp."
-  },
-  {
-    "symbol": "FTEL",
-    "name": "Fitell Corporation"
-  },
-  {
-    "symbol": "FTRK",
-    "name": "FAST TRACK GROUP"
-  },
-  {
-    "symbol": "FUFUW",
-    "name": "BitFuFu Inc. Warrant"
-  },
-  {
-    "symbol": "FUSEW",
-    "name": "Fusemachines Inc. Warrants"
-  },
-  {
-    "symbol": "FVNNR",
-    "name": "Future Vision II Acquisition Co"
-  },
-  {
-    "symbol": "GAME",
-    "name": "GameSquare Holdings, Inc."
-  },
-  {
-    "symbol": "GCLWW",
-    "name": "GCL Global Holdings Ltd Warrant"
-  },
-  {
-    "symbol": "GCMGW",
-    "name": "GCM Grosvenor Inc."
-  },
-  {
-    "symbol": "GDEVW",
-    "name": "Nexters Inc. Warrant"
-  },
-  {
-    "symbol": "GFAI",
-    "name": "Guardforce AI Co., Limited"
-  },
-  {
-    "symbol": "GFAIW",
-    "name": "Guardforce AI Co., Limited Warrant"
-  },
-  {
-    "symbol": "GGROW",
-    "name": "Gogoro Inc. Warrant"
-  },
-  {
-    "symbol": "GIBOW",
-    "name": "GIBOW"
-  },
-  {
-    "symbol": "GIGGW",
-    "name": "GigCapital4, Inc."
-  },
-  {
-    "symbol": "GIPR",
-    "name": "Generation Income Properties In"
-  },
-  {
-    "symbol": "GIWWR",
-    "name": "GigCapital8 Corp."
-  },
-  {
-    "symbol": "GLE",
-    "name": "Global Engine Group Holding Lim"
-  },
-  {
-    "symbol": "GLMD",
-    "name": "Galmed Pharmaceuticals Ltd."
-  },
-  {
-    "symbol": "GMGI",
-    "name": "Golden Matrix Group, Inc."
-  },
-  {
-    "symbol": "GORV",
-    "name": "Lazydays Holdings, Inc."
-  },
-  {
-    "symbol": "GOVX",
-    "name": "GeoVax Labs, Inc."
-  },
-  {
-    "symbol": "GP",
-    "name": "GreenPower Motor Company Inc."
-  },
-  {
-    "symbol": "GPATW",
-    "name": "GP-Act III Acquisition Corp. Wa"
-  },
-  {
-    "symbol": "GRABW",
-    "name": "Grab Holdings Limited Warrant"
-  },
-  {
-    "symbol": "GRRRW",
-    "name": "GRRRW"
-  },
-  {
-    "symbol": "GSHRW",
-    "name": "GSHRW"
-  },
-  {
-    "symbol": "GSIW",
-    "name": "Garden Stage Limited"
-  },
-  {
-    "symbol": "GTBP",
-    "name": "GT Biopharma, Inc."
-  },
-  {
-    "symbol": "GTERR",
-    "name": "Globa Terra Acquisition Corpora"
-  },
-  {
-    "symbol": "GTERW",
-    "name": "Globa Terra Acquisition Corpora"
-  },
-  {
-    "symbol": "HAO",
-    "name": "Haoxi Health Technology Limited"
-  },
-  {
-    "symbol": "HBIO",
-    "name": "Harvard Bioscience, Inc."
-  },
-  {
-    "symbol": "HCAI",
-    "name": "Huachen AI Parking Management T"
-  },
-  {
-    "symbol": "HOLOW",
-    "name": "HOLOW"
-  },
-  {
-    "symbol": "HOVRW",
-    "name": "HOVRW"
-  },
-  {
-    "symbol": "HOWL",
-    "name": "Werewolf Therapeutics, Inc."
-  },
-  {
-    "symbol": "HPAIW",
-    "name": "Helport AI Limited Warrants"
-  },
-  {
-    "symbol": "HSPOR",
-    "name": "Horizon Space Acquisition I Cor"
-  },
-  {
-    "symbol": "HSPOW",
-    "name": "Horizon Space Acquisition I Cor"
-  },
-  {
-    "symbol": "HSPTR",
-    "name": "Horizon Space Acquisition II Co"
-  },
-  {
-    "symbol": "HTCR",
-    "name": "Heartcore Enterprises, Inc."
-  },
-  {
-    "symbol": "HTOOW",
-    "name": "Fusion Fuel Green PLC"
-  },
-  {
-    "symbol": "HUBCW",
-    "name": "Hub Cyber Security Ltd. Warrant"
-  },
-  {
-    "symbol": "HUMAW",
-    "name": "HUMAW"
-  },
-  {
-    "symbol": "HVIIR",
-    "name": "Hennessy Capital Investment Cor"
-  },
-  {
-    "symbol": "HVMCW",
-    "name": "Highview Merger Corp. Warrants"
-  },
-  {
-    "symbol": "HXHX",
-    "name": "Haoxin Holdings Limited"
-  },
-  {
-    "symbol": "IBACR",
-    "name": "IB Acquisition Corp."
-  },
-  {
-    "symbol": "ICCM",
-    "name": "IceCure Medical Ltd."
-  },
-  {
-    "symbol": "ICON",
-    "name": "Icon Energy Corp."
-  },
-  {
-    "symbol": "ICU",
-    "name": "SeaStar Medical Holding Corpora"
-  },
-  {
-    "symbol": "ICUCW",
-    "name": "ICUCW"
-  },
-  {
-    "symbol": "IFBD",
-    "name": "Infobird Co., Ltd"
-  },
-  {
-    "symbol": "IINNW",
-    "name": "Inspira Technologies Oxy B.H.N. Ltd. Warrant"
-  },
-  {
-    "symbol": "ILAG",
-    "name": "Intelligent Living Application "
-  },
-  {
-    "symbol": "ILLR",
-    "name": "Triller Group Inc."
-  },
-  {
-    "symbol": "ILLRW",
-    "name": "ILLRW"
-  },
-  {
-    "symbol": "IMG",
-    "name": "CIMG Inc."
-  },
-  {
-    "symbol": "IMTE",
-    "name": "Integrated Media Technology Lim"
-  },
-  {
-    "symbol": "IMUX",
-    "name": "Immunic, Inc."
-  },
-  {
-    "symbol": "INACR",
-    "name": "Indigo Acquisition Corp."
-  },
-  {
-    "symbol": "INBS",
-    "name": "Intelligent Bio Solutions Inc."
-  },
-  {
-    "symbol": "INEO",
-    "name": "INNEOVA Holdings Limited"
-  },
-  {
-    "symbol": "INHD",
-    "name": "Inno Holdings Inc."
-  },
-  {
-    "symbol": "INLF",
-    "name": "INLIF LIMITED"
-  },
-  {
-    "symbol": "INTJ",
-    "name": "Intelligent Group Limited"
-  },
-  {
-    "symbol": "INTS",
-    "name": "Intensity Therapeutics, Inc."
-  },
-  {
-    "symbol": "INVZW",
-    "name": "Innoviz Technologies Ltd."
-  },
-  {
-    "symbol": "IOBT",
-    "name": "IO Biotech, Inc."
-  },
-  {
-    "symbol": "IPCXR",
-    "name": "Inflection Point Acquisition Co"
-  },
-  {
-    "symbol": "IPODW",
-    "name": "Social Capital Hedosophia Holdi"
-  },
-  {
-    "symbol": "IPSC",
-    "name": "Century Therapeutics, Inc."
-  },
-  {
-    "symbol": "IRIX",
-    "name": "IRIDEX Corporation"
-  },
-  {
-    "symbol": "ISPC",
-    "name": "iSpecimen Inc."
-  },
-  {
-    "symbol": "ISPOW",
-    "name": "ISPOW"
-  },
-  {
-    "symbol": "ISRLW",
-    "name": "Israel Acquisitions Corp Warran"
-  },
-  {
-    "symbol": "ITRM",
-    "name": "Iterum Therapeutics plc"
-  },
-  {
-    "symbol": "IVDA",
-    "name": "Iveda Solutions, Inc."
-  },
-  {
-    "symbol": "IVDAW",
-    "name": "Iveda Solutions, Inc. Warrant"
-  },
-  {
-    "symbol": "IVF",
-    "name": "INVO Fertility, Inc."
-  },
-  {
-    "symbol": "IVP",
-    "name": "Inspire Veterinary Partners, In"
-  },
-  {
-    "symbol": "IXHL",
-    "name": "Incannex Healthcare Inc."
-  },
-  {
-    "symbol": "IZM",
-    "name": "ICZOOM Group Inc."
-  },
-  {
-    "symbol": "JBDI",
-    "name": "JBDI Holdings Limited"
-  },
-  {
-    "symbol": "JEM",
-    "name": "707 Cayman Holdings Limited"
-  },
-  {
-    "symbol": "JFBRW",
-    "name": "JFBRW"
-  },
-  {
-    "symbol": "JSPRW",
-    "name": "JSPRW"
-  },
-  {
-    "symbol": "JZXN",
-    "name": "Jiuzi Holdings, Inc."
-  },
-  {
-    "symbol": "KALA",
-    "name": "KALA BIO, Inc."
-  },
-  {
-    "symbol": "KAVL",
-    "name": "Kaival Brands Innovations Group"
-  },
-  {
-    "symbol": "KCHVR",
-    "name": "Kochav Defense Acquisition Corp"
-  },
-  {
-    "symbol": "KFIIR",
-    "name": "K&F Growth Acquisition Corp. II"
-  },
-  {
-    "symbol": "KIDZ",
-    "name": "Classover Holdings, Inc."
-  },
-  {
-    "symbol": "KIDZW",
-    "name": "Classover Holdings, Inc. Warran"
-  },
-  {
-    "symbol": "KITT",
-    "name": "Nauticus Robotics, Inc."
-  },
-  {
-    "symbol": "KITTW",
-    "name": "KITTW"
-  },
-  {
-    "symbol": "KLTO",
-    "name": "Klotho Neurosciences, Inc."
-  },
-  {
-    "symbol": "KLTOW",
-    "name": "KLTOW"
-  },
-  {
-    "symbol": "KNDI",
-    "name": "Kandi Technologies Group, Inc."
-  },
-  {
-    "symbol": "KOYNW",
-    "name": "CSLM Digital Asset Acquisition "
-  },
-  {
-    "symbol": "KPLTW",
-    "name": "KPLTW"
-  },
-  {
-    "symbol": "KTTA",
-    "name": "Pasithea Therapeutics Corp."
-  },
-  {
-    "symbol": "KTTAW",
-    "name": "Pasithea Therapeutics Corp. Warrant"
-  },
-  {
-    "symbol": "KWM",
-    "name": "K Wave Media, Ltd."
-  },
-  {
-    "symbol": "KWMWW",
-    "name": "KWMWW"
-  },
-  {
-    "symbol": "KXIN",
-    "name": "Kaixin Holdings"
-  },
-  {
-    "symbol": "LAZR",
-    "name": "Luminar Technologies, Inc."
-  },
-  {
-    "symbol": "LBGJ",
-    "name": "Li Bang International Corporati"
-  },
-  {
-    "symbol": "LCCCR",
-    "name": "Lakeshore Acquisition III Corp."
-  },
-  {
-    "symbol": "LEXXW",
-    "name": "Lexaria Bioscience Corp."
-  },
-  {
-    "symbol": "LFWD",
-    "name": "Lifeward Ltd."
-  },
-  {
-    "symbol": "LGHL",
-    "name": "Lion Group Holding Ltd."
-  },
-  {
-    "symbol": "LGO",
-    "name": "Largo Inc."
-  },
-  {
-    "symbol": "LGVN",
-    "name": "Longeveron Inc."
-  },
-  {
-    "symbol": "LIDRW",
-    "name": "CF Finance Acquisition Corp. II"
-  },
-  {
-    "symbol": "LIMN",
-    "name": "Liminatus Pharma, Inc."
-  },
-  {
-    "symbol": "LIXTW",
-    "name": "Lixte Biotechnology Holdings, I"
-  },
-  {
-    "symbol": "LMFA",
-    "name": "LM Funding America, Inc."
-  },
-  {
-    "symbol": "LNKS",
-    "name": "Linkers Industries Limited"
-  },
-  {
-    "symbol": "LNZAW",
-    "name": "LNZAW"
-  },
-  {
-    "symbol": "LOBO",
-    "name": "LOBO TECHNOLOGIES LTD."
-  },
-  {
-    "symbol": "LOKVW",
-    "name": "Live Oak Acquisition Corp. V Wa"
-  },
-  {
-    "symbol": "LPAAW",
-    "name": "Launch One Acquisition Corp. Wa"
-  },
-  {
-    "symbol": "LPBBW",
-    "name": "Launch Two Acquisition Corp. Wa"
-  },
-  {
-    "symbol": "LSH",
-    "name": "Lakeside Holding Limited"
-  },
-  {
-    "symbol": "LTRYW",
-    "name": "Lottery.com, Inc."
-  },
-  {
-    "symbol": "LUCYW",
-    "name": "LUCYW"
-  },
-  {
-    "symbol": "LVRO",
-    "name": "Lavoro Limited"
-  },
-  {
-    "symbol": "LVROW",
-    "name": "Lavoro Limited Warrant"
-  },
-  {
-    "symbol": "LWACW",
-    "name": "Locust Walk Acquisition Corp."
-  },
-  {
-    "symbol": "LXEH",
-    "name": "Lixiang Education Holding Co., "
-  },
-  {
-    "symbol": "MACIW",
-    "name": "Melar Acquisition Corp. I Warra"
-  },
-  {
-    "symbol": "MAPS",
-    "name": "WM Technology, Inc."
-  },
-  {
-    "symbol": "MAPSW",
-    "name": "Silver Spike Acquisition Corp."
-  },
-  {
-    "symbol": "MASK",
-    "name": "3 E Network Technology Group Lt"
-  },
-  {
-    "symbol": "MAYAR",
-    "name": "Maywood Acquisition Corp."
-  },
-  {
-    "symbol": "MBRX",
-    "name": "Moleculin Biotech, Inc."
-  },
-  {
-    "symbol": "MBVIW",
-    "name": "M3-Brigade Acquisition VI Corp."
-  },
-  {
-    "symbol": "MCGAW",
-    "name": "MCGAW"
-  },
-  {
-    "symbol": "MDAIW",
-    "name": "MDAIW"
-  },
-  {
-    "symbol": "MDCXW",
-    "name": "Medicus Pharma Ltd. Warrant"
-  },
-  {
-    "symbol": "MDIA",
-    "name": "Mediaco Holding Inc."
-  },
-  {
-    "symbol": "MIMI",
-    "name": "Mint Incorporation Limited"
-  },
-  {
-    "symbol": "MKDW",
-    "name": "MKDWELL Tech Inc."
-  },
-  {
-    "symbol": "MKLYR",
-    "name": "McKinley Acquisition Corporatio"
-  },
-  {
-    "symbol": "MLACR",
-    "name": "Mountain Lake Acquisition Corp."
-  },
-  {
-    "symbol": "MLEC",
-    "name": "Moolec Science SA"
-  },
-  {
-    "symbol": "MLECW",
-    "name": "Moolec Science SA Warrant"
-  },
-  {
-    "symbol": "MNTS",
-    "name": "Momentus Inc."
-  },
-  {
-    "symbol": "MNTSW",
-    "name": "MNTSW"
-  },
-  {
-    "symbol": "MNYWW",
-    "name": "MoneyHero Limited Warrants"
-  },
-  {
-    "symbol": "MOBX",
-    "name": "Mobix Labs, Inc."
-  },
-  {
-    "symbol": "MODD",
-    "name": "Modular Medical, Inc."
-  },
-  {
-    "symbol": "MRNOW",
-    "name": "Murano Global Investments PLC W"
-  },
-  {
-    "symbol": "MSAI",
-    "name": "MultiSensor AI Holdings, Inc."
-  },
-  {
-    "symbol": "MSAIW",
-    "name": "MSAIW"
-  },
-  {
-    "symbol": "MSPR",
-    "name": "MSP Recovery, Inc."
-  },
-  {
-    "symbol": "MSPRW",
-    "name": "MSP Recovery, Inc."
-  },
-  {
-    "symbol": "MSPRZ",
-    "name": "MSP Recovery, Inc."
-  },
-  {
-    "symbol": "MSS",
-    "name": "Maison Solutions Inc."
-  },
-  {
-    "symbol": "MTEKW",
-    "name": "Maris-Tech Ltd. Warrants"
-  },
-  {
-    "symbol": "MTVA",
-    "name": "MetaVia Inc."
-  },
-  {
-    "symbol": "MVIS",
-    "name": "Microvision, Inc."
-  },
-  {
-    "symbol": "MVSTW",
-    "name": "MVSTW"
-  },
-  {
-    "symbol": "MWYN",
-    "name": "Marwynn Holdings, Inc."
-  },
-  {
-    "symbol": "MYNZ",
-    "name": "Mainz Biomed N.V."
-  },
-  {
-    "symbol": "MYPS",
-    "name": "PLAYSTUDIOS, Inc."
-  },
-  {
-    "symbol": "MYPSW",
-    "name": "MYPSW"
-  },
-  {
-    "symbol": "MYSEW",
-    "name": "MYSEW"
-  },
-  {
-    "symbol": "MYSZ",
-    "name": "My Size, Inc."
-  },
-  {
-    "symbol": "NAKA",
-    "name": "Kindly MD, Inc."
-  },
-  {
-    "symbol": "NAMI",
-    "name": "Jinxin Technology Holding Compa"
-  },
-  {
-    "symbol": "NAMMW",
-    "name": "NAMMW"
-  },
-  {
-    "symbol": "NCPLW",
-    "name": "NETCAPITAL INC C/WTS 05/07/2027"
-  },
-  {
-    "symbol": "NCT",
-    "name": "Intercont (Cayman) Limited"
-  },
-  {
-    "symbol": "NDLS",
-    "name": "Noodles & Company"
-  },
-  {
-    "symbol": "NETDW",
-    "name": "Nabors Energy Transition Corp. "
-  },
-  {
-    "symbol": "NIVF",
-    "name": "NewGenIvf Group Limited"
-  },
-  {
-    "symbol": "NIVFW",
-    "name": "NewGenIvf Group Limited Warrant"
-  },
-  {
-    "symbol": "NIXXW",
-    "name": "NIXXW"
-  },
-  {
-    "symbol": "NMPAR",
-    "name": "NMP Acquisition Corp."
-  },
-  {
-    "symbol": "NMTC",
-    "name": "NeuroOne Medical Technologies C"
-  },
-  {
-    "symbol": "NOEMR",
-    "name": "CO2 Energy Transition Corp."
-  },
-  {
-    "symbol": "NOEMW",
-    "name": "CO2 Energy Transition Corp. War"
-  },
-  {
-    "symbol": "NOTV",
-    "name": "Inotiv, Inc."
-  },
-  {
-    "symbol": "NPACW",
-    "name": "New Providence Acquisition Corp"
-  },
-  {
-    "symbol": "NRSNW",
-    "name": "NEUROSENSE THERAPEUTICS LTD C/W"
-  },
-  {
-    "symbol": "NRXPW",
-    "name": "NRXPW"
-  },
-  {
-    "symbol": "NTWOW",
-    "name": "Newbury Street II Acquisition C"
-  },
-  {
-    "symbol": "NUKKW",
-    "name": "NUKKW"
-  },
-  {
-    "symbol": "NVNIW",
-    "name": "Nvni Group Limited Warrants"
-  },
-  {
-    "symbol": "NVNO",
-    "name": "enVVeno Medical Corporation"
-  },
-  {
-    "symbol": "NVVE",
-    "name": "Nuvve Holding Corp."
-  },
-  {
-    "symbol": "NVVEW",
-    "name": "Nuvve Holding Corp."
-  },
-  {
-    "symbol": "NXGLW",
-    "name": "NexGel, Inc Warrant"
-  },
-  {
-    "symbol": "NXPL",
-    "name": "NextPlat Corp"
-  },
-  {
-    "symbol": "NXPLW",
-    "name": "NXPLW"
-  },
-  {
-    "symbol": "OABIW",
-    "name": "OABIW"
-  },
-  {
-    "symbol": "OAKUR",
-    "name": "Oak Woods Acquisition Corporati"
-  },
-  {
-    "symbol": "OBAWW",
-    "name": "Oxley Bridge Acquisition Limite"
-  },
-  {
-    "symbol": "ODVWZ",
-    "name": "Osisko Development Corp. Warran"
-  },
-  {
-    "symbol": "OFAL",
-    "name": "OFA Group"
-  },
-  {
-    "symbol": "OMH",
-    "name": "Ohmyhome Limited"
-  },
-  {
-    "symbol": "ONCHW",
-    "name": "1RT Acquisition Corp. Warrant"
-  },
-  {
-    "symbol": "ONFO",
-    "name": "Onfolio Holdings Inc."
-  },
-  {
-    "symbol": "ONFOW",
-    "name": "Onfolio Holdings Inc. Warrant"
-  },
-  {
-    "symbol": "ONMDW",
-    "name": "ONMDW"
-  },
-  {
-    "symbol": "OPTXW",
-    "name": "OPTXW"
-  },
-  {
-    "symbol": "ORGN",
-    "name": "Origin Materials, Inc."
-  },
-  {
-    "symbol": "ORGNW",
-    "name": "ORGNW"
-  },
-  {
-    "symbol": "ORIQW",
-    "name": "Origin Investment Corp I Warran"
-  },
-  {
-    "symbol": "ORIS",
-    "name": "Oriental Rise Holdings Limited"
-  },
-  {
-    "symbol": "ORKT",
-    "name": "Orangekloud Technology Inc."
-  },
-  {
-    "symbol": "OSRH",
-    "name": "OSR Holdings, Inc."
-  },
-  {
-    "symbol": "OSRHW",
-    "name": "OSRHW"
-  },
-  {
-    "symbol": "OUSTZ",
-    "name": "Ouster, Inc. Warrants"
-  },
-  {
-    "symbol": "OXBRW",
-    "name": "Oxbridge Re Holdings Limited"
-  },
-  {
-    "symbol": "OYSER",
-    "name": "Oyster Enterprises II Acquisiti"
-  },
-  {
-    "symbol": "PASW",
-    "name": "Ping An Biomedical Co., Ltd."
-  },
-  {
-    "symbol": "PAVM",
-    "name": "PAVmed Inc."
-  },
-  {
-    "symbol": "PAVS",
-    "name": "Paranovus Entertainment Technol"
-  },
-  {
-    "symbol": "PBMWW",
-    "name": "Psyence Biomedical Ltd. Warrant"
-  },
-  {
-    "symbol": "PCAPW",
-    "name": "ProCap Acquisition Corp Warrant"
-  },
-  {
-    "symbol": "PCLA",
-    "name": "PicoCELA Inc."
-  },
-  {
-    "symbol": "PCSA",
-    "name": "Processa Pharmaceuticals, Inc."
-  },
-  {
-    "symbol": "PCTTW",
-    "name": "PureCycle Technologies, Inc."
-  },
-  {
-    "symbol": "PDSB",
-    "name": "PDS Biotechnology Corporation"
-  },
-  {
-    "symbol": "PDYNW",
-    "name": "PDYNW"
-  },
-  {
-    "symbol": "PELIR",
-    "name": "Pelican Acquisition Corporation"
-  },
-  {
-    "symbol": "PETZ",
-    "name": "TDH Holdings, Inc."
-  },
-  {
-    "symbol": "PFSA",
-    "name": "Profusa, Inc."
-  },
-  {
-    "symbol": "PGACR",
-    "name": "Pantages Capital Acquisition Co"
-  },
-  {
-    "symbol": "PGYWW",
-    "name": "Pagaya Technologies Ltd. Warran"
-  },
-  {
-    "symbol": "PIIIW",
-    "name": "PIIIW"
-  },
-  {
-    "symbol": "PLMKW",
-    "name": "Plum Acquisition Corp. IV Warra"
-  },
-  {
-    "symbol": "PLRZ",
-    "name": "Polyrizon Ltd."
-  },
-  {
-    "symbol": "PMCB",
-    "name": "PharmaCyte  Biotech, Inc."
-  },
-  {
-    "symbol": "PMN",
-    "name": "ProMIS Neurosciences Inc."
-  },
-  {
-    "symbol": "PMTRW",
-    "name": "Perimeter Acquisition Corp. I W"
-  },
-  {
-    "symbol": "PN",
-    "name": "Skycorp Solar Group Limited"
-  },
-  {
-    "symbol": "POLEW",
-    "name": "Andretti Acquisition Corp. II W"
-  },
-  {
-    "symbol": "PPBT",
-    "name": "Purple Biotech Ltd."
-  },
-  {
-    "symbol": "PPCB",
-    "name": "Propanc Biopharma, Inc."
-  },
-  {
-    "symbol": "PRFX",
-    "name": "PainReform Ltd."
-  },
-  {
-    "symbol": "PRHI",
-    "name": "Presurance Holdings, Inc."
-  },
-  {
-    "symbol": "PRPH",
-    "name": "ProPhase Labs, Inc."
-  },
-  {
-    "symbol": "PRPL",
-    "name": "Purple Innovation, Inc."
-  },
-  {
-    "symbol": "PRSO",
-    "name": "Peraso Inc."
-  },
-  {
-    "symbol": "PRTS",
-    "name": "CarParts.com, Inc."
-  },
-  {
-    "symbol": "PSNY",
-    "name": "Polestar Automotive Holding UK "
-  },
-  {
-    "symbol": "PSNYW",
-    "name": "Polestar Automotive Holding UK "
-  },
-  {
-    "symbol": "PSTV",
-    "name": "PLUS THERAPEUTICS, Inc."
-  },
-  {
-    "symbol": "PT",
-    "name": "Pintec Technology Holdings Limi"
-  },
-  {
-    "symbol": "PTHL",
-    "name": "Pheton Holdings Ltd"
-  },
-  {
-    "symbol": "PTIXW",
-    "name": "Protagenic Therapeutics, Inc. Warrant"
-  },
-  {
-    "symbol": "PTLE",
-    "name": "PTL LTD"
-  },
-  {
-    "symbol": "QH",
-    "name": "Quhuo Limited - American Deposi"
-  },
-  {
-    "symbol": "QSEAR",
-    "name": "Quartzsea Acquisition Corporati"
-  },
-  {
-    "symbol": "QSIAW",
-    "name": "QSIAW"
-  },
-  {
-    "symbol": "QUMSR",
-    "name": "Quantumsphere Acquisition Corp."
-  },
-  {
-    "symbol": "RAAQW",
-    "name": "RAAQW"
-  },
-  {
-    "symbol": "RAINW",
-    "name": "Rain Enhancement Technologies H"
-  },
-  {
-    "symbol": "RANGR",
-    "name": "Range Capital Acquisition Corp."
-  },
-  {
-    "symbol": "RBNE",
-    "name": "Robin Energy Ltd."
-  },
-  {
-    "symbol": "RCKTW",
-    "name": "Rocket Pharmaceuticals, Inc. Wa"
-  },
-  {
-    "symbol": "RDACR",
-    "name": "Rising Dragon Acquisition Corp."
-  },
-  {
-    "symbol": "RDZNW",
-    "name": "RDZNW"
-  },
-  {
-    "symbol": "REE",
-    "name": "REE Automotive Ltd."
-  },
-  {
-    "symbol": "RELI",
-    "name": "Reliance Global Group, Inc."
-  },
-  {
-    "symbol": "REVB",
-    "name": "Revelation Biosciences, Inc."
-  },
-  {
-    "symbol": "REVBW",
-    "name": "REVBW"
-  },
-  {
-    "symbol": "RFAIR",
-    "name": "RF Acquisition Corp II"
-  },
-  {
-    "symbol": "RIBBR",
-    "name": "Ribbon Acquisition Corp"
-  },
-  {
-    "symbol": "RLYB",
-    "name": "Rallybio Corporation"
-  },
-  {
-    "symbol": "RMCOW",
-    "name": "RMCOW"
-  },
-  {
-    "symbol": "RMSGW",
-    "name": "Real Messenger Corporation Warr"
-  },
-  {
-    "symbol": "RMTI",
-    "name": "Rockwell Medical, Inc."
-  },
-  {
-    "symbol": "RNWWW",
-    "name": "ReNew Energy Global plc Warrant"
-  },
-  {
-    "symbol": "RNXT",
-    "name": "RenovoRx, Inc."
-  },
-  {
-    "symbol": "RPGL",
-    "name": "Republic Power Group Limited"
-  },
-  {
-    "symbol": "RSVRW",
-    "name": "RSVRW"
-  },
-  {
-    "symbol": "RTACW",
-    "name": "Renatus Tactical Acquisition Co"
-  },
-  {
-    "symbol": "RUBI",
-    "name": "Rubico Inc."
-  },
-  {
-    "symbol": "RVMDW",
-    "name": "Revolution Medicines, Inc. Warr"
-  },
-  {
-    "symbol": "RVPH",
-    "name": "Reviva Pharmaceuticals Holdings"
-  },
-  {
-    "symbol": "RVPHW",
-    "name": "Reviva Pharmaceuticals Holdings"
-  },
-  {
-    "symbol": "RVSN",
-    "name": "Rail Vision Ltd."
-  },
-  {
-    "symbol": "RVSNW",
-    "name": "Rail Vision Ltd. Warrant"
-  },
-  {
-    "symbol": "RVYL",
-    "name": "Ryvyl Inc."
-  },
-  {
-    "symbol": "SAFX",
-    "name": "XCF Global, Inc."
-  },
-  {
-    "symbol": "SATLW",
-    "name": "CF Acquisition Corp. V"
-  },
-  {
-    "symbol": "SBCWW",
-    "name": "SBCWW"
-  },
-  {
-    "symbol": "SBFMW",
-    "name": "Sunshine Biopharma Inc. warrant"
-  },
-  {
-    "symbol": "SCAGW",
-    "name": "Scage Future Warrants"
-  },
-  {
-    "symbol": "SCLXW",
-    "name": "SCLXW"
-  },
-  {
-    "symbol": "SCNI",
-    "name": "Scinai Immunotherapeutics Ltd."
-  },
-  {
-    "symbol": "SCNX",
-    "name": "Scienture Holdings, Inc."
-  },
-  {
-    "symbol": "SCWO",
-    "name": "374Water Inc."
-  },
-  {
-    "symbol": "SCYX",
-    "name": "SCYNEXIS, Inc."
-  },
-  {
-    "symbol": "SDHIR",
-    "name": "Siddhi Acquisition Corp"
-  },
-  {
-    "symbol": "SDSTW",
-    "name": "SDSTW"
-  },
-  {
-    "symbol": "SEATW",
-    "name": "Vivid Seats Inc. Warrant"
-  },
-  {
-    "symbol": "SELX",
-    "name": "Semilux International Ltd."
-  },
-  {
-    "symbol": "SFHG",
-    "name": "Samfine Creation Holdings Group"
-  },
-  {
-    "symbol": "SFWL",
-    "name": "Shengfeng Development Limited"
-  },
-  {
-    "symbol": "SGLY",
-    "name": "Singularity Future Technology L"
-  },
-  {
-    "symbol": "SGMO",
-    "name": "Sangamo Therapeutics, Inc."
-  },
-  {
-    "symbol": "SGRP",
-    "name": "SPAR Group, Inc."
-  },
-  {
-    "symbol": "SHMDW",
-    "name": "SCHMID Group N.V. Warrants"
-  },
-  {
-    "symbol": "SIDU",
-    "name": "Sidus Space, Inc."
-  },
-  {
-    "symbol": "SILO",
-    "name": "Silo Pharma, Inc."
-  },
-  {
-    "symbol": "SJ",
-    "name": "Scienjoy Holding Corporation"
-  },
-  {
-    "symbol": "SKK",
-    "name": "SKK Holdings Limited"
-  },
-  {
-    "symbol": "SKYQ",
-    "name": "Sky Quarry Inc."
-  },
-  {
-    "symbol": "SLE",
-    "name": "Super League Enterprise, Inc."
-  },
-  {
-    "symbol": "SLRX",
-    "name": "Salarius Pharmaceuticals, Inc."
-  },
-  {
-    "symbol": "SMSI",
-    "name": "Smith Micro Software, Inc."
-  },
-  {
-    "symbol": "SMXT",
-    "name": "Solarmax Technology Inc."
-  },
-  {
-    "symbol": "SMXWW",
-    "name": "SMX (Security Matters) Public L"
-  },
-  {
-    "symbol": "SNAL",
-    "name": "Snail, Inc."
-  },
-  {
-    "symbol": "SOCAW",
-    "name": "Solarius Capital Acquisition Co"
-  },
-  {
-    "symbol": "SOWG",
-    "name": "Sow Good Inc."
-  },
-  {
-    "symbol": "SPEGR",
-    "name": "Silver Pegasus Acquisition Corp"
-  },
-  {
-    "symbol": "SPHL",
-    "name": "SPRINGVIEW HOLDINGS LTD"
-  },
-  {
-    "symbol": "SPKLW",
-    "name": "Spark I Acquisition Corp. Warra"
-  },
-  {
-    "symbol": "SPWRW",
-    "name": "SPWRW"
-  },
-  {
-    "symbol": "SQFTW",
-    "name": "Presidio Property Trust, Inc. S"
-  },
-  {
-    "symbol": "SRTAW",
-    "name": "SRTAW"
-  },
-  {
-    "symbol": "SRZNW",
-    "name": "Surrozen, Inc. Warrant"
-  },
-  {
-    "symbol": "SSEAR",
-    "name": "Starry Sea Acquisition Corp"
-  },
-  {
-    "symbol": "STAI",
-    "name": "ScanTech AI Systems Inc."
-  },
-  {
-    "symbol": "STAK",
-    "name": "STAK Inc."
-  },
-  {
-    "symbol": "STFS",
-    "name": "Star Fashion Culture Holdings L"
-  },
-  {
-    "symbol": "STRO",
-    "name": "Sutro Biopharma, Inc."
-  },
-  {
-    "symbol": "STSSW",
-    "name": "Sharps Technology Inc. Warrant"
-  },
-  {
-    "symbol": "SVACW",
-    "name": "Starboard Value Acquisition Cor"
-  },
-  {
-    "symbol": "SVCCW",
-    "name": "Stellar V Capital Corp. Warrant"
-  },
-  {
-    "symbol": "SVRE",
-    "name": "SaverOne 2014 Ltd."
-  },
-  {
-    "symbol": "SVREW",
-    "name": "SaverOne 2014 Ltd. Warrant"
-  },
-  {
-    "symbol": "SWAGW",
-    "name": "SWAGW"
-  },
-  {
-    "symbol": "SWVLW",
-    "name": "Swvl Holdings Corp Warrant"
-  },
-  {
-    "symbol": "SXTPW",
-    "name": "60 Degrees Pharmaceuticals, Inc"
-  },
-  {
-    "symbol": "SZZLR",
-    "name": "Sizzle Acquisition Corp. II"
-  },
-  {
-    "symbol": "TACHW",
-    "name": "TACHW"
-  },
-  {
-    "symbol": "TACOW",
-    "name": "TACOW"
-  },
-  {
-    "symbol": "TALKW",
-    "name": "TALKW"
-  },
-  {
-    "symbol": "TAVIR",
-    "name": "Tavia Acquisition Corp."
-  },
-  {
-    "symbol": "TBH",
-    "name": "Brag House Holdings, Inc."
-  },
-  {
-    "symbol": "TBLAW",
-    "name": "Taboola.com Ltd. Warrant"
-  },
-  {
-    "symbol": "TBMCR",
-    "name": "Trailblazer Merger Corporation "
-  },
-  {
-    "symbol": "TCRX",
-    "name": "TScan Therapeutics, Inc."
-  },
-  {
-    "symbol": "TDACW",
-    "name": "Trident Acquisitions Corp."
-  },
-  {
-    "symbol": "TDIC",
-    "name": "Dreamland Limited"
-  },
-  {
-    "symbol": "TDTH",
-    "name": "Trident Digital Tech Holdings L"
-  },
-  {
-    "symbol": "TEAD",
-    "name": "Teads Holding Co."
-  },
-  {
-    "symbol": "TGHL",
-    "name": "The GrowHub Limited"
-  },
-  {
-    "symbol": "TGL",
-    "name": "Treasure Global Inc."
-  },
-  {
-    "symbol": "TIRX",
-    "name": "TIAN RUIXIANG Holdings Ltd"
-  },
-  {
-    "symbol": "TLIH",
-    "name": "Ten-League International Holdin"
-  },
-  {
-    "symbol": "TLNCW",
-    "name": "Talon Capital Corp. Warrants"
-  },
-  {
-    "symbol": "TLRY",
-    "name": "Tilray Brands, Inc."
-  },
-  {
-    "symbol": "TMCWW",
-    "name": "TMC the metals company Inc. Warrants"
-  },
-  {
-    "symbol": "TNMG",
-    "name": "TNL Mediagene"
-  },
-  {
-    "symbol": "TNONW",
-    "name": "Tenon Medical, Inc. Warrant"
-  },
-  {
-    "symbol": "TOIIW",
-    "name": "TOIIW"
-  },
-  {
-    "symbol": "TOMZ",
-    "name": "TOMI Environmental Solutions, I"
-  },
-  {
-    "symbol": "TOUR",
-    "name": "Tuniu Corporation"
-  },
-  {
-    "symbol": "TRIB",
-    "name": "Trinity Biotech plc"
-  },
-  {
-    "symbol": "TVAIR",
-    "name": "Thayer Ventures Acquisition Cor"
-  },
-  {
-    "symbol": "TVGN",
-    "name": "Tevogen Bio Holdings Inc."
-  },
-  {
-    "symbol": "TVGNW",
-    "name": "Semper Paratus Acquisition Corp"
-  },
-  {
-    "symbol": "UFG",
-    "name": "Uni-Fuels Holdings Limited"
-  },
-  {
-    "symbol": "UGRO",
-    "name": "urban-gro, Inc."
-  },
-  {
-    "symbol": "UHGWW",
-    "name": "UHGWW"
-  },
-  {
-    "symbol": "UK",
-    "name": "Ucommune International Ltd"
-  },
-  {
-    "symbol": "UONEK",
-    "name": "Urban One, Inc."
-  },
-  {
-    "symbol": "USARW",
-    "name": "USARW"
-  },
-  {
-    "symbol": "USEG",
-    "name": "U.S. Energy Corp."
-  },
-  {
-    "symbol": "USGOW",
-    "name": "U.S. GoldMining Inc."
-  },
-  {
-    "symbol": "UYSCR",
-    "name": "UY Scuti Acquisition Corp."
-  },
-  {
-    "symbol": "VACHW",
-    "name": "VACHW"
-  },
-  {
-    "symbol": "VEEA",
-    "name": "Veea Inc."
-  },
-  {
-    "symbol": "VEEAW",
-    "name": "VEEAW"
-  },
-  {
-    "symbol": "VFSWW",
-    "name": "VinFast Auto Ltd. Warrant"
-  },
-  {
-    "symbol": "VGASW",
-    "name": "VGASW"
-  },
-  {
-    "symbol": "VIVK",
-    "name": "Vivakor, Inc."
-  },
-  {
-    "symbol": "VNMEW",
-    "name": "Vendome Acquisition Corporation"
-  },
-  {
-    "symbol": "VRAX",
-    "name": "Virax Biolabs Group Limited"
-  },
-  {
-    "symbol": "VRME",
-    "name": "VerifyMe, Inc."
-  },
-  {
-    "symbol": "VSA",
-    "name": "VisionSys AI Inc."
-  },
-  {
-    "symbol": "VSEE",
-    "name": "VSee Health, Inc."
-  },
-  {
-    "symbol": "VSEEW",
-    "name": "VSEEW"
-  },
-  {
-    "symbol": "VSME",
-    "name": "VS Media Holdings Limited"
-  },
-  {
-    "symbol": "VSSYW",
-    "name": "Versus Systems Inc."
-  },
-  {
-    "symbol": "VSTD",
-    "name": "Vestand Inc."
-  },
-  {
-    "symbol": "VYNE",
-    "name": "VYNE Therapeutics Inc."
-  },
-  {
-    "symbol": "WALDW",
-    "name": "Waldencast Acquisition Corp. Warrant"
-  },
-  {
-    "symbol": "WCT",
-    "name": "Wellchange Holdings Company Lim"
-  },
-  {
-    "symbol": "WENNW",
-    "name": "Wen Acquisition Corp Warrant"
-  },
-  {
-    "symbol": "WETO",
-    "name": "Webus International Limited"
-  },
-  {
-    "symbol": "WFF",
-    "name": "WF Holding Limited"
-  },
-  {
-    "symbol": "WGRX",
-    "name": "Wellgistics Health, Inc."
-  },
-  {
-    "symbol": "WGSWW",
-    "name": "WGSWW"
-  },
-  {
-    "symbol": "WKHS",
-    "name": "Workhorse Group, Inc."
-  },
-  {
-    "symbol": "WORX",
-    "name": "SCWorx Corp."
-  },
-  {
-    "symbol": "WTGUR",
-    "name": "Wintergreen Acquisition Corp."
-  },
-  {
-    "symbol": "WXM",
-    "name": "WF International Limited"
-  },
-  {
-    "symbol": "WYHG",
-    "name": "Wing Yip Food Holdings Group Li"
-  },
-  {
-    "symbol": "XBP",
-    "name": "XBP Global Holdings, Inc."
-  },
-  {
-    "symbol": "XCH",
-    "name": "XCHG Limited"
-  },
-  {
-    "symbol": "XELB",
-    "name": "Xcel Brands, Inc"
-  },
-  {
-    "symbol": "XHLD",
-    "name": "TEN Holdings, Inc."
-  },
-  {
-    "symbol": "XLO",
-    "name": "Xilio Therapeutics, Inc."
-  },
-  {
-    "symbol": "XOSWW",
-    "name": "XOSWW"
-  },
-  {
-    "symbol": "XRPNW",
-    "name": "XRPNW"
-  },
-  {
-    "symbol": "XRTX",
-    "name": "XORTX Therapeutics Inc."
-  },
-  {
-    "symbol": "XTLB",
-    "name": "XTL Biopharmaceuticals Ltd."
-  },
-  {
-    "symbol": "XWEL",
-    "name": "XWELL, Inc."
-  },
-  {
-    "symbol": "XXII",
-    "name": "22nd Century Group, Inc"
-  },
-  {
-    "symbol": "YDESW",
-    "name": "YD Bio Limited Warrants"
-  },
-  {
-    "symbol": "YGMZ",
-    "name": "MingZhu Logistics Holdings Limi"
-  },
-  {
-    "symbol": "YHC",
-    "name": "LQR House Inc."
-  },
-  {
-    "symbol": "YHNAR",
-    "name": "YHN Acquisition I Limited"
-  },
-  {
-    "symbol": "YMAT",
-    "name": "J-Star Holding Co., Ltd."
-  },
-  {
-    "symbol": "YXT",
-    "name": "YXT.COM GROUP HOLDING LIMITED -"
-  },
-  {
-    "symbol": "YYAI",
-    "name": "AiRWA Inc."
-  },
-  {
-    "symbol": "YYGH",
-    "name": "YY Group Holding Limited"
-  },
-  {
-    "symbol": "ZBAO",
-    "name": "Zhibao Technology Inc."
-  },
-  {
-    "symbol": "ZCMD",
-    "name": "Zhongchao Inc."
-  },
-  {
-    "symbol": "ZDAI",
-    "name": "DirectBooking Technology Co., L"
-  },
-  {
-    "symbol": "ZEOWW",
-    "name": "ZEOWW"
-  },
-  {
-    "symbol": "ZJYL",
-    "name": "JIN MEDICAL INTERNATIONAL LTD."
-  },
-  {
-    "symbol": "ZNB",
-    "name": "Zeta Network Group"
-  },
-  {
-    "symbol": "ZOOZ",
-    "name": "ZOOZ Strategy Ltd."
-  },
-  {
-    "symbol": "ZOOZW",
-    "name": "ZOOZ Power Ltd. Warrant"
-  },
-  {
-    "symbol": "ZSPC",
-    "name": "zSpace, Inc."
-  },
-  {
-    "symbol": "ZTEK",
-    "name": "Zentek Ltd."
-  },
-  {
-    "symbol": "ZYXI",
-    "name": "Zynex, Inc."
   }
 ]
