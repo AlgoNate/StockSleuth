@@ -60,9 +60,14 @@ jobs:
           name: collector-log
           path: collector/collector.log
 
-      # 8️⃣ Upload today's history file as artifact
-      - name: Upload daily history
+      # 8️⃣ Upload today's history file only
+      - name: Upload today's history file
         uses: actions/upload-artifact@v4
+        run: |
+          # Get the latest history file
+          latest_file=$(ls -t collector/history/*.json | head -n1)
+          echo "Uploading $latest_file"
         with:
           name: daily-history
-          path: collector/history/*.json
+          path: ${{ steps.upload.outputs.latest_file }}
+
