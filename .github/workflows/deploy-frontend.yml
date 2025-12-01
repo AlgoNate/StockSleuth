@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repo
+      # 1. Checkout the repo
       - uses: actions/checkout@v3
 
       # 2. Setup Node.js
@@ -18,16 +18,18 @@ jobs:
           node-version: '18'
 
       # 3. Install dependencies
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
         working-directory: frontend
 
       # 4. Build the frontend with Parcel
-      - run: npm run build
+      - name: Build frontend
+        run: npm run build
         working-directory: frontend
 
       # 5. Deploy to GitHub Pages
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-        working-directory: frontend
+          publish_dir: frontend/dist
