@@ -1,15 +1,11 @@
 name: Daily Stock Collector
 
-# Schedule runs at:
-# 9:30 AM ET (open) → 13:30 UTC
-# 1:00 PM ET (mid-day) → 18:00 UTC
-# 4:05 PM ET (close) → 21:05 UTC
 on:
   schedule:
     - cron: "30 13 * * 1-5"   # 9:30 AM ET
     - cron: "0 18 * * 1-5"    # 1:00 PM ET
     - cron: "5 21 * * 1-5"    # 4:05 PM ET
-  workflow_dispatch:           # allows manual run
+  workflow_dispatch:
 
 jobs:
   collect:
@@ -18,40 +14,50 @@ jobs:
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
 
     steps:
-      # 1️⃣ Checkout repo
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
-      # 2️⃣ Setup Python 3.10
+      # 2️⃣ Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       # 3️⃣ Install dependencies
-      - run: pip install -r requirements.txt jsonschema
+      - run: pip install -r requirements.txt
 
-      # 4️⃣ Run the collector script
-      - run: python collector/collect.py
+      # 4️⃣ Run the collector
+      - name: Run Daily Stock Collector
+        run: python collector/collect.py
 
-      # 5️⃣ Validate JSON against schema using Python
-      - name: Validate JSON
+      # 5️⃣ Validate JSON
+      - name: Validate daily_stock_data.json
         run: |
+          pip install jsonschema
           python - <<EOF
-          import json, jsonschema
-          schema_file = "collector/daily_stock_data.schema.json"
-          data_file = "collector/daily_stock_data.json"
-          with open(schema_file) as f:
+          import json
+          import jsonschema
+
+          with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
-          with open(data_file) as f:
+          with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
+
           jsonschema.validate(instance=data, schema=schema)
           print("✅ JSON is valid against the schema")
           EOF
 
-      # 6️⃣ Commit and push JSON to repo
-      - name: Commit and Push JSON
+      # 6️⃣ Commit and push changes
+      - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json
+          git add collector/daily_stock_data.json collector/watchlist.json collector/history/
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
+
+      # 7️⃣ Upload logs as artifact
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: collector-logs
+          path: collector.log
