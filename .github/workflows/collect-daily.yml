@@ -11,30 +11,27 @@ jobs:
   collect:
     runs-on: ubuntu-latest
 
-    env:
-      FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-
     steps:
+      - uses: actions/checkout@v3
 
-      # 1️⃣ Checkout repository (updated)
-      - uses: actions/checkout@v4
-
-      # 2️⃣ Setup Python
+      # Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3️⃣ Install dependencies (minimal required)
-      - run: pip install requests jsonschema pandas
+      # Install dependencies
+      - name: Install dependencies
+        run: pip install yfinance jsonschema pandas
 
-      # 4️⃣ Run collector
+      # Run the collector
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
-      # 5️⃣ Validate JSON
+      # Validate JSON (optional if you have schema)
       - name: Validate daily_stock_data.json
         run: |
-          python - << 'EOF'
+          pip install jsonschema
+          python - <<EOF
           import json
           import jsonschema
 
@@ -47,24 +44,11 @@ jobs:
           print("✅ JSON is valid against the schema")
           EOF
 
-      # 6️⃣ Commit and push changes
+      # Commit and push changes
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          
-          mkdir -p collector/history  # prevent errors
-
-          git add collector/daily_stock_data.json
-          git add collector/watchlist.json
-          git add collector/history/
-
+          git add collector/daily_stock_data.json collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
-
-      # 7️⃣ Upload logs (updated artifact version)
-      - name: Upload logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: collector-logs
-          path: collector.log
