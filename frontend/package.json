@@ -4,10 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-  "start": "parcel public/index.html --port 3000",
-  "build": "parcel build public/index.html --dist-dir dist",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "start": "parcel public/index.html --port 3000",
+    "build": "parcel build public/index.html --dist-dir dist"
   },
   "dependencies": {
     "react": "^18.2.0",
