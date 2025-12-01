@@ -1,30 +1,26 @@
-# collector/generate_watchlist.py
 import yfinance as yf
-import pandas as pd
 import json
-import os
 
-os.makedirs("collector", exist_ok=True)
+WATCHLIST_FILE = "collector/watchlist.json"
 
-# Download NASDAQ-listed tickers CSV
-tickers = pd.read_csv("https://datahub.io/core/nasdaq-listings/r/nasdaq-listed-symbols.csv")
+# Example: top US penny stocks (symbols under $5)
+symbols = ["GME", "PLUG", "AMC", "FUBO", "SNDL"]  # replace/add symbols you want
 
-penny_stocks = []
+watchlist = []
 
-for symbol in tickers['Symbol']:
+for symbol in symbols:
     try:
         stock = yf.Ticker(symbol)
-        hist = stock.history(period="1d")
-        if hist.empty:
-            continue
-        price = hist['Close'][-1]
-        if price <= 1:
-            penny_stocks.append({"symbol": symbol, "name": stock.info.get("shortName", symbol)})
-    except:
+        info = stock.info
+        price = info.get("regularMarketPrice", 0)
+        if price <= 5 and price > 0:
+            watchlist.append(symbol)
+    except Exception as e:
+        print(f"Error fetching {symbol}: {e}")
         continue
 
 # Save watchlist
-with open("collector/watchlist.json", "w") as f:
-    json.dump(penny_stocks, f, indent=2)
+with open(WATCHLIST_FILE, "w") as f:
+    json.dump(watchlist, f, indent=2)
 
-print(f"Watchlist generated: {len(penny_stocks)} penny stocks")
+print(f"✅ Watchlist updated with {len(watchlist)} symbols")
