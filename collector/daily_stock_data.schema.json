@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Daily Stock Data",
   "type": "array",
   "items": {
     "type": "object",
@@ -11,10 +12,19 @@
       "timestamp": { "type": "string", "format": "date-time" },
       "stocks": {
         "type": "array",
-        "items": { "$ref": "#" }
+        "items": {
+          "type": "object",
+          "properties": {
+            "symbol": { "type": "string" },
+            "name": { "type": "string" },
+            "price": { "type": "number" },
+            "percent_change": { "type": "number" },
+            "timestamp": { "type": "string", "format": "date-time" }
+          },
+          "required": ["symbol", "name", "price", "percent_change"]
+        }
       }
     },
-    "required": ["timestamp"],
     "anyOf": [
       { "required": ["symbol", "name", "price", "percent_change", "timestamp"] },
       { "required": ["timestamp", "stocks"] }
