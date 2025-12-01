@@ -1,8 +1,9 @@
 import os
 import json
-import requests
 import logging
 from datetime import datetime
+import yfinance as yf
+import pandas as pd
 
 # -------------------------------
 #  LOGGING SETUP
@@ -17,25 +18,11 @@ logging.basicConfig(
 
 logging.info("📌 Collector started")
 
-
+# -------------------------------
+#  FILE PATHS
+# -------------------------------
 WATCHLIST_FILE = "collector/watchlist.json"
 DAILY_DATA_FILE = "collector/daily_stock_data.json"
-
-API_KEY = os.environ.get("FINNHUB_API_KEY")
-BASE_URL = "https://finnhub.io/api/v1"
-
-
-# -------------------------------
-#  VALIDATE API KEY
-# -------------------------------
-if not API_KEY:
-    msg = "❌ FINNHUB_API_KEY not found in environment variables!"
-    print(msg)
-    logging.error(msg)
-    raise SystemExit(msg)
-
-logging.info("API key detected. Starting operations...")
-
 
 # -------------------------------
 #  Ensure watchlist.json exists
@@ -45,54 +32,39 @@ if not os.path.exists(WATCHLIST_FILE):
         json.dump([], f)
     logging.info("Created new empty watchlist.json")
 
-
 # -------------------------------
-#  Fetch all US stock symbols
+#  Fetch all US tickers (penny stock filter)
 # -------------------------------
-logging.info("Fetching US stock list from Finnhub...")
+logging.info("Fetching US tickers and filtering penny stocks...")
 
 try:
-    res = requests.get(f"{BASE_URL}/stock/symbol?exchange=US&token={API_KEY}")
-    res.raise_for_status()
-    all_stocks = res.json()
-    logging.info(f"Fetched {len(all_stocks)} US stock symbols")
+    # Example: S&P 500 tickers or custom list; here we'll use a simple predefined sample
+    # Replace with your own symbols for full coverage if needed
+    all_symbols = ["AAPL", "MSFT", "TSLA", "GME", "AMC", "NOK", "BB", "F"]
+    
+    penny_stocks = []
+    
+    for symbol in all_symbols:
+        try:
+            ticker = yf.Ticker(symbol)
+            price = ticker.info.get("regularMarketPrice", 0)
+            name = ticker.info.get("shortName", symbol)
+            
+            if 0 < price <= 5:  # Adjust ceiling for penny stocks if desired
+                penny_stocks.append({"symbol": symbol, "name": name})
+                logging.info(f"Added penny stock: {symbol} at ${price}")
+        except Exception as e:
+            logging.warning(f"Skipping {symbol}: {e}")
+            continue
+    
+    # Save watchlist.json
+    with open(WATCHLIST_FILE, "w") as f:
+        json.dump(penny_stocks, f, indent=2)
+    
+    logging.info(f"Watchlist saved with {len(penny_stocks)} penny stocks")
 except Exception as e:
-    msg = f"❌ Error fetching US stock list: {e}"
-    print(msg)
-    logging.error(msg)
-    all_stocks = []
-
-
-# -------------------------------
-#  Filter penny stocks
-# -------------------------------
-logging.info("Filtering penny stocks (price ≤ $1)...")
-
-penny_stocks = []
-
-for stock in all_stocks:
-    symbol = stock.get("symbol")
-    name = stock.get("description", "")
-
-    try:
-        price_res = requests.get(f"{BASE_URL}/quote?symbol={symbol}&token={API_KEY}")
-        price_data = price_res.json()
-        price = price_data.get("c", 0)
-
-        if 0 < price <= 1:
-            penny_stocks.append({"symbol": symbol, "name": name})
-            logging.info(f"Added penny stock: {symbol} at ${price}")
-
-    except Exception as e:
-        logging.warning(f"Skipping symbol {symbol}: {e}")
-        continue
-
-# Save watchlist
-with open(WATCHLIST_FILE, "w") as f:
-    json.dump(penny_stocks, f, indent=2)
-
-logging.info(f"Watchlist saved with {len(penny_stocks)} penny stocks.")
-
+    logging.error(f"❌ Failed to fetch tickers: {e}")
+    penny_stocks = []
 
 # -------------------------------
 #  Collect daily stock data
@@ -107,31 +79,28 @@ daily_entry = {
 for stock in penny_stocks:
     symbol = stock["symbol"]
     name = stock["name"]
-
+    
     try:
-        price_res = requests.get(f"{BASE_URL}/quote?symbol={symbol}&token={API_KEY}")
-        price_data = price_res.json()
-
-        price = price_data.get("c", 0)
-        prev_close = price_data.get("pc", 0)
-
-        pct_change = 0
-        if prev_close:
-            pct_change = round((price - prev_close) / prev_close * 100, 2)
-
+        ticker = yf.Ticker(symbol)
+        data = ticker.history(period="2d")  # get last 2 days for percent change
+        if len(data) < 2:
+            continue
+        
+        latest_close = data['Close'][-1]
+        prev_close = data['Close'][-2]
+        percent_change = round((latest_close - prev_close) / prev_close * 100, 2) if prev_close else 0
+        
         daily_entry["stocks"].append({
             "symbol": symbol,
             "name": name,
-            "price": price,
-            "percent_change": pct_change
+            "price": round(latest_close, 2),
+            "percent_change": percent_change
         })
-
-        logging.info(f"{symbol} → ${price} ({pct_change}%)")
-
+        
+        logging.info(f"{symbol} → ${latest_close} ({percent_change}%)")
     except Exception as e:
-        logging.error(f"❌ Error fetching data for {symbol}: {e}")
+        logging.error(f"❌ Error collecting data for {symbol}: {e}")
         continue
-
 
 # -------------------------------
 #  Append to daily_stock_data.json
@@ -147,6 +116,6 @@ data.append(daily_entry)
 with open(DAILY_DATA_FILE, "w") as f:
     json.dump(data, f, indent=2)
 
-logging.info("Daily stock data entry saved")
+logging.info("Daily stock data saved")
 logging.info("🎉 Collector completed successfully")
 print(f"Daily stock data updated at {daily_entry['timestamp']}")
