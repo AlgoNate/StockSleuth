@@ -8,26 +8,25 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. Checkout the repo
       - uses: actions/checkout@v3
 
-      # 2. Setup Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      # 3. Install dependencies
+      # Install dependencies
       - name: Install dependencies
         run: npm install
         working-directory: frontend
 
-      # 4. Build the frontend with Parcel
+      # Build the frontend
       - name: Build frontend
         run: npm run build
         working-directory: frontend
 
-      # 5. Deploy to GitHub Pages
+      # Deploy build files
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
