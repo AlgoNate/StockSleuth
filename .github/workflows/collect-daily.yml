@@ -12,22 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
-      # Setup Python
+      # 2️⃣ Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # Install dependencies
+      # 3️⃣ Install dependencies
       - name: Install dependencies
-        run: pip install yfinance jsonschema pandas
+        run: pip install yfinance pandas
 
-      # Run the collector
+      # 4️⃣ Run the collector using Yahoo Finance
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
-      # Validate JSON (optional if you have schema)
+      # 5️⃣ Validate JSON
       - name: Validate daily_stock_data.json
         run: |
           pip install jsonschema
@@ -44,11 +45,11 @@ jobs:
           print("✅ JSON is valid against the schema")
           EOF
 
-      # Commit and push changes
+      # 6️⃣ Commit and push changes
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json
+          git add collector/daily_stock_data.json collector/watchlist.json collector/history/
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
