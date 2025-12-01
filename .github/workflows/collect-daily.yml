@@ -27,17 +27,25 @@ jobs:
           python-version: "3.10"
 
       # 3️⃣ Install dependencies
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt jsonschema
 
       # 4️⃣ Run the collector script
       - run: python collector/collect.py
 
-      # 5️⃣ Validate JSON against schema
-      - name: Validate daily_stock_data.json
-        uses: josephburnett/json-schema-action@v1
-        with:
-          schema: collector/daily_stock_data.schema.json
-          file: collector/daily_stock_data.json
+      # 5️⃣ Validate JSON against schema using Python
+      - name: Validate JSON
+        run: |
+          python - <<EOF
+          import json, jsonschema
+          schema_file = "collector/daily_stock_data.schema.json"
+          data_file = "collector/daily_stock_data.json"
+          with open(schema_file) as f:
+              schema = json.load(f)
+          with open(data_file) as f:
+              data = json.load(f)
+          jsonschema.validate(instance=data, schema=schema)
+          print("✅ JSON is valid against the schema")
+          EOF
 
       # 6️⃣ Commit and push JSON to repo
       - name: Commit and Push JSON
