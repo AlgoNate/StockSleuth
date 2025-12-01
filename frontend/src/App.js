@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react"; // ✅ added useState and useEffect
 import { DATA_URL } from "./config";
 import TopMoversTable from "./components/TopMoversTable";
 
