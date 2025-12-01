@@ -32,7 +32,14 @@ jobs:
       # 4️⃣ Run the collector script
       - run: python collector/collect.py
 
-      # 5️⃣ Commit and push JSON to repo
+      # 5️⃣ Validate JSON against schema
+      - name: Validate daily_stock_data.json
+        uses: josephburnett/json-schema-action@v1
+        with:
+          schema: collector/daily_stock_data.schema.json
+          file: collector/daily_stock_data.json
+
+      # 6️⃣ Commit and push JSON to repo
       - name: Commit and Push JSON
         run: |
           git config --global user.name "github-actions"
