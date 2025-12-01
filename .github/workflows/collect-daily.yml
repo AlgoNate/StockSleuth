@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance pandas jsonschema
 
-      # 4️⃣ Run the collector using Yahoo Finance
+      # 4️⃣ Run the collector
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
@@ -44,7 +44,7 @@ jobs:
           print("✅ JSON is valid against the schema")
           EOF
 
-      # 6️⃣ Commit and push changes
+      # 6️⃣ Commit updated JSON
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
@@ -53,21 +53,21 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
 
-      # 7️⃣ Upload collector.log as artifact
+      # 7️⃣ Upload collector.log (optional)
       - name: Upload collector log
         uses: actions/upload-artifact@v4
         with:
           name: collector-log
           path: collector/collector.log
 
-      # 8️⃣ Upload only the latest history file
-      - name: Upload today's history file
+      # 8️⃣ Upload today's history file only
+      - name: Get latest history file
         id: history
         run: |
           latest_file=$(ls -t collector/history/*.json | head -n1)
           echo "latest_file=$latest_file" >> $GITHUB_OUTPUT
 
-      - name: Upload artifact
+      - name: Upload today's history artifact
         uses: actions/upload-artifact@v4
         with:
           name: daily-history
