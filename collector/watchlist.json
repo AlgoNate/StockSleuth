@@ -1,15 +1,15 @@
 [
   {
-    "symbol": "AACBR",
-    "name": "Artius II Acquisition Inc."
-  },
-  {
     "symbol": "ABLV",
     "name": "Able View Global Inc."
   },
   {
     "symbol": "ABLVW",
     "name": "Able View Global Inc. Warrant"
+  },
+  {
+    "symbol": "ABPWW",
+    "name": "ABPWW"
   },
   {
     "symbol": "ABVEW",
@@ -28,10 +28,6 @@
     "name": "Adial Pharmaceuticals, Inc"
   },
   {
-    "symbol": "ADSEW",
-    "name": "ADS-TEC ENERGY PLC Warrant"
-  },
-  {
     "symbol": "ADV",
     "name": "Advantage Solutions Inc."
   },
@@ -44,12 +40,12 @@
     "name": "Aeries Technology, Inc."
   },
   {
-    "symbol": "AEVAW",
-    "name": "Aeva Technologies, Inc. Warrant"
+    "symbol": "AERTW",
+    "name": "AERTW"
   },
   {
-    "symbol": "AFRIW",
-    "name": "Forafric Global PLC Warrants"
+    "symbol": "AEVAW",
+    "name": "Aeva Technologies, Inc. Warrant"
   },
   {
     "symbol": "AGAE",
@@ -60,32 +56,32 @@
     "name": "Robo.ai Inc."
   },
   {
-    "symbol": "AIIOW",
-    "name": "AIIOW"
-  },
-  {
     "symbol": "AIRE",
     "name": "reAlpha Tech Corp."
-  },
-  {
-    "symbol": "AIRJW",
-    "name": "AIRJW"
   },
   {
     "symbol": "AIXI",
     "name": "XIAO-I Corporation"
   },
   {
+    "symbol": "AKAN",
+    "name": "Akanda Corp."
+  },
+  {
     "symbol": "AKTX",
     "name": "Akari Therapeutics Plc"
   },
   {
-    "symbol": "AMOD",
-    "name": "Alpha Modus Holdings, Inc."
+    "symbol": "ALDFW",
+    "name": "Aldel Financial II Inc. Warrant"
   },
   {
-    "symbol": "AMPGW",
-    "name": "Amplitech Group, Inc."
+    "symbol": "ALISR",
+    "name": "Calisa Acquisition Corp"
+  },
+  {
+    "symbol": "AMOD",
+    "name": "Alpha Modus Holdings, Inc."
   },
   {
     "symbol": "ANY",
@@ -116,20 +112,12 @@
     "name": "American Rebel Holdings, Inc. W"
   },
   {
-    "symbol": "ARKOW",
-    "name": "ARKO Corp."
-  },
-  {
     "symbol": "ARQQW",
     "name": "Arqit Quantum Inc. Warrants"
   },
   {
     "symbol": "ASBP",
     "name": "Aspire Biopharma Holdings, Inc."
-  },
-  {
-    "symbol": "ASBPW",
-    "name": "ASBPW"
   },
   {
     "symbol": "ASPSW",
@@ -152,6 +140,14 @@
     "name": "Aterian, Inc."
   },
   {
+    "symbol": "ATMCR",
+    "name": "AlphaTime Acquisition Corp"
+  },
+  {
+    "symbol": "ATMCW",
+    "name": "AlphaTime Acquisition Corp Warr"
+  },
+  {
     "symbol": "ATMVR",
     "name": "AlphaVest Acquisition Corp"
   },
@@ -169,7 +165,7 @@
   },
   {
     "symbol": "AURE",
-    "name": "Prestige Wealth Inc."
+    "name": "Aurelion Inc."
   },
   {
     "symbol": "AUROW",
@@ -184,14 +180,6 @@
     "name": "Autozi Internet Technology (Glo"
   },
   {
-    "symbol": "BACCR",
-    "name": "Blue Acquisition Corp."
-  },
-  {
-    "symbol": "BACQR",
-    "name": "Inflection Point Acquisition Co"
-  },
-  {
     "symbol": "BAERW",
     "name": "Bridger Aerospace Group Holding"
   },
@@ -204,24 +192,20 @@
     "name": "BioAtla, Inc."
   },
   {
-    "symbol": "BCGWW",
-    "name": "Binah Capital Group, Inc. Warra"
+    "symbol": "BCARW",
+    "name": "D. Boral ARC Acquisition I Corp"
   },
   {
-    "symbol": "BCTXW",
-    "name": "BriaCell Therapeutics Corp."
+    "symbol": "BDMDW",
+    "name": "BDMDW"
   },
   {
-    "symbol": "BDCIW",
-    "name": "BTC Development Corp. Warrant"
+    "symbol": "BEAGR",
+    "name": "Bold Eagle Acquisition Corp."
   },
   {
     "symbol": "BEAT",
     "name": "Heartbeam, Inc."
-  },
-  {
-    "symbol": "BEATW",
-    "name": "Heartbeam, Inc. Warrant"
   },
   {
     "symbol": "BENF",
@@ -236,28 +220,12 @@
     "name": "BETRW"
   },
   {
-    "symbol": "BFRG",
-    "name": "Bullfrog AI Holdings, Inc."
-  },
-  {
-    "symbol": "BFRGW",
-    "name": "Bullfrog AI Holdings, Inc. Warr"
-  },
-  {
     "symbol": "BFRI",
     "name": "Biofrontera Inc."
   },
   {
     "symbol": "BGLWW",
     "name": "Blue Gold Limited Warrant"
-  },
-  {
-    "symbol": "BIAFW",
-    "name": "bioAffinity Technologies, Inc. "
-  },
-  {
-    "symbol": "BIVIW",
-    "name": "BioVie Inc. Warrant"
   },
   {
     "symbol": "BIYA",
@@ -268,8 +236,8 @@
     "name": "BIO-key International, Inc."
   },
   {
-    "symbol": "BLIN",
-    "name": "Bridgeline Digital, Inc."
+    "symbol": "BLMZ",
+    "name": "Harrison Global Holdings Inc."
   },
   {
     "symbol": "BLUWW",
@@ -280,8 +248,8 @@
     "name": "Brand Engagement Network Inc."
   },
   {
-    "symbol": "BNAIW",
-    "name": "BNAIW"
+    "symbol": "BNCWW",
+    "name": "BNCWW"
   },
   {
     "symbol": "BNKK",
@@ -296,20 +264,12 @@
     "name": "Boxlight Corporation"
   },
   {
-    "symbol": "BRLSW",
-    "name": "BRLSW"
-  },
-  {
     "symbol": "BRNS",
     "name": "Barinthus Biotherapeutics plc"
   },
   {
     "symbol": "BRRWW",
     "name": "BRRWW"
-  },
-  {
-    "symbol": "BSLKW",
-    "name": "BSLKW"
   },
   {
     "symbol": "BTMWW",
@@ -328,12 +288,12 @@
     "name": "Park Ha Biological Technology C"
   },
   {
-    "symbol": "BYND",
-    "name": "Beyond Meat, Inc."
-  },
-  {
     "symbol": "BZFD",
     "name": "BuzzFeed, Inc."
+  },
+  {
+    "symbol": "CAN",
+    "name": "Canaan Inc."
   },
   {
     "symbol": "CAPS",
@@ -344,6 +304,14 @@
     "name": "Captivision Inc."
   },
   {
+    "symbol": "CAPTW",
+    "name": "Captivision Inc. Warrant"
+  },
+  {
+    "symbol": "CASI",
+    "name": "CASI Pharmaceuticals, Inc."
+  },
+  {
     "symbol": "CBAT",
     "name": "CBAK Energy Technology, Inc."
   },
@@ -352,20 +320,8 @@
     "name": "Cheche Group Inc."
   },
   {
-    "symbol": "CCGWW",
-    "name": "Cheche Group Inc. Warrant"
-  },
-  {
-    "symbol": "CCIIW",
-    "name": "Cohen Circle Acquisition Corp. "
-  },
-  {
     "symbol": "CCTG",
     "name": "CCSC Technology International H"
-  },
-  {
-    "symbol": "CDIOW",
-    "name": "CDIOW"
   },
   {
     "symbol": "CDROW",
@@ -374,10 +330,6 @@
   {
     "symbol": "CDTG",
     "name": "CDT Environmental Technology In"
-  },
-  {
-    "symbol": "CDTTW",
-    "name": "CDTTW"
   },
   {
     "symbol": "CELUW",
@@ -392,20 +344,12 @@
     "name": "Creative Global Technology Hold"
   },
   {
-    "symbol": "CHACR",
-    "name": "Crane Harbor Acquisition Corp."
-  },
-  {
     "symbol": "CHR",
     "name": "Cheer Holding, Inc."
   },
   {
     "symbol": "CIIT",
     "name": "Tianci International, Inc."
-  },
-  {
-    "symbol": "CINGW",
-    "name": "Cingulate Inc. Warrants"
   },
   {
     "symbol": "CISO",
@@ -416,12 +360,12 @@
     "name": "ClearSign Technologies Corporat"
   },
   {
-    "symbol": "CLPS",
-    "name": "CLPS Incorporation"
+    "symbol": "CLNNW",
+    "name": "Clene Inc."
   },
   {
-    "symbol": "CLSD",
-    "name": "Clearside Biomedical, Inc."
+    "symbol": "CLPS",
+    "name": "CLPS Incorporation"
   },
   {
     "symbol": "CLSKW",
@@ -432,31 +376,15 @@
     "name": "Clearmind Medicine Inc."
   },
   {
-    "symbol": "CNCKW",
-    "name": "Coincheck Group N.V. Warrants"
-  },
-  {
     "symbol": "COCH",
     "name": "Envoy Medical, Inc."
-  },
-  {
-    "symbol": "COCHW",
-    "name": "COCHW"
   },
   {
     "symbol": "CODX",
     "name": "Co-Diagnostics, Inc."
   },
   {
-    "symbol": "COEPW",
-    "name": "COEPW"
-  },
-  {
     "symbol": "COOT",
-    "name": "Australian Oilseeds Holdings Li"
-  },
-  {
-    "symbol": "COOTW",
     "name": "Australian Oilseeds Holdings Li"
   },
   {
@@ -468,12 +396,12 @@
     "name": "Pop Culture Group Co., Ltd"
   },
   {
-    "symbol": "CRE",
-    "name": "Cre8 Enterprise Limited"
+    "symbol": "CRDL",
+    "name": "Cardiol Therapeutics Inc."
   },
   {
-    "symbol": "CREVW",
-    "name": "Carbon Revolution Public Limite"
+    "symbol": "CRE",
+    "name": "Cre8 Enterprise Limited"
   },
   {
     "symbol": "CRGOW",
@@ -482,10 +410,6 @@
   {
     "symbol": "CTSO",
     "name": "Cytosorbents Corporation"
-  },
-  {
-    "symbol": "CUBWW",
-    "name": "Lionheart Holdings Warrant"
   },
   {
     "symbol": "CUE",
@@ -508,16 +432,8 @@
     "name": "CXAIW"
   },
   {
-    "symbol": "CYCUW",
-    "name": "Cycurion, Inc. Warrant"
-  },
-  {
-    "symbol": "DAICW",
-    "name": "CID HoldCo, Inc. Warrants"
-  },
-  {
-    "symbol": "DAVEW",
-    "name": "Dave Inc. Warrants"
+    "symbol": "DCGO",
+    "name": "DocGo Inc."
   },
   {
     "symbol": "DFLI",
@@ -528,10 +444,6 @@
     "name": "DFLIW"
   },
   {
-    "symbol": "DHAI",
-    "name": "DIH Holding US, Inc."
-  },
-  {
     "symbol": "DKI",
     "name": "DarkIris Inc."
   },
@@ -540,8 +452,20 @@
     "name": "Delixy Holdings Limited"
   },
   {
+    "symbol": "DMAAR",
+    "name": "Drugs Made In America Acquisiti"
+  },
+  {
+    "symbol": "DNMXW",
+    "name": "Dynamix Corporation III Warrants"
+  },
+  {
     "symbol": "DRCT",
     "name": "Direct Digital Holdings, Inc."
+  },
+  {
+    "symbol": "DRTSW",
+    "name": "Alpha Tau Medical Ltd. Warrant"
   },
   {
     "symbol": "DSY",
@@ -554,6 +478,10 @@
   {
     "symbol": "DTCK",
     "name": "Davis Commodities Limited"
+  },
+  {
+    "symbol": "DTSQR",
+    "name": "DT Cloud Star Acquisition Corpo"
   },
   {
     "symbol": "DTSTW",
@@ -582,5 +510,37 @@
   {
     "symbol": "EEIQ",
     "name": "EpicQuest Education Group Inter"
+  },
+  {
+    "symbol": "EHGO",
+    "name": "Eshallgo Inc."
+  },
+  {
+    "symbol": "EJH",
+    "name": "E-Home Household Service Holdin"
+  },
+  {
+    "symbol": "ELBM",
+    "name": "Electra Battery Materials Corpo"
+  },
+  {
+    "symbol": "ELPW",
+    "name": "Elong Power Holding Limited"
+  },
+  {
+    "symbol": "ELUT",
+    "name": "Elutia, Inc."
+  },
+  {
+    "symbol": "ENLV",
+    "name": "Enlivex Therapeutics Ltd."
+  },
+  {
+    "symbol": "EQ",
+    "name": "Equillium, Inc."
+  },
+  {
+    "symbol": "ETS",
+    "name": "Elite Express Holding Inc."
   }
 ]
