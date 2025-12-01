@@ -4,5 +4,5 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": { "react": "^18.0.0", "react-dom": "^18.0.0" },
-  "scripts": { "start": "parcel public/index.html --port 3000", "build": "parcel build public/index.html --public-url ./" }
+  "scripts": { "start": "parcel public/index.html --port 3000", "build": "parcel build public/index.html --public-url ./", "predeploy": "npm run build" }
 }
