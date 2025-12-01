@@ -1,78 +1,45 @@
-name: Daily Stock Collector & Frontend Deployment
+name: Daily Stock Collector
 
 on:
   schedule:
-    - cron: "30 13 * * 1-5"   # 9:30 AM ET
-    - cron: "0 18 * * 1-5"    # 1:00 PM ET
-    - cron: "5 21 * * 1-5"    # 4:05 PM ET
-    - cron: "0 3 * * 0"       # Weekly watchlist regeneration: Sunday 3:00 AM UTC
+    - cron: "30 13 * * 1-5"
+    - cron: "0 18 * * 1-5"
+    - cron: "5 21 * * 1-5"
   workflow_dispatch:
 
 jobs:
-  collect-and-deploy:
+  collect:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
-      # 2️⃣ Setup Python & Node
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-
-      # 3️⃣ Install Python dependencies
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: pip install yfinance pandas jsonschema
 
-      # 4️⃣ Generate watchlist
-      - name: Generate Watchlist
-        run: python collector/generate_watchlist.py
-
-      # 5️⃣ Run Daily Stock Collector
-      - name: Run Collector
+      - name: Run Daily Stock Collector
         run: python collector/collect.py
 
-      # 6️⃣ Validate JSON
       - name: Validate JSON
         run: |
           python - <<EOF
-          import json
-          import jsonschema
-
+          import json, jsonschema
           with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
           with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
-
           jsonschema.validate(instance=data, schema=schema)
-          print("✅ JSON is valid against the schema")
+          print("✅ JSON is valid")
           EOF
 
-      # 7️⃣ Commit & push updates
-      - name: Commit & Push JSON
+      - name: Commit & Push
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add collector/daily_stock_data.json collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
-
-      # 8️⃣ Build & Deploy Frontend
-      - name: Install Frontend Dependencies
-        run: npm install
-        working-directory: frontend
-
-      - name: Build Frontend
-        run: npm run build
-        working-directory: frontend
-
-      - name: Deploy Frontend to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: frontend/dist
