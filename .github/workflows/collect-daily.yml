@@ -60,14 +60,15 @@ jobs:
           name: collector-log
           path: collector/collector.log
 
-      # 8️⃣ Upload today's history file only
+      # 8️⃣ Upload only the latest history file
       - name: Upload today's history file
-        uses: actions/upload-artifact@v4
+        id: history
         run: |
-          # Get the latest history file
           latest_file=$(ls -t collector/history/*.json | head -n1)
-          echo "Uploading $latest_file"
+          echo "latest_file=$latest_file" >> $GITHUB_OUTPUT
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: daily-history
-          path: ${{ steps.upload.outputs.latest_file }}
-
+          path: ${{ steps.history.outputs.latest_file }}
