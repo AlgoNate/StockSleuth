@@ -1,7 +1,6 @@
 import os
 import json
 import yfinance as yf
-import pandas as pd
 
 WATCHLIST_FILE = "collector/watchlist.json"
 
@@ -10,7 +9,7 @@ if not os.path.exists(WATCHLIST_FILE):
     with open(WATCHLIST_FILE, "w") as f:
         json.dump([], f)
 
-# Example set of symbols to scan; you can extend this list
+# Example symbols to scan; extendable
 symbols_to_check = [
     "GME", "AMC", "PLUG", "NOK", "SNDL", "VKSC", "UCLE", "PPCB",
     "BIEL", "CYAN", "GLNLF", "CPMD", "DMIFF", "NRXPW", "IDGC",
@@ -28,7 +27,8 @@ for symbol in symbols_to_check:
         if not data.empty:
             price = float(data["Close"].iloc[-1])
             if 0 < price <= 1:
-                name = ticker.info.get("shortName", symbol)
+                # Use shortName if available; fallback to symbol
+                name = ticker.info.get("shortName") or symbol
                 penny_stocks.append({"symbol": symbol, "name": name, "price": price})
                 print(f"✅ {symbol} added: ${price}")
     except Exception as e:
