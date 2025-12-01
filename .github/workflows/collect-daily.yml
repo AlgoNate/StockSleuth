@@ -22,16 +22,21 @@ jobs:
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
-        run: pip install yfinance pandas
+        run: pip install yfinance pandas jsonschema
 
-      # 4️⃣ Run the collector using Yahoo Finance
+      # 4️⃣ Ensure history folder exists
+      - name: Ensure history folder
+        run: |
+          mkdir -p collector/history
+          touch collector/history/.gitkeep
+
+      # 5️⃣ Run the collector
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
-      # 5️⃣ Validate JSON
+      # 6️⃣ Validate JSON
       - name: Validate daily_stock_data.json
         run: |
-          pip install jsonschema
           python - <<EOF
           import json
           import jsonschema
@@ -45,7 +50,7 @@ jobs:
           print("✅ JSON is valid against the schema")
           EOF
 
-      # 6️⃣ Commit and push changes
+      # 7️⃣ Commit & push JSON and history
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
@@ -53,3 +58,11 @@ jobs:
           git add collector/daily_stock_data.json collector/watchlist.json collector/history/
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
+
+      # 8️⃣ Optional: Upload logs as artifact
+      - name: Upload collector log
+        if: exists('collector/collector.log')
+        uses: actions/upload-artifact@v4
+        with:
+          name: collector-logs
+          path: collector/collector.log
