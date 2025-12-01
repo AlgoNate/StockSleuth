@@ -1,26 +1,41 @@
-import yfinance as yf
+import os
 import json
+import yfinance as yf
+import pandas as pd
 
 WATCHLIST_FILE = "collector/watchlist.json"
 
-# Example: top US penny stocks (symbols under $5)
-symbols = ["GME", "PLUG", "AMC", "FUBO", "SNDL"]  # replace/add symbols you want
+# Ensure watchlist file exists
+if not os.path.exists(WATCHLIST_FILE):
+    with open(WATCHLIST_FILE, "w") as f:
+        json.dump([], f)
 
-watchlist = []
+# Example set of symbols to scan; you can extend this list
+symbols_to_check = [
+    "GME", "AMC", "PLUG", "NOK", "SNDL", "VKSC", "UCLE", "PPCB",
+    "BIEL", "CYAN", "GLNLF", "CPMD", "DMIFF", "NRXPW", "IDGC",
+    "VHAI", "ARRRF", "BFYW", "ANORF", "AMHGQ"
+]
 
-for symbol in symbols:
+penny_stocks = []
+
+print("🔎 Scanning symbols for penny stocks (price <= $1)...")
+
+for symbol in symbols_to_check:
     try:
-        stock = yf.Ticker(symbol)
-        info = stock.info
-        price = info.get("regularMarketPrice", 0)
-        if price <= 5 and price > 0:
-            watchlist.append(symbol)
+        ticker = yf.Ticker(symbol)
+        data = ticker.history(period="1d")
+        if not data.empty:
+            price = float(data["Close"].iloc[-1])
+            if 0 < price <= 1:
+                name = ticker.info.get("shortName", symbol)
+                penny_stocks.append({"symbol": symbol, "name": name, "price": price})
+                print(f"✅ {symbol} added: ${price}")
     except Exception as e:
-        print(f"Error fetching {symbol}: {e}")
-        continue
+        print(f"⚠️ Could not fetch {symbol}: {e}")
 
-# Save watchlist
+# Save watchlist.json
 with open(WATCHLIST_FILE, "w") as f:
-    json.dump(watchlist, f, indent=2)
+    json.dump(penny_stocks, f, indent=2)
 
-print(f"✅ Watchlist updated with {len(watchlist)} symbols")
+print(f"✅ Watchlist generated with {len(penny_stocks)} penny stocks.")
