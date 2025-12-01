@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "parcel public/index.html --port 3000",
-    "build": "parcel build public/index.html --dist-dir dist"
+    "start": "parcel frontend/public/index.html --port 3000",
+    "build": "parcel build frontend/public/index.html --dist-dir frontend/dist"
   },
   "dependencies": {
     "react": "^18.2.0",
