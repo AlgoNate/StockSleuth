@@ -55,7 +55,7 @@
       {
         "symbol": "SNNVF",
         "name": "SUNNIVA INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -139,7 +139,7 @@
       {
         "symbol": "AILEQ",
         "name": "ILEARNINGENGINES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -163,7 +163,7 @@
       {
         "symbol": "RIGH",
         "name": "RIGHTSMILE INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -2143,13 +2143,13 @@
       {
         "symbol": "IGNT",
         "name": "INGEN TECHNOLOGIES INC",
-        "price": 2.2e-05,
+        "price": 2.2e-5,
         "percent_change": 2100.0
       },
       {
         "symbol": "VRED",
         "name": "VIRTUAL ED LINK INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -2263,7 +2263,7 @@
       {
         "symbol": "TPNI",
         "name": "PULSE NETWORK INC/THE",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -4567,7 +4567,7 @@
       {
         "symbol": "CMGR",
         "name": "CLUBHOUSE MEDIA GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -4669,7 +4669,7 @@
       {
         "symbol": "PCTL",
         "name": "PCT LTD",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -4735,7 +4735,7 @@
       {
         "symbol": "EFIR",
         "name": "EGPI FIRECREEK INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -4777,7 +4777,7 @@
       {
         "symbol": "BKMP",
         "name": "BLACKOUT MEDIA CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -4801,7 +4801,7 @@
       {
         "symbol": "AAGRW",
         "name": "AFRICAN AGRICULTURE HOL-CW27",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -7398,7 +7398,7 @@
       {
         "symbol": "AFPW",
         "name": "ALUMIFUEL POWER CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -7482,7 +7482,7 @@
       {
         "symbol": "PPJE",
         "name": "PPJ HEALTHCARE ENTERPRISES I",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -7566,7 +7566,7 @@
       {
         "symbol": "FTXP",
         "name": "FOOTHILLS EXPLORATION INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -7596,19 +7596,19 @@
       {
         "symbol": "SYVN",
         "name": "SYCAMORE VENTURES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
         "symbol": "NUNZ",
         "name": "NUNZIA PHARMACEUTICAL CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
         "symbol": "TOMDF",
         "name": "TODOS MEDICAL LTD",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -7698,7 +7698,7 @@
       {
         "symbol": "HEMP",
         "name": "HEMP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -9708,7 +9708,7 @@
       {
         "symbol": "MRRCF",
         "name": "WAYLAND GROUP CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -9828,7 +9828,7 @@
       {
         "symbol": "BSSP",
         "name": "BASSLINE PRODUCTIONS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -9894,7 +9894,7 @@
       {
         "symbol": "BDGR",
         "name": "BLACK DRAGON RESOURCE COS IN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -11778,7 +11778,7 @@
       {
         "symbol": "MRNJ",
         "name": "METATRON INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -11826,7 +11826,7 @@
       {
         "symbol": "TTCFQ",
         "name": "TATTOOED CHEF INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -11862,7 +11862,7 @@
       {
         "symbol": "VGFCQ",
         "name": "VERY GOOD FOOD CO INC/THE",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -11904,7 +11904,7 @@
       {
         "symbol": "ALEAF",
         "name": "ALEAFIA HEALTH INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -12084,13 +12084,13 @@
       {
         "symbol": "NBRVF",
         "name": "NABRIVA THERAPEUTICS PLC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
         "symbol": "OPMZ",
         "name": "1PM INDUSTRIES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -12126,7 +12126,7 @@
       {
         "symbol": "GEGI",
         "name": "GENESIS ELECTRONICS GROUP IN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -12833,7 +12833,7 @@
       {
         "symbol": "SNNVF",
         "name": "SUNNIVA INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -12893,7 +12893,7 @@
       {
         "symbol": "RBDC",
         "name": "RBID.COM INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -13007,7 +13007,7 @@
       {
         "symbol": "CNTTQ",
         "name": "CANNTRUST HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -13139,7 +13139,7 @@
       {
         "symbol": "TBEV",
         "name": "HIGH PERFORMANCE BEVERAGES C",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -15731,7 +15731,7 @@
       {
         "symbol": "MBLMF",
         "name": "MOBILUM TECHNOLOGIES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -15767,7 +15767,7 @@
       {
         "symbol": "TPTW",
         "name": "TPT GLOBAL TECH INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -15797,7 +15797,7 @@
       {
         "symbol": "BIOLQ",
         "name": "BIOLASE INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -15899,7 +15899,7 @@
       {
         "symbol": "GOEWQ",
         "name": "HENNESSY CAPITAL ACQUIS-CW25",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -15929,7 +15929,7 @@
       {
         "symbol": "SFLM",
         "name": "SFLMAVEN CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -16067,7 +16067,7 @@
       {
         "symbol": "TSOI",
         "name": "THERAPEUTIC SOLUTIONS INTERN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -17500,7 +17500,7 @@
       {
         "symbol": "CYLC",
         "name": "COUNTY LINE ENERGY CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -17512,7 +17512,7 @@
       {
         "symbol": "TNGNQ",
         "name": "TENGION INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -20487,7 +20487,7 @@
       {
         "symbol": "MJNE",
         "name": "MJ HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -20505,7 +20505,7 @@
       {
         "symbol": "ANDR",
         "name": "ANDREA ELECTRONICS CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -20529,7 +20529,7 @@
       {
         "symbol": "ASCJF",
         "name": "AMSC ASA",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -100.0
       },
       {
@@ -20565,7 +20565,7 @@
       {
         "symbol": "GYOG",
         "name": "GREEN ENERGY ENTERPRISES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -20667,7 +20667,7 @@
       {
         "symbol": "GEECF",
         "name": "GLOBAL ENVIRONMENTAL ENERGY",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -20721,7 +20721,7 @@
       {
         "symbol": "INTK",
         "name": "INDUSTRIAL NANOTECH INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -20781,7 +20781,7 @@
       {
         "symbol": "BBBT",
         "name": "BLACK BIRD BIOTECH INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -22845,7 +22845,7 @@
       {
         "symbol": "MMMM",
         "name": "QUAD M SOLUTIONS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -22857,7 +22857,7 @@
       {
         "symbol": "BANT",
         "name": "BANTEK INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -22917,7 +22917,7 @@
       {
         "symbol": "FLOOF",
         "name": "FLOWER ONE HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -22965,7 +22965,7 @@
       {
         "symbol": "MSHE",
         "name": "MSH ENTERTAINMENT CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -25035,7 +25035,7 @@
       {
         "symbol": "VRTHF",
         "name": "INDIGENOUS BLOOM HEMP CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -25101,7 +25101,7 @@
       {
         "symbol": "TTCFQ",
         "name": "TATTOOED CHEF INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -25173,7 +25173,7 @@
       {
         "symbol": "UNSS",
         "name": "UNIVERSAL SOLAR TECHNOLOGY",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.5
       },
       {
@@ -27153,7 +27153,7 @@
       {
         "symbol": "HMNU",
         "name": "HUMAN UNITEC INTERNATIONAL",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -27476,7 +27476,7 @@
       {
         "symbol": "PGPM",
         "name": "PILGRIM PETROLEUM CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -27506,7 +27506,7 @@
       {
         "symbol": "SHWZ",
         "name": "MEDICINE MAN TECHNOLOGIES IN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -27584,7 +27584,7 @@
       {
         "symbol": "ETEK",
         "name": "ECO-TEK GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -27632,7 +27632,7 @@
       {
         "symbol": "VIEWF",
         "name": "VIEWTRAN GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -27668,7 +27668,7 @@
       {
         "symbol": "AILEQ",
         "name": "ILEARNINGENGINES INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -27740,7 +27740,7 @@
       {
         "symbol": "ISOLF",
         "name": "ISODIOL INTERNATIONAL INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -30997,7 +30997,7 @@
       {
         "symbol": "GOEWQ",
         "name": "HENNESSY CAPITAL ACQUIS-CW25",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -31213,7 +31213,7 @@
       {
         "symbol": "PRCNF",
         "name": "PURE GLOBAL CANNABIS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -31225,13 +31225,13 @@
       {
         "symbol": "EVIO",
         "name": "EVIO INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
         "symbol": "AFTM",
         "name": "AFTERMASTER INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -31303,7 +31303,7 @@
       {
         "symbol": "VGID",
         "name": "V GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -31315,7 +31315,7 @@
       {
         "symbol": "MVVYF",
         "name": "MOOVLY MEDIA INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -34548,7 +34548,7 @@
       {
         "symbol": "CNTTQ",
         "name": "CANNTRUST HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -34644,7 +34644,7 @@
       {
         "symbol": "HVCW",
         "name": "HARRISON VICKERS & WATERMAN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -34710,7 +34710,7 @@
       {
         "symbol": "NHMD",
         "name": "NATE'S FOOD CO",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -34764,7 +34764,7 @@
       {
         "symbol": "TCHH",
         "name": "TRUSTCASH HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -37038,7 +37038,7 @@
       {
         "symbol": "HYBE",
         "name": "HYBRID ENERGY HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -37254,7 +37254,7 @@
       {
         "symbol": "IAHL",
         "name": "IAHL CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -37290,7 +37290,7 @@
       {
         "symbol": "IMJX",
         "name": "IMAGEXPRES CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -39474,13 +39474,13 @@
       {
         "symbol": "HBRM",
         "name": "HERBORIUM GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
         "symbol": "MTVX",
         "name": "APT MOTO VOX GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -39516,7 +39516,7 @@
       {
         "symbol": "HDVY",
         "name": "HEALTH DISCOVERY CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -39552,7 +39552,7 @@
       {
         "symbol": "SKYF",
         "name": "SKY440 INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -41021,7 +41021,7 @@
       {
         "symbol": "STHFF",
         "name": "STELMINE CANADA LTD",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -41063,7 +41063,7 @@
       {
         "symbol": "SONG",
         "name": "MUSIC LICENSING INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
@@ -41111,7 +41111,7 @@
       {
         "symbol": "DRWN",
         "name": "A CLEAN SLATE INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -41135,7 +41135,7 @@
       {
         "symbol": "CNTTQ",
         "name": "CANNTRUST HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -41195,7 +41195,7 @@
       {
         "symbol": "STMH",
         "name": "STEM HOLDINGS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -43462,13 +43462,13 @@
       {
         "symbol": "ATHXQ",
         "name": "ATHERSYS INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
         "symbol": "VPOR",
         "name": "VAPOR GROUP INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -43510,7 +43510,7 @@
       {
         "symbol": "ATTBF",
         "name": "ABATTIS BIOCEUTICALS CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -45268,7 +45268,7 @@
       {
         "symbol": "SHWZ",
         "name": "MEDICINE MAN TECHNOLOGIES IN",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -47614,7 +47614,7 @@
       {
         "symbol": "NSAV",
         "name": "NET SAVINGS LINK INC",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -47692,7 +47692,7 @@
       {
         "symbol": "HDYNQ",
         "name": "HYPERDYNAMICS CORP",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": 0.0
       },
       {
@@ -47758,7 +47758,7 @@
       {
         "symbol": "EBODF",
         "name": "NEW ENERGY EXCHANGE LTD",
-        "price": 1e-06,
+        "price": 1e-6,
         "percent_change": -99.0
       },
       {
