@@ -21,25 +21,23 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance pandas jsonschema
 
-      - name: Run Daily Stock Collector
+      - name: Run collector
         run: python collector/collect.py
 
       - name: Validate JSON
         run: |
           python - <<EOF
           import json, jsonschema
-          with open("collector/daily_stock_data.schema.json") as f:
-              schema = json.load(f)
-          with open("collector/daily_stock_data.json") as f:
-              data = json.load(f)
-          jsonschema.validate(instance=data, schema=schema)
-          print("✅ JSON is valid")
+          schema = json.load(open("collector/daily_stock_data.schema.json"))
+          data = json.load(open("collector/daily_stock_data.json"))
+          jsonschema.validate(data, schema)
+          print("✔ JSON valid")
           EOF
 
-      - name: Commit & Push
+      - name: Commit updates
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json
-          git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
+          git add collector/daily_stock_data.json collector/history/ collector/watchlist.json
+          git diff --cached --quiet || git commit -m "Update stock data [skip ci]"
           git push
