@@ -1,69 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const DATA_URL =
-  "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
+const DATA_URL = "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
 function App() {
   const [stocks, setStocks] = useState([]);
-  const [lastUpdated, setLastUpdated] = useState("");
 
   useEffect(() => {
     fetch(DATA_URL)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
-          const latest = data[data.length - 1];
-          setStocks(latest.stocks || []);
-          setLastUpdated(latest.timestamp);
+          setStocks(data[data.length - 1].stocks);
         }
       })
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
   return (
-    <div className="App" style={{ padding: "1rem", fontFamily: "Arial, sans-serif" }}>
+    <div className="App" style={{ padding: "2rem", fontFamily: "Arial" }}>
       <h1>Top Penny Stocks</h1>
-      {lastUpdated && <h3>Last Updated: {new Date(lastUpdated).toLocaleString()}</h3>}
       <div style={{ overflowX: "auto" }}>
-        <table
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            minWidth: "500px",
-          }}
-        >
+        <table border="1" cellPadding="8" cellSpacing="0">
           <thead>
             <tr>
-              <th style={{ border: "1px solid #ccc", padding: "8px" }}>Symbol</th>
-              <th style={{ border: "1px solid #ccc", padding: "8px" }}>Name</th>
-              <th style={{ border: "1px solid #ccc", padding: "8px" }}>Price ($)</th>
-              <th style={{ border: "1px solid #ccc", padding: "8px" }}>% Change</th>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>% Change</th>
             </tr>
           </thead>
           <tbody>
-            {stocks.map((stock) => (
-              <tr key={stock.symbol}>
-                <td style={{ border: "1px solid #ccc", padding: "8px" }}>{stock.symbol}</td>
-                <td style={{ border: "1px solid #ccc", padding: "8px" }}>{stock.name}</td>
-                <td style={{ border: "1px solid #ccc", padding: "8px" }}>{stock.price.toFixed(2)}</td>
-                <td
-                  style={{
-                    border: "1px solid #ccc",
-                    padding: "8px",
-                    color: stock.percent_change >= 0 ? "green" : "red",
-                  }}
-                >
-                  {stock.percent_change.toFixed(2)}%
-                </td>
+            {stocks.map((s) => (
+              <tr key={s.symbol}>
+                <td>{s.symbol}</td>
+                <td>{s.name}</td>
+                <td>${s.price.toFixed(2)}</td>
+                <td>{s.percent_change.toFixed(2)}%</td>
               </tr>
             ))}
-            {stocks.length === 0 && (
-              <tr>
-                <td colSpan="4" style={{ textAlign: "center", padding: "8px" }}>
-                  No data available
-                </td>
-              </tr>
-            )}
           </tbody>
         </table>
       </div>
