@@ -3,17 +3,29 @@ import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 export default function App() {
   const [stocks, setStocks] = useState([]);
-  const DATA_URL = "https://algonate.github.io/StockSleuth/collector/daily_stock_data.json";
+  const DATA_URL =
+    "https://algonate.github.io/StockSleuth/collector/daily_stock_data.json";
+
   useEffect(() => {
-    fetch(DATA_URL).then(res => res.json()).then(data => setStocks(data));
+    fetch(DATA_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        // Use the latest entry only
+        if (data.length > 0) {
+          setStocks(data[data.length - 1].stocks);
+        }
+      })
+      .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>Top 25 Penny Movers</Text>
-      {stocks.map(s => (
+      <Text style={styles.header}>Top Penny Movers</Text>
+      {stocks.map((s) => (
         <View key={s.symbol} style={styles.card}>
-          <Text>{s.symbol}: ${s.price.toFixed(3)} ({s.percent_change.toFixed(2)}%)</Text>
+          <Text>
+            {s.symbol}: ${s.price.toFixed(3)} ({s.percent_change.toFixed(2)}%)
+          </Text>
         </View>
       ))}
     </ScrollView>
@@ -21,7 +33,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container:{padding:20,backgroundColor:'#111'},
-  header:{fontSize:24,fontWeight:'bold',color:'#fff',marginBottom:10},
-  card:{padding:10,backgroundColor:'#222',marginBottom:5,borderRadius:5,color:'#fff'}
+  container: { padding: 20, backgroundColor: "#111" },
+  header: { fontSize: 24, fontWeight: "bold", color: "#fff", marginBottom: 10 },
+  card: { padding: 10, backgroundColor: "#222", marginBottom: 5, borderRadius: 5, color: "#fff" },
 });
