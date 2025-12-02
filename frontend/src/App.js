@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
-// GitHub Pages raw JSON URL
 const DATA_URL =
   "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
 export default function App() {
   const [stocks, setStocks] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
+
+  // Sorting State
+  const [sortConfig, setSortConfig] = useState({
+    key: null,
+    direction: "asc",
+  });
 
   useEffect(() => {
     fetch(DATA_URL)
@@ -19,8 +24,33 @@ export default function App() {
           setLastUpdated(latest.timestamp);
         }
       })
-      .catch((err) => console.log("Error loading JSON:", err));
+      .catch((err) => console.error("Error loading JSON:", err));
   }, []);
+
+  // Sorting function
+  const sortBy = (key) => {
+    let direction = "asc";
+
+    // If clicking the same column, reverse direction
+    if (sortConfig.key === key && sortConfig.direction === "asc") {
+      direction = "desc";
+    }
+
+    const sorted = [...stocks].sort((a, b) => {
+      if (key === "symbol" || key === "name") {
+        // String sort
+        return direction === "asc"
+          ? a[key].localeCompare(b[key])
+          : b[key].localeCompare(a[key]);
+      } else {
+        // Number sort
+        return direction === "asc" ? a[key] - b[key] : b[key] - a[key];
+      }
+    });
+
+    setSortConfig({ key, direction });
+    setStocks(sorted);
+  };
 
   return (
     <div className="container">
@@ -35,10 +65,10 @@ export default function App() {
       <table>
         <thead>
           <tr>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Price ($)</th>
-            <th>Change (%)</th>
+            <th onClick={() => sortBy("symbol")}>Symbol ⬍</th>
+            <th onClick={() => sortBy("name")}>Name ⬍</th>
+            <th onClick={() => sortBy("price")}>Price ($) ⬍</th>
+            <th onClick={() => sortBy("percent_change")}>Change (%) ⬍</th>
           </tr>
         </thead>
 
