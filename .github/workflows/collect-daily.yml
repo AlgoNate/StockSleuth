@@ -2,9 +2,9 @@ name: Daily Stock Collector
 
 on:
   schedule:
-    - cron: "30 13 * * 1-5"
-    - cron: "0 18 * * 1-5"
-    - cron: "5 21 * * 1-5"
+    - cron: "30 13 * * 1-5"   # 9:30 AM ET
+    - cron: "0 18 * * 1-5"    # 1:00 PM ET
+    - cron: "5 21 * * 1-5"    # 4:05 PM ET
   workflow_dispatch:
 
 jobs:
@@ -12,30 +12,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
+      # 2️⃣ Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: pip install yfinance pandas jsonschema
 
+      # 4️⃣ Run the collector
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
+      # 5️⃣ Validate JSON
       - name: Validate daily_stock_data.json
         run: |
           python - <<EOF
-          import json, jsonschema
+          import json
+          import jsonschema
+
           with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
           with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
-          jsonschema.validate(instance=data, schema=schema)
-          print("✅ JSON is valid")
+
+          # Ensure each entry has 'timestamp' and 'stocks' list
+          for entry in data:
+              jsonschema.validate(instance=entry, schema=schema)
+
+          print("✅ JSON is valid against schema")
           EOF
 
+      # 6️⃣ Commit and push changes
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
