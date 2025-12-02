@@ -1,35 +1,24 @@
 import json
-import yfinance as yf
+from pathlib import Path
 
-WATCHLIST_FILE = "collector/watchlist.json"
+WATCHLIST_FILE = Path("collector/watchlist.json")
+DAILY_FILE = Path("collector/daily_stock_data.json")
 
-# Example symbols
-symbols = [
-    "GME", "AMC", "PLUG", "NOK", "SNDL",
-    "VKSC", "UCLE", "PPCB", "BIEL",
-    "CYAN", "GLNLF", "CPMD", "DMIFF",
-    "NRXPW", "IDGC", "VHAI", "ARRRF",
-    "BFYW", "ANORF", "AMHGQ"
-]
+# Load latest daily data
+if DAILY_FILE.exists():
+    with open(DAILY_FILE) as f:
+        daily_data = json.load(f)
+    latest_stocks = daily_data[-1]["stocks"] if daily_data else []
+else:
+    latest_stocks = []
 
-penny_stocks = []
+# Filter penny stocks
+penny_watchlist = [{"symbol": s["symbol"], "name": s["name"]} 
+                   for s in latest_stocks if s["price"] <= 1]
 
-for symbol in symbols:
-    try:
-        ticker = yf.Ticker(symbol)
-        data = ticker.history(period="1d")
-        if not data.empty:
-            price = float(data["Close"].iloc[-1])
-            if 0 < price <= 1:
-                name = ticker.info.get("shortName", symbol)
-                penny_stocks.append({
-                    "symbol": symbol,
-                    "name": name
-                })
-    except Exception:
-        continue
-
+# Save watchlist
+WATCHLIST_FILE.parent.mkdir(exist_ok=True)
 with open(WATCHLIST_FILE, "w") as f:
-    json.dump(penny_stocks, f, indent=2)
+    json.dump(penny_watchlist, f, indent=2)
 
-print("✔ Watchlist updated.")
+print(f"✔ Watchlist updated ({len(penny_watchlist)} stocks)")
