@@ -1,3 +1,11 @@
 {
-  "expo": { "name": "StockSleuth Mobile", "slug": "StockSleuth-mobile", "version": "1.0.0", "sdkVersion": "50.0.0", "platforms": ["ios","android"] }
+  "expo": {
+    "name": "StockSleuth Mobile",
+    "slug": "StockSleuth-mobile",
+    "version": "1.0.0",
+    "sdkVersion": "50.0.0",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "jsEngine": "hermes"
+  }
 }
