@@ -2,9 +2,10 @@ name: Daily Stock Collector
 
 on:
   schedule:
-    - cron: "30 13 * * 1-5"   # 9:30 AM ET
-    - cron: "0 18 * * 1-5"    # 1:00 PM ET
-    - cron: "5 21 * * 1-5"    # 4:05 PM ET
+    # Market times ET (9:30 AM, 1:00 PM, 4:05 PM)
+    - cron: "30 13 * * 1-5"
+    - cron: "0 18 * * 1-5"
+    - cron: "5 21 * * 1-5"
   workflow_dispatch:
 
 jobs:
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout repo
       - uses: actions/checkout@v3
 
       # 2️⃣ Setup Python
@@ -24,34 +25,32 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance pandas jsonschema
 
-      # 4️⃣ Run the collector
+      # 4️⃣ Generate/Update Watchlist (optional manual trigger)
+      - name: Generate Watchlist
+        run: python collector/generate_watchlist.py
+
+      # 5️⃣ Run Collector
       - name: Run Daily Stock Collector
         run: python collector/collect.py
 
-      # 5️⃣ Validate JSON
+      # 6️⃣ Validate JSON
       - name: Validate daily_stock_data.json
         run: |
           python - <<EOF
-          import json
-          import jsonschema
-
+          import json, jsonschema
           with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
           with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
-
-          # Ensure each entry has 'timestamp' and 'stocks' list
-          for entry in data:
-              jsonschema.validate(instance=entry, schema=schema)
-
-          print("✅ JSON is valid against schema")
+          jsonschema.validate(instance=data, schema=schema)
+          print("✅ JSON validated successfully")
           EOF
 
-      # 6️⃣ Commit and push changes
+      # 7️⃣ Commit & push JSON files
       - name: Commit & Push JSON
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json
+          git add collector/daily_stock_data.json collector/watchlist.json collector/history/
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
