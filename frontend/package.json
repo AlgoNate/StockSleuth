@@ -1,10 +1,12 @@
 {
   "homepage": "https://algonate.github.io/StockSleuth/",
+  {
   "name": "penny-frontend",
   "version": "1.0.0",
   "private": true,
+  "source": "public/index.html",
   "scripts": {
-    "start": "parcel public/index.html --port 3000",
+    "start": "parcel",
     "build": "parcel build public/index.html --dist-dir dist"
   },
   "dependencies": {
@@ -15,3 +17,4 @@
     "parcel": "^2.12.0"
   }
 }
+
