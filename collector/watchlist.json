@@ -1,32 +1,62 @@
 [
   {
+    "symbol": "VKSC",
+    "name": "Viskase Companies, Inc."
+  },
+  {
+    "symbol": "UCLE",
+    "name": "US Nuclear Corp."
+  },
+  {
     "symbol": "PPCB",
-    "name": "Propanc Biopharma, Inc.",
-    "price": 0.9424999952316284
+    "name": "Propanc Biopharma, Inc."
   },
   {
     "symbol": "BIEL",
-    "name": "BioElectronics Corp.",
-    "price": 0.0003000000142492354
+    "name": "BioElectronics Corp."
   },
   {
     "symbol": "CYAN",
-    "name": "Cyanotech Corp.",
-    "price": 0.3499999940395355
+    "name": "Cyanotech Corp."
+  },
+  {
+    "symbol": "GLNLF",
+    "name": "GALAN LITHIUM LTD."
   },
   {
     "symbol": "CPMD",
-    "name": "Cannapharmarx Inc.",
-    "price": 0.004000000189989805
+    "name": "Cannapharmarx Inc."
+  },
+  {
+    "symbol": "DMIFF",
+    "name": "Diamcor Mining Inc."
   },
   {
     "symbol": "NRXPW",
-    "name": "NRXPW",
-    "price": 0.10660000145435333
+    "name": "NRXPW"
+  },
+  {
+    "symbol": "IDGC",
+    "name": "IDGLOBAL CORP"
   },
   {
     "symbol": "VHAI",
-    "name": "Vocodia Holdings Corp.",
-    "price": 9.999999747378752e-05
+    "name": "Vocodia Holdings Corp."
+  },
+  {
+    "symbol": "ARRRF",
+    "name": "Ardea Res Ltd."
+  },
+  {
+    "symbol": "BFYW",
+    "name": "Better For You Wellness Inc."
+  },
+  {
+    "symbol": "ANORF",
+    "name": "ANORTECH INC"
+  },
+  {
+    "symbol": "AMHGQ",
+    "name": "Amergent Hospitality Group, Inc"
   }
 ]
