@@ -157,3 +157,43 @@ tr:hover {
     padding: 6px 10px;
   }
 }
+/* ===========================
+   Error Banner
+=========================== */
+
+.error-banner {
+  background: #ff4d4d;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===========================
+   Loading Skeleton
+=========================== */
+
+.skeleton-wrapper {
+  margin-top: 20px;
+}
+
+.skeleton-row {
+  height: 22px;
+  width: 100%;
+  background: linear-gradient(90deg, #e0e0e0, #f5f5f5, #e0e0e0);
+  background-size: 200%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  animation: shimmer 1.2s infinite;
+}
+
+.dark .skeleton-row {
+  background: linear-gradient(90deg, #444, #555, #444);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200%; }
+  100% { background-position: -200%; }
+}
