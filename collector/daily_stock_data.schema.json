@@ -3,22 +3,25 @@
   "type": "array",
   "items": {
     "type": "object",
+    "required": ["timestamp", "stocks"],
     "properties": {
-      "timestamp": { "type": "string" },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time"
+      },
       "stocks": {
         "type": "array",
         "items": {
           "type": "object",
+          "required": ["symbol", "name", "price", "percent_change"],
           "properties": {
             "symbol": { "type": "string" },
             "name": { "type": "string" },
             "price": { "type": "number" },
             "percent_change": { "type": "number" }
-          },
-          "required": ["symbol", "name", "price", "percent_change"]
+          }
         }
       }
-    },
-    "required": ["timestamp", "stocks"]
+    }
   }
 }
