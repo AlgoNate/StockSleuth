@@ -1,36 +1,40 @@
-name: Penny Stock Pipeline
+name: Penny Stock Collector + Frontend Deploy
 
 on:
   schedule:
-    # Daily runs: open, mid-day, close
-    - cron: "30 13 * * 1-5"   # 9:30 AM ET
-    - cron: "0 18 * * 1-5"    # 1:00 PM ET
-    - cron: "5 21 * * 1-5"    # 4:05 PM ET
-    # Weekly watchlist regeneration: Sunday 3:00 AM UTC
-    - cron: "0 3 * * 0"
-  workflow_dispatch:           # allows manual run
+    # Daily runs: market open, mid-day, close (ET)
+    - cron: "30 13 * * 1-5"
+    - cron: "0 18 * * 1-5"
+    - cron: "5 21 * * 1-5"
+  workflow_dispatch:
 
 jobs:
-  generate-collect:
+  full_pipeline:
     runs-on: ubuntu-latest
+    env:
+      # FINNHUB removed; using Yahoo Finance via yfinance
+      # If you had secrets, you can still add them here if needed
+      DATA_DIR: collector
+
     steps:
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
-      # Setup Python
+      # 2️⃣ Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # Install Python dependencies
-      - name: Install dependencies
+      # 3️⃣ Install Python dependencies
+      - name: Install Python dependencies
         run: pip install yfinance pandas jsonschema
 
-      # Run the collector
+      # 4️⃣ Run the collector (Yahoo Finance)
       - name: Run Collector
         run: python collector/collect.py
 
-      # Validate JSON
-      - name: Validate daily_stock_data.json
+      # 5️⃣ Validate daily_stock_data.json against schema
+      - name: Validate JSON
         run: |
           python - <<EOF
           import json
@@ -38,45 +42,40 @@ jobs:
 
           with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
+
           with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
 
           jsonschema.validate(instance=data, schema=schema)
-          print("✅ JSON is valid against the schema")
+          print("✅ JSON is valid against schema")
           EOF
 
-      # Commit updates
-      - name: Commit & Push JSON
+      # 6️⃣ Commit updated JSON files if changed
+      - name: Commit JSON changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json
+          git add collector/daily_stock_data.json collector/watchlist.json collector/history/
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
 
-  deploy-frontend:
-    runs-on: ubuntu-latest
-    needs: generate-collect
-    steps:
-      - uses: actions/checkout@v3
-
-      # Setup Node.js
+      # 7️⃣ Setup Node.js for frontend build
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Install frontend dependencies
-      - name: Install dependencies
+      # 8️⃣ Install frontend dependencies
+      - name: Install Frontend
         run: npm install
         working-directory: frontend
 
-      # Build frontend
-      - name: Build frontend
+      # 9️⃣ Build frontend (Parcel)
+      - name: Build Frontend
         run: npm run build
         working-directory: frontend
 
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      # 🔟 Deploy frontend to GitHub Pages
+      - name: Deploy Frontend
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
