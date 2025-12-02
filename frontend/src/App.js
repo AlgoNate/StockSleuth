@@ -9,14 +9,15 @@ export default function App() {
   const [filteredStocks, setFilteredStocks] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
 
-  // Sorting state
+  // Sorting configuration
   const [sortConfig, setSortConfig] = useState({
     key: null,
     direction: "asc",
   });
 
-  // Load data
+  // Load JSON
   useEffect(() => {
     fetch(DATA_URL)
       .then((res) => res.json())
@@ -31,7 +32,7 @@ export default function App() {
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
 
-  // Handle search
+  // Search
   useEffect(() => {
     const q = searchQuery.toLowerCase();
     const result = stocks.filter(
@@ -42,10 +43,9 @@ export default function App() {
     setFilteredStocks(result);
   }, [searchQuery, stocks]);
 
-  // Sorting function
+  // Sorting handler
   const sortBy = (key) => {
     let direction = "asc";
-
     if (sortConfig.key === key && sortConfig.direction === "asc") {
       direction = "desc";
     }
@@ -65,8 +65,18 @@ export default function App() {
   };
 
   return (
-    <div className="container">
-      <h1>🔥 Top Penny Stocks</h1>
+    <div className={darkMode ? "container dark" : "container"}>
+      <div className="header-row">
+        <h1>🔥 Top Penny Stocks</h1>
+
+        {/* 🌙 Dark Mode Toggle */}
+        <button
+          className="dark-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
 
       {lastUpdated && (
         <div className="updated-box">
@@ -74,7 +84,7 @@ export default function App() {
         </div>
       )}
 
-      {/* 🔍 Search Bar */}
+      {/* Search */}
       <input
         type="text"
         className="search-bar"
@@ -83,29 +93,31 @@ export default function App() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
 
-      <table>
-        <thead>
-          <tr>
-            <th onClick={() => sortBy("symbol")}>Symbol ⬍</th>
-            <th onClick={() => sortBy("name")}>Name ⬍</th>
-            <th onClick={() => sortBy("price")}>Price ($) ⬍</th>
-            <th onClick={() => sortBy("percent_change")}>Change (%) ⬍</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {filteredStocks.map((s, idx) => (
-            <tr key={idx}>
-              <td>{s.symbol}</td>
-              <td>{s.name}</td>
-              <td>${s.price}</td>
-              <td className={s.percent_change >= 0 ? "positive" : "negative"}>
-                {s.percent_change.toFixed(2)}%
-              </td>
+      <div className="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th onClick={() => sortBy("symbol")}>Symbol ⬍</th>
+              <th onClick={() => sortBy("name")}>Name ⬍</th>
+              <th onClick={() => sortBy("price")}>Price ($) ⬍</th>
+              <th onClick={() => sortBy("percent_change")}>Change (%) ⬍</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {filteredStocks.map((s, idx) => (
+              <tr key={idx}>
+                <td>{s.symbol}</td>
+                <td>{s.name}</td>
+                <td>${s.price}</td>
+                <td className={s.percent_change >= 0 ? "positive" : "negative"}>
+                  {s.percent_change.toFixed(2)}%
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {filteredStocks.length === 0 && (
         <p className="no-results">No results found.</p>
