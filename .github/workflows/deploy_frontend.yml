@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -18,7 +19,7 @@ jobs:
         with:
           node-version: 18
 
-      # 3️⃣ Install dependencies
+      # 3️⃣ Install frontend dependencies
       - name: Install dependencies
         run: npm install
         working-directory: frontend
@@ -29,7 +30,7 @@ jobs:
         working-directory: frontend
 
       # 5️⃣ Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
