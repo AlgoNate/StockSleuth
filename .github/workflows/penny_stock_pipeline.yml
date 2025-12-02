@@ -2,7 +2,6 @@ name: Penny Stock Collector + Frontend Deploy
 
 on:
   schedule:
-    # Daily runs: market open, mid-day, close (ET)
     - cron: "30 13 * * 1-5"
     - cron: "0 18 * * 1-5"
     - cron: "5 21 * * 1-5"
@@ -11,70 +10,62 @@ on:
 jobs:
   full_pipeline:
     runs-on: ubuntu-latest
-    env:
-      # FINNHUB removed; using Yahoo Finance via yfinance
-      # If you had secrets, you can still add them here if needed
-      DATA_DIR: collector
 
     steps:
-      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
-      # 2️⃣ Setup Python
+      # Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3️⃣ Install Python dependencies
+      # Install Python dependencies
       - name: Install Python dependencies
         run: pip install yfinance pandas jsonschema
 
-      # 4️⃣ Run the collector (Yahoo Finance)
+      # Run collector
       - name: Run Collector
         run: python collector/collect.py
 
-      # 5️⃣ Validate daily_stock_data.json against schema
+      # Validate JSON
       - name: Validate JSON
         run: |
           python - <<EOF
           import json
           import jsonschema
-
           with open("collector/daily_stock_data.schema.json") as f:
               schema = json.load(f)
-
           with open("collector/daily_stock_data.json") as f:
               data = json.load(f)
-
           jsonschema.validate(instance=data, schema=schema)
-          print("✅ JSON is valid against schema")
+          print("✅ JSON is valid")
           EOF
 
-      # 6️⃣ Commit updated JSON files if changed
+      # Commit updated JSON files
       - name: Commit JSON changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json collector/history/
+          git add collector/daily_stock_data.json collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
           git push
 
-      # 7️⃣ Setup Node.js for frontend build
+      # Setup Node.js
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 8️⃣ Install frontend dependencies
+      # Install frontend dependencies
       - name: Install Frontend
         run: npm install
         working-directory: frontend
 
-      # 9️⃣ Build frontend (Parcel)
+      # Build frontend
       - name: Build Frontend
         run: npm run build
         working-directory: frontend
 
-      # 🔟 Deploy frontend to GitHub Pages
+      # Deploy to GitHub Pages
       - name: Deploy Frontend
         uses: peaceiris/actions-gh-pages@v4
         with:
