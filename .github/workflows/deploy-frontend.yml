@@ -2,8 +2,7 @@ name: Deploy Frontend to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   build-and-deploy:
@@ -18,11 +17,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: frontend
 
-      - name: Build frontend
-        run: npm run build
+      - name: Build
+        run: npm run build -- --public-url ./
+        working-directory: frontend
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
