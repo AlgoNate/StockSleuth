@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-12-02T15:08:48.102341",
+  "stocks": [
+    {
+      "symbol": "PPCB",
+      "name": "Propanc Biopharma, Inc.",
+      "price": 0.8759999871253967
+    },
+    {
+      "symbol": "BIEL",
+      "name": "BioElectronics Corp.",
+      "price": 0.0003000000142492354
+    },
+    {
+      "symbol": "CYAN",
+      "name": "Cyanotech Corp.",
+      "price": 0.3499999940395355
+    },
+    {
+      "symbol": "CPMD",
+      "name": "Cannapharmarx Inc.",
+      "price": 0.004000000189989805
+    },
+    {
+      "symbol": "NRXPW",
+      "name": "NRXPW",
+      "price": 0.09809999912977219
+    },
+    {
+      "symbol": "VHAI",
+      "name": "Vocodia Holdings Corp.",
+      "price": 0.0001500000071246177
+    }
+  ]
+}
