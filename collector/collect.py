@@ -5,15 +5,20 @@ from datetime import datetime
 
 WATCHLIST_FILE = "collector/watchlist.json"
 DAILY_DATA_FILE = "collector/daily_stock_data.json"
+HISTORY_DIR = "collector/history"
+
+# Ensure history directory exists
+os.makedirs(HISTORY_DIR, exist_ok=True)
 
 # Load watchlist
 if os.path.exists(WATCHLIST_FILE):
     with open(WATCHLIST_FILE) as f:
-        symbols_to_check = [stock["symbol"] for stock in json.load(f)]
+        watchlist = json.load(f)
 else:
-    symbols_to_check = ["PLUG", "GME", "AMC"]  # fallback symbols
+    watchlist = []
 
-# Collect daily stock data
+symbols_to_check = [s["symbol"] for s in watchlist]
+
 daily_entry = {
     "timestamp": datetime.utcnow().isoformat(),
     "stocks": []
@@ -31,21 +36,24 @@ for symbol in symbols_to_check:
                 "name": name,
                 "price": price
             })
-    except Exception as e:
-        print(f"⚠️ Could not fetch {symbol}: {e}")
+    except Exception:
+        continue
 
-# Load previous JSON
+# Append to main file
 if os.path.exists(DAILY_DATA_FILE):
     with open(DAILY_DATA_FILE) as f:
-        all_data = json.load(f)
+        existing = json.load(f)
 else:
-    all_data = []
+    existing = []
 
-# Append new entry
-all_data.append(daily_entry)
+existing.append(daily_entry)
 
-# Save back
 with open(DAILY_DATA_FILE, "w") as f:
-    json.dump(all_data, f, indent=2)
+    json.dump(existing, f, indent=2)
 
-print(f"✅ Daily stock data updated with {len(daily_entry['stocks'])} stocks.")
+# Save daily history copy
+history_file = f"{HISTORY_DIR}/{daily_entry['timestamp'].replace(':', '-')}.json"
+with open(history_file, "w") as f:
+    json.dump(daily_entry, f, indent=2)
+
+print("✔ Daily stock data updated.")
