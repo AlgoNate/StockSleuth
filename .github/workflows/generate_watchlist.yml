@@ -1,0 +1,38 @@
+name: Generate Penny Stock Watchlist
+
+# Trigger schedule: weekly Sunday 3:00 AM UTC
+# Also allows manual run
+on:
+  schedule:
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+
+jobs:
+  generate-watchlist:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repository
+      - uses: actions/checkout@v3
+
+      # 2️⃣ Setup Python environment
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      # 4️⃣ Generate the watchlist
+      - name: Generate Watchlist
+        run: python collector/generate_watchlist.py
+
+      # 5️⃣ Commit and push the updated watchlist
+      - name: Commit Watchlist
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add collector/watchlist.json
+          git diff-index --quiet HEAD || git commit -m "Update watchlist [skip ci]"
+          git push
