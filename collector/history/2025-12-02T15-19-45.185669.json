@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-12-02T15:19:45.185669",
+  "stocks": [
+    {
+      "symbol": "VKSC",
+      "name": "Viskase Companies, Inc.",
+      "price": 0.949999988079071
+    },
+    {
+      "symbol": "UCLE",
+      "name": "US Nuclear Corp.",
+      "price": 0.05999999865889549
+    },
+    {
+      "symbol": "PPCB",
+      "name": "Propanc Biopharma, Inc.",
+      "price": 0.878000020980835
+    },
+    {
+      "symbol": "BIEL",
+      "name": "BioElectronics Corp.",
+      "price": 0.0003000000142492354
+    },
+    {
+      "symbol": "CYAN",
+      "name": "Cyanotech Corp.",
+      "price": 0.3499999940395355
+    },
+    {
+      "symbol": "GLNLF",
+      "name": "GALAN LITHIUM LTD.",
+      "price": 0.17249999940395355
+    },
+    {
+      "symbol": "CPMD",
+      "name": "Cannapharmarx Inc.",
+      "price": 0.004000000189989805
+    },
+    {
+      "symbol": "DMIFF",
+      "name": "Diamcor Mining Inc.",
+      "price": 0.004100000020116568
+    },
+    {
+      "symbol": "NRXPW",
+      "name": "NRXPW",
+      "price": 0.09809999912977219
+    },
+    {
+      "symbol": "IDGC",
+      "name": "IDGLOBAL CORP",
+      "price": 9.999999747378752e-05
+    },
+    {
+      "symbol": "VHAI",
+      "name": "Vocodia Holdings Corp.",
+      "price": 9.999999747378752e-05
+    },
+    {
+      "symbol": "ARRRF",
+      "name": "Ardea Res Ltd.",
+      "price": 0.28200000524520874
+    },
+    {
+      "symbol": "BFYW",
+      "name": "Better For You Wellness Inc.",
+      "price": 9.999999747378752e-05
+    },
+    {
+      "symbol": "ANORF",
+      "name": "ANORTECH INC",
+      "price": 0.029999999329447746
+    },
+    {
+      "symbol": "AMHGQ",
+      "name": "Amergent Hospitality Group, Inc",
+      "price": 9.999999747378752e-06
+    }
+  ]
+}
