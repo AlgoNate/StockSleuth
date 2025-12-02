@@ -6,14 +6,17 @@ const DATA_URL =
 
 export default function App() {
   const [stocks, setStocks] = useState([]);
+  const [filteredStocks, setFilteredStocks] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // Sorting State
+  // Sorting state
   const [sortConfig, setSortConfig] = useState({
     key: null,
     direction: "asc",
   });
 
+  // Load data
   useEffect(() => {
     fetch(DATA_URL)
       .then((res) => res.json())
@@ -21,35 +24,44 @@ export default function App() {
         if (Array.isArray(data) && data.length > 0) {
           const latest = data[data.length - 1];
           setStocks(latest.stocks);
+          setFilteredStocks(latest.stocks);
           setLastUpdated(latest.timestamp);
         }
       })
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
 
+  // Handle search
+  useEffect(() => {
+    const q = searchQuery.toLowerCase();
+    const result = stocks.filter(
+      (s) =>
+        s.symbol.toLowerCase().includes(q) ||
+        s.name.toLowerCase().includes(q)
+    );
+    setFilteredStocks(result);
+  }, [searchQuery, stocks]);
+
   // Sorting function
   const sortBy = (key) => {
     let direction = "asc";
 
-    // If clicking the same column, reverse direction
     if (sortConfig.key === key && sortConfig.direction === "asc") {
       direction = "desc";
     }
 
-    const sorted = [...stocks].sort((a, b) => {
+    const sorted = [...filteredStocks].sort((a, b) => {
       if (key === "symbol" || key === "name") {
-        // String sort
         return direction === "asc"
           ? a[key].localeCompare(b[key])
           : b[key].localeCompare(a[key]);
       } else {
-        // Number sort
         return direction === "asc" ? a[key] - b[key] : b[key] - a[key];
       }
     });
 
     setSortConfig({ key, direction });
-    setStocks(sorted);
+    setFilteredStocks(sorted);
   };
 
   return (
@@ -62,6 +74,15 @@ export default function App() {
         </div>
       )}
 
+      {/* 🔍 Search Bar */}
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search by symbol or company name..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+
       <table>
         <thead>
           <tr>
@@ -73,7 +94,7 @@ export default function App() {
         </thead>
 
         <tbody>
-          {stocks.map((s, idx) => (
+          {filteredStocks.map((s, idx) => (
             <tr key={idx}>
               <td>{s.symbol}</td>
               <td>{s.name}</td>
@@ -85,6 +106,10 @@ export default function App() {
           ))}
         </tbody>
       </table>
+
+      {filteredStocks.length === 0 && (
+        <p className="no-results">No results found.</p>
+      )}
     </div>
   );
 }
