@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
-// URL to your GitHub JSON data
+// URL to your JSON data in the repo
 const DATA_URL = "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
-          // Get latest entry
+          // Use the latest entry (last item in array)
           setStocks(data[data.length - 1].stocks);
         }
       })
@@ -19,30 +19,26 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "1rem", fontFamily: "Arial, sans-serif" }}>
-      <h1 style={{ textAlign: "center" }}>Top Penny Stocks</h1>
-      <div style={{ overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Top Penny Stocks</h1>
+      <div style={styles.tableWrapper}>
+        <table style={styles.table}>
           <thead>
             <tr>
-              <th style={thStyle}>Symbol</th>
-              <th style={thStyle}>Name</th>
-              <th style={thStyle}>Price ($)</th>
-              <th style={thStyle}>% Change</th>
-              <th style={thStyle}>History (last 7 days)</th>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Price ($)</th>
+              <th>% Change</th>
             </tr>
           </thead>
           <tbody>
             {stocks.map((stock) => (
               <tr key={stock.symbol}>
-                <td style={tdStyle}>{stock.symbol}</td>
-                <td style={tdStyle}>{stock.name}</td>
-                <td style={tdStyle}>{stock.price.toFixed(2)}</td>
-                <td style={{ ...tdStyle, color: stock.percent_change >= 0 ? "green" : "red" }}>
+                <td>{stock.symbol}</td>
+                <td>{stock.name}</td>
+                <td>{stock.price.toFixed(2)}</td>
+                <td style={{ color: stock.percent_change >= 0 ? "green" : "red" }}>
                   {stock.percent_change.toFixed(2)}%
-                </td>
-                <td style={tdStyle}>
-                  {stock.history ? stock.history.slice(-7).join(", ") : "N/A"}
                 </td>
               </tr>
             ))}
@@ -53,17 +49,33 @@ function App() {
   );
 }
 
-// Styles
-const thStyle = {
-  border: "1px solid #ddd",
-  padding: "0.5rem",
-  backgroundColor: "#f2f2f2",
-  textAlign: "left",
-};
-
-const tdStyle = {
-  border: "1px solid #ddd",
-  padding: "0.5rem",
+// Simple inline styles for responsiveness and scrollable table
+const styles = {
+  container: {
+    padding: "20px",
+    fontFamily: "Arial, sans-serif"
+  },
+  heading: {
+    textAlign: "center",
+    marginBottom: "20px"
+  },
+  tableWrapper: {
+    overflowX: "auto"
+  },
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    minWidth: "400px"
+  },
+  th: {
+    borderBottom: "2px solid #000",
+    padding: "10px",
+    textAlign: "left"
+  },
+  td: {
+    borderBottom: "1px solid #ddd",
+    padding: "10px"
+  }
 };
 
 export default App;
