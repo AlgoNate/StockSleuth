@@ -8,7 +8,7 @@ watchlist_data = [
         "name": "ABC Corp",
         "price": 1.23,
         "percent_change": 2.34,
-        "price_history": [1.15, 1.18, 1.20, 1.22, 1.23]  # example history
+        "price_history": [1.15, 1.18, 1.20, 1.22, 1.23]
     },
     {
         "symbol": "XYZ",
