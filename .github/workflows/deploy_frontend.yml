@@ -10,24 +10,29 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
 
+      # 2️⃣ Setup Node.js
       - uses: actions/setup-node@v3
         with:
           node-version: 20
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: |
           cd frontend
           npm install
 
+      # 4️⃣ Build frontend
       - name: Build frontend
         run: |
           cd frontend
           npm run build
 
+      # 5️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v6.4.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
@@ -36,7 +41,8 @@ jobs:
           keep_files: true
           commit_message: "Deploy frontend + watchlist JSON [skip ci]"
 
-      - name: Copy JSON to gh-pages
+      # 6️⃣ Copy watchlist JSON to gh-pages root
+      - name: Copy watchlist JSON
         run: |
           git fetch origin gh-pages
           git checkout gh-pages
