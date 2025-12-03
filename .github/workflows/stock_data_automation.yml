@@ -26,8 +26,8 @@ jobs:
 
       # Run Daily Stock Collector
       - name: Run Daily Stock Collector
-        run: python collector/daily_stock_collector.py
-
+        run: python collector/clean_and_collect.py
+        
       # Generate Penny Stock Watchlist
       - name: Generate Penny Stock Watchlist
         run: python collector/generate_watchlist.py
