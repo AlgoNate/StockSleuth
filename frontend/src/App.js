@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import StockTable from "./StockTable";
+import StockTable from "./stock_table";
 import "./styles/globals.css";
 
 function App() {
