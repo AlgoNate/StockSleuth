@@ -33,9 +33,11 @@ jobs:
       - name: Generate Watchlist
         run: python collector/generate_watchlist.py
 
-      # 6️⃣ Copy watchlist to public folder
-      - name: Copy Watchlist to Docs (GitHub Pages)
-        run: mkdir -p docs/collector && cp collector/watchlist.json docs/collector/watchlist.json
+      # 6️⃣ Copy the watchlist JSON into docs so GitHub Pages publishes it
+      - name: Copy watchlist.json to docs
+        run: |
+          mkdir -p docs/collector
+          cp collector/watchlist.json docs/collector/watchlist.json
 
       # 7️⃣ Commit and push updates (force overwrite auto-generated JSON)
       - name: Commit and Push Updates
