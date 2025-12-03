@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import "./stock_table.css"; // keep your CSS file
+import "./stock_table.css";
 
 export default function StockTable({ stocks, lastUpdated }) {
   const [filter, setFilter] = useState("");
@@ -9,14 +9,14 @@ export default function StockTable({ stocks, lastUpdated }) {
     lastUpdated ? new Date(lastUpdated) : new Date()
   );
 
+  // Update local time whenever lastUpdated changes
   useEffect(() => {
-    if (lastUpdated) {
-      setLocalTime(new Date(lastUpdated));
-    }
+    if (lastUpdated) setLocalTime(new Date(lastUpdated));
   }, [lastUpdated]);
 
   const minutesAgo = Math.floor((new Date() - localTime) / 60000);
 
+  // Sorting
   const sortedStocks = [...stocks].sort((a, b) => {
     const { key, direction } = sortConfig;
     let aValue = a[key];
@@ -47,9 +47,7 @@ export default function StockTable({ stocks, lastUpdated }) {
       s.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  if (!stocks || stocks.length === 0) {
-    return <p>No penny‑stock data available.</p>;
-  }
+  if (!stocks || stocks.length === 0) return <p>No penny-stock data available.</p>;
 
   return (
     <div className="stock-table-container">
@@ -78,7 +76,7 @@ export default function StockTable({ stocks, lastUpdated }) {
               <th onClick={() => requestSort("name")}>Name</th>
               <th onClick={() => requestSort("price")}>Price</th>
               <th onClick={() => requestSort("percent_change")}>% Change</th>
-              <th>Trend</th> {/* New sparkline column */}
+              <th>Trend</th>
             </tr>
           </thead>
           <tbody>
