@@ -8,7 +8,7 @@ export default function StockTableWrapper() {
  useEffect(() => {
   async function fetchWatchlist() {
     try {
-      const response = await fetch("https://algonate.github.io/StockSleuth/collector/watchlist.json");
+      const response = await fetch("./collector/watchlist.json");
       const data = await response.json();
       setStocks(data.stocks || []);
       setLastUpdated(data.last_updated || null);
