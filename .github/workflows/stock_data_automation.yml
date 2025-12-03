@@ -79,12 +79,14 @@ jobs:
     # Step 11: Copy watchlist.json to gh-pages branch
     - name: Copy watchlist.json to gh-pages branch
       run: |
-       git fetch origin main
-       git checkout gh-pages
-       # Ensure collector folder exists on gh-pages
-       mkdir -p collector
-       # Copy watchlist.json from main branch
-       cp ../collector/watchlist.json collector/
-       git add collector/watchlist.json
-       git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
-       git push origin gh-pages
+        # Fetch main branch
+        git fetch origin main
+        # Checkout gh-pages branch
+        git checkout gh-pages
+        # Ensure collector folder exists on gh-pages
+        mkdir -p collector
+        # Copy watchlist.json from main branch using git show
+        git show origin/main:collector/watchlist.json > collector/watchlist.json
+        git add collector/watchlist.json
+        git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
+        git push origin gh-pages
