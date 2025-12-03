@@ -8,75 +8,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  stock_and_deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout repo
+    # Step 1: Checkout repository
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    # Step 2: Setup Python
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
-
-    # Step 3: Install Python dependencies
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    # Step 4: Generate daily stock data and watchlist
-    - name: Generate Stock Data
-      run: |
-        python collector/clean_and_collect.py
-        python collector/generate_watchlist.py
-
-    # Step 5: Upload watchlist.json as artifact
-    - name: Upload watchlist artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: watchlist-json
-        path: collector/watchlist.json
-
-    # Step 6: Commit daily stock data to main
-    - name: Commit stock data to main
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add collector/daily_stock_data.json
-        git commit -m "Update daily stock data [skip ci]" || echo "No changes to commit"
-        git push origin main
-
-    # Step 7: Setup Node for frontend
+    # Step 2: Setup Node
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 8: Install frontend dependencies
+    # Step 3: Install frontend dependencies
     - name: Install frontend packages
       run: |
         cd frontend
         npm install
 
-    # Step 9: Build frontend
+    # Step 4: Build frontend
     - name: Build frontend
       run: |
         cd frontend
         npm run build
 
-    # Step 10: Download watchlist.json artifact
-    - name: Download watchlist artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: watchlist-json
-        path: frontend/public/collector
-
-    # Step 11: Deploy frontend to GitHub Pages
-    - name: Deploy frontend
+    # Step 5: Deploy to GitHub Pages
+    - name: Deploy frontend to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
