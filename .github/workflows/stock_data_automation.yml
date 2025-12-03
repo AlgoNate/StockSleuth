@@ -1,0 +1,53 @@
+name: Stock Data Automation
+
+on:
+  schedule:
+    - cron: "30 13 * * 1-5"  # 9:30 AM ET
+    - cron: "0 18 * * 1-5"   # 1:00 PM ET
+    - cron: "5 21 * * 1-5"   # 4:05 PM ET
+  workflow_dispatch:          # Allows manual run
+
+jobs:
+  daily-stock-collector:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install yfinance pandas
+      - name: Collect Daily Stock Data
+        run: python collector/daily_stock_collector.py
+      - name: Commit Daily Stock Data
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add collector/daily_stock_data.json collector/watchlist.json
+          git diff-index --quiet HEAD || git commit -m "Update daily stock data [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin main
+        shell: bash
+
+  penny-stock-watchlist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: pip install yfinance pandas
+      - name: Generate Penny Stock Watchlist
+        run: python collector/generate_watchlist.py
+      - name: Commit Watchlist
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add collector/watchlist.json
+          git diff-index --quiet HEAD || git commit -m "Update watchlist [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin main
+        shell: bash
