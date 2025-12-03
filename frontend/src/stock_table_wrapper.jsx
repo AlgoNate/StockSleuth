@@ -6,17 +6,11 @@ export default function StockTableWrapper() {
   const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
-    async function fetchWatchlist() {
-      try {
-        const response = await fetch("/collector/watchlist.json");
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const data = await response.json();
-        setStocks(data.stocks || []);
-        setLastUpdated(data.last_updated || null);
-      } catch (err) {
-        console.error("Failed to fetch watchlist:", err);
-        setStocks([]);
-        setLastUpdated(null);
+  fetch("/StockSleuth/collector/watchlist.json")
+    .then((res) => res.json())
+    .then((data) => setStocks(data.stocks || []))
+    .catch((err) => console.error("Error loading watchlist:", err));
+}, []);
       }
     }
 
