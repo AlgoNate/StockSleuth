@@ -26,7 +26,7 @@ jobs:
 
       # 4️⃣ Run the collector script
       - name: Collect Daily Stock Data
-        run: python collector/daily_stock_collector.py
+        run: python collector/clean_and_collect.py
 
       # 5️⃣ Commit and safely push updated data
       - name: Commit Daily Stock Data
