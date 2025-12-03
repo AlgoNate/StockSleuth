@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { DATA_PATH } from './config';
 
-export default function StockTable() {
+const StockTable = () => {
   const [watchlist, setWatchlist] = useState([]);
-  const [stockData, setStockData] = useState({});
+  const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
-    // Fetch watchlist
-    fetch("/collector/watchlist.json")
+    // Fetch watchlist.json
+    fetch(`${DATA_PATH}/watchlist.json`)
       .then((res) => res.json())
       .then((data) => setWatchlist(data))
-      .catch((err) => console.error("Error loading watchlist:", err));
+      .catch((err) => console.error("Error fetching watchlist:", err));
 
-    // Fetch daily stock data
-    fetch("/collector/daily_stock_data.json")
+    // Fetch daily_stock_data.json
+    fetch(`${DATA_PATH}/daily_stock_data.json`)
       .then((res) => res.json())
-      .then((data) => setStockData(data))
-      .catch((err) => console.error("Error loading stock data:", err));
+      .then((data) => setDailyData(data))
+      .catch((err) => console.error("Error fetching daily stock data:", err));
   }, []);
 
   return (
@@ -30,15 +31,17 @@ export default function StockTable() {
           </tr>
         </thead>
         <tbody>
-          {watchlist.map((symbol) => (
-            <tr key={symbol}>
-              <td>{symbol}</td>
-              <td>{stockData[symbol]?.price ?? "N/A"}</td>
-              <td>{stockData[symbol]?.change ?? "N/A"}</td>
+          {watchlist.map((stock, index) => (
+            <tr key={index}>
+              <td>{stock.symbol}</td>
+              <td>{dailyData[stock.symbol]?.price || 'N/A'}</td>
+              <td>{dailyData[stock.symbol]?.change || 'N/A'}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-}
+};
+
+export default StockTable;
