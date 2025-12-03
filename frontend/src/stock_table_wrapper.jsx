@@ -9,9 +9,7 @@ export default function StockTableWrapper() {
     async function fetchWatchlist() {
       try {
         const response = await fetch("/collector/watchlist.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         setStocks(data.stocks || []);
         setLastUpdated(data.last_updated || null);
@@ -24,8 +22,7 @@ export default function StockTableWrapper() {
 
     fetchWatchlist();
 
-    // Optional: auto-refresh every 5 minutes
-    const interval = setInterval(fetchWatchlist, 300000);
+    const interval = setInterval(fetchWatchlist, 300000); // auto-refresh every 5 min
     return () => clearInterval(interval);
   }, []);
 
