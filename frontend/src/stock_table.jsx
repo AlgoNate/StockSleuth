@@ -3,19 +3,13 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import "./stock_table.css";
 
 export default function StockTable({ stocks, lastUpdated }) {
-  if (!stocks || stocks.length === 0) {
-    return <p>No penny‑stock data available.</p>;
-  }
+  if (!stocks || stocks.length === 0) return <p>No penny‑stock data available.</p>;
 
   return (
     <div className="stock-table-container">
       <div className="header-row">
         <h2>Top Penny Stocks</h2>
-        {lastUpdated && (
-          <div className="timestamp">
-            As of: {new Date(lastUpdated).toLocaleString()}
-          </div>
-        )}
+        {lastUpdated && <div className="timestamp">As of: {new Date(lastUpdated).toLocaleString()}</div>}
       </div>
 
       <div className="table-wrapper">
@@ -37,17 +31,13 @@ export default function StockTable({ stocks, lastUpdated }) {
                   <td>{s.symbol}</td>
                   <td>{s.name}</td>
                   <td>${s.price.toFixed(4)}</td>
-                  <td className={isPositive ? "positive" : "negative"}>
-                    {s.percent_change.toFixed(2)}%
-                  </td>
+                  <td className={isPositive ? "positive" : "negative"}>{s.percent_change.toFixed(2)}%</td>
                   <td>
                     {s.price_history && s.price_history.length > 0 ? (
                       <Sparklines data={s.price_history} width={100} height={30}>
                         <SparklinesLine color={isPositive ? "green" : "red"} />
                       </Sparklines>
-                    ) : (
-                      "—"
-                    )}
+                    ) : "—"}
                   </td>
                 </tr>
               );
