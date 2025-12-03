@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function StockTable({ stocks, lastUpdated }) {
+  const [localTime, setLocalTime] = useState(
+    lastUpdated ? new Date(lastUpdated).toLocaleString() : null
+  );
+
+  // Update localTime whenever lastUpdated changes
+  useEffect(() => {
+    if (lastUpdated) {
+      setLocalTime(new Date(lastUpdated).toLocaleString());
+    }
+  }, [lastUpdated]);
+
   if (!stocks || stocks.length === 0) {
     return <p>No penny‑stock data available.</p>;
   }
-
-  // Convert lastUpdated to a Date object and then to local string
-  const localTime = lastUpdated ? new Date(lastUpdated).toLocaleString() : null;
 
   return (
     <div className="stock-table-container">
       <div className="header-row">
         <h2>Top Penny Stocks</h2>
-        {localTime && (
-          <div className="timestamp">As of: {localTime}</div>
-        )}
+        {localTime && <div className="timestamp">As of: {localTime}</div>}
       </div>
       <div className="table-wrapper">
         <table className="stock-table">
@@ -30,19 +36,3 @@ export default function StockTable({ stocks, lastUpdated }) {
             {stocks.map((s) => {
               const isPositive = s.percent_change >= 0;
               return (
-                <tr key={s.symbol}>
-                  <td>{s.symbol}</td>
-                  <td>{s.name}</td>
-                  <td>${s.price.toFixed(4)}</td>
-                  <td className={isPositive ? "positive" : "negative"}>
-                    {s.percent_change.toFixed(2)}%
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
