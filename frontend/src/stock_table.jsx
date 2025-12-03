@@ -5,12 +5,15 @@ export default function StockTable({ stocks, lastUpdated }) {
     return <p>No penny‑stock data available.</p>;
   }
 
+  // Convert lastUpdated to a Date object and then to local string
+  const localTime = lastUpdated ? new Date(lastUpdated).toLocaleString() : null;
+
   return (
     <div className="stock-table-container">
       <div className="header-row">
         <h2>Top Penny Stocks</h2>
-        {lastUpdated && (
-          <div className="timestamp">As of: {new Date(lastUpdated).toLocaleString()}</div>
+        {localTime && (
+          <div className="timestamp">As of: {localTime}</div>
         )}
       </div>
       <div className="table-wrapper">
