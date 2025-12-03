@@ -34,25 +34,23 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Upload watchlist.json as an artifact
+    # Step 5: Upload watchlist.json as artifact
     - name: Upload watchlist artifact
       uses: actions/upload-artifact@v3
       with:
-        name: watchlist
+        name: watchlist-json
         path: collector/watchlist.json
 
-    # Step 6: Commit updated JSON files to main branch safely
-    - name: Commit daily stock data and watchlist
+    # Step 6: Commit daily stock data to main
+    - name: Commit stock data to main
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add collector/daily_stock_data.json
         git commit -m "Update daily stock data [skip ci]" || echo "No changes to commit"
-        git fetch origin main
-        git reset --hard origin/main
-        git push origin main --force
+        git push origin main
 
-    # Step 7: Setup Node for frontend build
+    # Step 7: Setup Node for frontend
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
@@ -70,21 +68,18 @@ jobs:
         cd frontend
         npm run build
 
-    # Step 10: Deploy frontend to GitHub Pages
+    # Step 10: Download watchlist.json artifact
+    - name: Download watchlist artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: watchlist-json
+        path: frontend/public/collector
+
+    # Step 11: Deploy frontend to GitHub Pages
     - name: Deploy frontend
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/dist
-
-    # Step 11: Download watchlist artifact and push to gh-pages
-    - name: Copy watchlist.json to gh-pages branch
-      run: |
-        git fetch origin gh-pages
-        git checkout gh-pages
-        # Download the watchlist artifact
-        mkdir -p collector
-        gh-action-download-artifact -n watchlist -d collector || echo "No artifact found"
-        git add collector/watchlist.json
-        git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
-        git push origin gh-pages
+        user_name: github-actions
+        user_email: github-actions@github.com
