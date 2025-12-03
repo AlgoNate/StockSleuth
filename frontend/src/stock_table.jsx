@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import "./stock_table.css";
