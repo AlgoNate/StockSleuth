@@ -5,43 +5,37 @@ on:
     - cron: "30 13 * * 1-5"  # 9:30 AM ET
     - cron: "0 18 * * 1-5"   # 1:00 PM ET
     - cron: "5 21 * * 1-5"   # 4:05 PM ET
-  workflow_dispatch:          # Allows manual run
+  workflow_dispatch:
 
 jobs:
   collector-and-watchlist:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
       - uses: actions/checkout@v3
-
-      # 2️⃣ Setup Python environment
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3️⃣ Install dependencies
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: pip install yfinance pandas
 
-      # 4️⃣ Run Daily Stock Collector
-      - name: Collect Daily Stock Data
+      - name: Run Daily Stock Collector
         run: python collector/daily_stock_collector.py
 
-      # 5️⃣ Generate Penny Stock Watchlist
       - name: Generate Penny Stock Watchlist
         run: python collector/generate_watchlist.py
 
-      # 6️⃣ Commit and safely push all updated files
+      - name: Install Node dependencies
+        run: npm install react-sparklines
+
       - name: Commit and Push Updates
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add collector/daily_stock_data.json collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data and watchlist [skip ci]"
-          # Fetch latest remote main and rebase
           git fetch origin main
           git rebase origin/main
-          # Push safely
           git push origin main
         shell: bash
