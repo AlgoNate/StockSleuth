@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json public/collector/watchlist.json
+          git add collector/daily_stock_data.json collector/watchlist.json
           git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
           git fetch origin main
           git reset --hard origin/main
