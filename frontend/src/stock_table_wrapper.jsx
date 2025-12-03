@@ -1,33 +1,57 @@
-import React, { useState, useEffect } from "react";
-import StockTable from "./stock_table";
+// stock_table_wrapper.jsx
 
-export default function StockTableWrapper() {
-  const [stocks, setStocks] = useState([]);
-  const [lastUpdated, setLastUpdated] = useState("");
+import React, { useEffect, useState } from "react";
+
+const StockTableWrapper = () => {
+  const [watchlist, setWatchlist] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchWatchlist() {
+    const fetchWatchlist = async () => {
       try {
-        const response = await fetch("/collector/watchlist.json");
-        if (!response.ok) throw new Error("Watchlist not found");
+        // Adjusted URL to fetch from GitHub Pages
+        const response = await fetch(
+          "https://algonate.github.io/StockSleuth/collector/watchlist.json"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
         const data = await response.json();
-        setStocks(data.stocks || []);
-        setLastUpdated(data.last_updated || "");
+        setWatchlist(data);
       } catch (error) {
         console.error("Error fetching watchlist:", error);
-        setStocks([]);
-        setLastUpdated("");
+        setWatchlist([]);
+      } finally {
+        setLoading(false);
       }
-    }
+    };
 
     fetchWatchlist();
   }, []);
 
+  if (loading) return <p>Loading watchlist...</p>;
+  if (!watchlist.length) return <p>No penny-stock data available</p>;
+
   return (
-    <div>
-      <p>Last Updated: {lastUpdated}</p>
-      <StockTable stocks={stocks} />
-      {stocks.length === 0 && <p>No penny-stock data available.</p>}
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Price</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        {watchlist.map((stock) => (
+          <tr key={stock.symbol}>
+            <td>{stock.symbol}</td>
+            <td>{stock.price}</td>
+            <td>{stock.change}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
-}
+};
+
+export default StockTableWrapper;
