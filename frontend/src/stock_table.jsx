@@ -1,50 +1,48 @@
-import React from "react";
-import { Sparklines, SparklinesLine } from "react-sparklines";
-import "./stock_table.css";
+import React, { useEffect, useState } from "react";
 
-export default function StockTable({ stocks, lastUpdated }) {
-  if (!stocks || stocks.length === 0) return <p>No penny‑stock data available.</p>;
+function StockTable() {
+  const [watchlist, setWatchlist] = useState([]);
+  const [stockData, setStockData] = useState({});
+
+  useEffect(() => {
+    // Fetch watchlist.json
+    fetch("/collector/watchlist.json")
+      .then((res) => res.json())
+      .then((data) => setWatchlist(data))
+      .catch(() => console.error("watchlist.json not found"));
+
+    // Fetch daily_stock_data.json
+    fetch("/collector/daily_stock_data.json")
+      .then((res) => res.json())
+      .then((data) => setStockData(data))
+      .catch(() => console.error("daily_stock_data.json not found"));
+  }, []);
 
   return (
-    <div className="stock-table-container">
-      <div className="header-row">
-        <h2>Top Penny Stocks</h2>
-        {lastUpdated && <div className="timestamp">As of: {new Date(lastUpdated).toLocaleString()}</div>}
-      </div>
-
-      <div className="table-wrapper">
-        <table className="stock-table">
-          <thead>
-            <tr>
-              <th>Symbol</th>
-              <th>Name</th>
-              <th>Price</th>
-              <th>% Change</th>
-              <th>Price History</th>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        {watchlist.map((symbol) => {
+          const stock = stockData[symbol] || {};
+          return (
+            <tr key={symbol}>
+              <td>{symbol}</td>
+              <td>{stock.name || "-"}</td>
+              <td>{stock.price || "-"}</td>
+              <td>{stock.change || "-"}</td>
             </tr>
-          </thead>
-          <tbody>
-            {stocks.map((s) => {
-              const isPositive = s.percent_change >= 0;
-              return (
-                <tr key={s.symbol}>
-                  <td>{s.symbol}</td>
-                  <td>{s.name}</td>
-                  <td>${s.price.toFixed(4)}</td>
-                  <td className={isPositive ? "positive" : "negative"}>{s.percent_change.toFixed(2)}%</td>
-                  <td>
-                    {s.price_history && s.price_history.length > 0 ? (
-                      <Sparklines data={s.price_history} width={100} height={30}>
-                        <SparklinesLine color={isPositive ? "green" : "red"} />
-                      </Sparklines>
-                    ) : "—"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </div>
+          );
+        })}
+      </tbody>
+    </table>
   );
 }
+
+export default StockTable;
