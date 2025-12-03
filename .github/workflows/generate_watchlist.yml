@@ -1,7 +1,5 @@
 name: Generate Penny Stock Watchlist
 
-# Trigger schedule: weekly Sunday 3:00 AM UTC
-# Also allows manual run
 on:
   schedule:
     - cron: "0 3 * * 0"
@@ -35,4 +33,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update watchlist [skip ci]"
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin main
+        shell: bash
