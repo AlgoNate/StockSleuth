@@ -8,91 +8,70 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_deploy:
+  stock_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    # Step 1: Checkout main branch
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      # Step 2: Setup Python
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
+    # Step 2: Setup Python
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
 
-      # Step 3: Install Python dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    # Step 3: Install Python dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      # Step 4: Generate daily stock data and watchlist
-      - name: Generate Stock Data
-        run: |
-          python collector/clean_and_collect.py
-          python collector/generate_watchlist.py
+    # Step 4: Generate daily stock data and watchlist
+    - name: Generate Stock Data
+      run: |
+        python collector/clean_and_collect.py
+        python collector/generate_watchlist.py
 
-      # Step 5: Upload JSONs as artifact
-      - name: Upload JSON artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: stock-json
-          path: |
-            collector/daily_stock_data.json
-            collector/watchlist.json
+    # Step 5: Copy watchlist.json to frontend safely
+    - name: Copy watchlist to frontend
+      run: |
+        mkdir -p frontend/public/collector
+        cp collector/watchlist.json frontend/public/collector/
+        cp collector/daily_stock_data.json frontend/public/collector/
 
-      # Step 6: Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
+    # Step 6: Commit updated JSON files to main branch
+    - name: Commit daily stock data and watchlist
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add collector/daily_stock_data.json collector/watchlist.json frontend/public/collector/
+        git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
+        git push origin main
 
-      # Step 7: Install frontend packages
-      - name: Install frontend packages
-        run: |
-          cd frontend
-          npm install
+    # Step 7: Setup Node for frontend build
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "20"
 
-      # Step 8: Build frontend
-      - name: Build frontend
-        run: |
-          cd frontend
-          npm run build
+    # Step 8: Install frontend dependencies
+    - name: Install frontend packages
+      run: |
+        cd frontend
+        npm install
 
-      # Step 9: Deploy frontend to GitHub Pages
-      - name: Deploy frontend
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
+    # Step 9: Build frontend
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm run build
 
-  update_watchlist:
-    runs-on: ubuntu-latest
-    needs: build_and_deploy
-
-    steps:
-      # Step 1: Checkout gh-pages
-      - name: Checkout gh-pages
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-
-      # Step 2: Download JSON artifacts from previous job
-      - name: Download JSON artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: stock-json
-          path: collector
-
-      # Step 3: Commit watchlist.json to gh-pages
-      - name: Commit watchlist.json
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          mkdir -p collector
-          cp collector/watchlist.json collector/
-          git add collector/watchlist.json
-          git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
-          git push origin gh-pages
+    # Step 10: Deploy frontend to GitHub Pages from main
+    - name: Deploy frontend
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend/dist
+        publish_branch: main  # deploy directly from main
