@@ -1,3 +1,4 @@
+/* Container and fonts */
 .stock-table-container {
   max-width: 1000px;
   margin: auto;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Header row with title and timestamp */
 .header-row {
   display: flex;
   justify-content: space-between;
@@ -17,6 +19,7 @@
   color: #555;
 }
 
+/* Search/filter input */
 .controls {
   margin-bottom: 10px;
 }
@@ -30,10 +33,12 @@
   border: 1px solid #ccc;
 }
 
+/* Table wrapper for horizontal scrolling on small screens */
 .table-wrapper {
   overflow-x: auto;
 }
 
+/* Table styling */
 .stock-table {
   width: 100%;
   border-collapse: collapse;
@@ -45,6 +50,7 @@
   border: 1px solid #ddd;
 }
 
+/* Sticky header */
 .stock-table th {
   position: sticky;
   top: 0;
@@ -53,18 +59,22 @@
   user-select: none;
 }
 
+/* Zebra stripes */
 .stock-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
+/* Hover effect */
 .stock-table tbody tr:hover {
   background-color: #f1f1f1;
 }
 
+/* Right-align numeric columns */
 .numeric {
   text-align: right;
 }
 
+/* Positive / negative color coding */
 .positive {
   color: green;
   font-weight: bold;
@@ -75,11 +85,39 @@
   font-weight: bold;
 }
 
-/* Responsive: make table horizontally scrollable on small screens */
+/* Center sparklines inside cells */
+.stock-table td > svg {
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+  width: 100px;
+}
+
+/* Responsive adjustments for mobile */
 @media (max-width: 600px) {
   .stock-table th,
   .stock-table td {
     padding: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  /* Sparkline scales down on mobile */
+  .stock-table td > svg {
+    width: 70px;
+    height: 16px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timestamp {
+    margin-top: 5px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 100%;
   }
 }
