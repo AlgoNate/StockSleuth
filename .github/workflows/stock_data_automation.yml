@@ -69,7 +69,7 @@ jobs:
         cd frontend
         npm run build
 
-    # Step 10: Deploy frontend
+    # Step 10: Deploy frontend to GitHub Pages
     - name: Deploy frontend
       uses: peaceiris/actions-gh-pages@v4
       with:
@@ -79,11 +79,11 @@ jobs:
     # Step 11: Ensure watchlist.json is on gh-pages branch
     - name: Copy watchlist.json to gh-pages branch
       run: |
-       git fetch origin gh-pages
-       git checkout gh-pages
-       mkdir -p collector
-       # Copy the latest watchlist.json from main branch into gh-pages
-       git show origin/main:collector/watchlist.json > collector/watchlist.json || echo "watchlist.json missing on main branch"
-       git add collector/watchlist.json
-       git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
-       git push origin gh-pages
+        git fetch origin gh-pages
+        git checkout gh-pages
+        mkdir -p collector
+        # Copy the watchlist.json from main branch into gh-pages
+        git show origin/main:collector/watchlist.json > collector/watchlist.json || echo "watchlist.json missing on main branch"
+        git add collector/watchlist.json
+        git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
+        git push origin gh-pages
