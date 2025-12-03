@@ -34,19 +34,20 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Copy watchlist.json to frontend safely
-    - name: Copy watchlist to frontend
-      run: |
-        mkdir -p frontend/public/collector
-        cp collector/watchlist.json frontend/public/collector/
+    # Step 5: Upload watchlist.json as an artifact
+    - name: Upload watchlist artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: watchlist
+        path: collector/watchlist.json
 
     # Step 6: Commit updated JSON files to main branch safely
     - name: Commit daily stock data and watchlist
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add collector/daily_stock_data.json collector/watchlist.json frontend/public/collector/watchlist.json
-        git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
+        git add collector/daily_stock_data.json
+        git commit -m "Update daily stock data [skip ci]" || echo "No changes to commit"
         git fetch origin main
         git reset --hard origin/main
         git push origin main --force
@@ -76,14 +77,14 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/dist
 
-    # Step 11: Copy watchlist.json to gh-pages branch safely
+    # Step 11: Download watchlist artifact and push to gh-pages
     - name: Copy watchlist.json to gh-pages branch
       run: |
-        git fetch origin main
+        git fetch origin gh-pages
         git checkout gh-pages
+        # Download the watchlist artifact
         mkdir -p collector
-        # Pull watchlist.json from main branch directly
-        git show origin/main:collector/watchlist.json > collector/watchlist.json
+        gh-action-download-artifact -n watchlist -d collector || echo "No artifact found"
         git add collector/watchlist.json
         git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
         git push origin gh-pages
