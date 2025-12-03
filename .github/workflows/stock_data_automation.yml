@@ -1,5 +1,6 @@
 name: Stock Data Automation (Single Job)
 
+# Run on schedule (ET time) and allow manual trigger
 on:
   schedule:
     - cron: "30 13 * * 1-5"  # 9:30 AM ET
@@ -8,46 +9,42 @@ on:
   workflow_dispatch:
 
 jobs:
-  collector-and-watchlist:
+  collect-and-watchlist:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
+      # 1️⃣ Checkout repo
       - uses: actions/checkout@v3
 
-      # Setup Python
+      # 2️⃣ Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # Install Python dependencies
+      # 3️⃣ Install dependencies
       - name: Install Python dependencies
         run: pip install yfinance pandas
 
-      # Run Daily Stock Collector
+      # 4️⃣ Run daily stock collector
       - name: Run Daily Stock Collector
         run: python collector/clean_and_collect.py
-        
-      # Generate Penny Stock Watchlist
-      - name: Generate Penny Stock Watchlist
+
+      # 5️⃣ Generate Penny Stock Watchlist
+      - name: Generate Watchlist
         run: python collector/generate_watchlist.py
 
-      # Copy watchlist to public folder for GitHub Pages
+      # 6️⃣ Copy watchlist to public folder
       - name: Copy Watchlist to Public
         run: mkdir -p public/collector && cp collector/watchlist.json public/collector/watchlist.json
 
-      # Install Node dependencies (react-sparklines)
-      - name: Install Node dependencies
-        run: npm install react-sparklines
-
-      # Commit and Push updated JSON
+      # 7️⃣ Commit and push updates (force overwrite auto-generated JSON)
       - name: Commit and Push Updates
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add collector/daily_stock_data.json collector/watchlist.json public/collector/watchlist.json
-          git diff-index --quiet HEAD || git commit -m "Update daily stock data and watchlist [skip ci]"
+          git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
           git fetch origin main
-          git rebase origin/main
-          git push origin main
+          git reset --hard origin/main
+          git push origin main --force
         shell: bash
