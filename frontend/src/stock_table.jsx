@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./stock_table.css"; // We'll create this CSS file next
+import { Sparklines, SparklinesLine } from "react-sparklines";
+import "./stock_table.css"; // keep your CSS file
 
 export default function StockTable({ stocks, lastUpdated }) {
   const [filter, setFilter] = useState("");
@@ -8,23 +9,19 @@ export default function StockTable({ stocks, lastUpdated }) {
     lastUpdated ? new Date(lastUpdated) : new Date()
   );
 
-  // Update local time whenever lastUpdated changes
   useEffect(() => {
     if (lastUpdated) {
       setLocalTime(new Date(lastUpdated));
     }
   }, [lastUpdated]);
 
-  // Compute "minutes ago"
   const minutesAgo = Math.floor((new Date() - localTime) / 60000);
 
-  // Sorting function
   const sortedStocks = [...stocks].sort((a, b) => {
     const { key, direction } = sortConfig;
     let aValue = a[key];
     let bValue = b[key];
 
-    // Handle numeric sort for price and percent_change
     if (key === "price" || key === "percent_change") {
       aValue = parseFloat(aValue);
       bValue = parseFloat(bValue);
@@ -38,14 +35,12 @@ export default function StockTable({ stocks, lastUpdated }) {
     return 0;
   });
 
-  // Handle column header click for sorting
   const requestSort = (key) => {
     let direction = "asc";
     if (sortConfig.key === key && sortConfig.direction === "asc") direction = "desc";
     setSortConfig({ key, direction });
   };
 
-  // Filter stocks based on search input
   const filteredStocks = sortedStocks.filter(
     (s) =>
       s.symbol.toLowerCase().includes(filter.toLowerCase()) ||
@@ -83,6 +78,7 @@ export default function StockTable({ stocks, lastUpdated }) {
               <th onClick={() => requestSort("name")}>Name</th>
               <th onClick={() => requestSort("price")}>Price</th>
               <th onClick={() => requestSort("percent_change")}>% Change</th>
+              <th>Trend</th> {/* New sparkline column */}
             </tr>
           </thead>
           <tbody>
@@ -95,6 +91,15 @@ export default function StockTable({ stocks, lastUpdated }) {
                   <td className="numeric">${s.price.toFixed(4)}</td>
                   <td className={`numeric ${isPositive ? "positive" : "negative"}`}>
                     {isPositive ? "▲" : "▼"} {s.percent_change.toFixed(2)}%
+                  </td>
+                  <td>
+                    {s.price_history ? (
+                      <Sparklines data={s.price_history} width={100} height={20}>
+                        <SparklinesLine color={isPositive ? "green" : "red"} />
+                      </Sparklines>
+                    ) : (
+                      "—"
+                    )}
                   </td>
                 </tr>
               );
