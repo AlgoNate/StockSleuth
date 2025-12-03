@@ -41,13 +41,13 @@ jobs:
         cp collector/watchlist.json frontend/public/collector/
         cp collector/daily_stock_data.json frontend/public/collector/
 
-    # Step 6: Setup Node for frontend
+    # Step 6: Setup Node
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 7: Install frontend dependencies
+    # Step 7: Install frontend packages
     - name: Install frontend packages
       run: |
         cd frontend
