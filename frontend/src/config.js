@@ -1,1 +1,4 @@
-export const DATA_URL = "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
+// frontend/src/config.js
+
+// Base path for JSON data on GitHub Pages
+export const DATA_PATH = process.env.PUBLIC_URL + '/collector';
