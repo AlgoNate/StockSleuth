@@ -1,5 +1,6 @@
 name: Deploy Frontend to GitHub Pages
 
+# Trigger: manual or on push to main
 on:
   push:
     branches:
@@ -7,31 +8,46 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout repo
       - uses: actions/checkout@v3
 
       # 2️⃣ Setup Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       # 3️⃣ Install frontend dependencies
       - name: Install dependencies
-        run: npm install
-        working-directory: frontend
+        run: |
+          cd frontend
+          npm install
 
       # 4️⃣ Build frontend
       - name: Build frontend
-        run: npm run build
-        working-directory: frontend
+        run: |
+          cd frontend
+          npm run build
 
-      # 5️⃣ Deploy to GitHub Pages
+      # 5️⃣ Deploy to gh-pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: frontend/dist
+          publish_dir: ./frontend/dist
+          user_name: github-actions
+          user_email: github-actions@github.com
+          keep_files: true
+          commit_message: "Deploy frontend + watchlist JSON [skip ci]"
+
+      # 6️⃣ Copy JSON to gh-pages root (optional if you want JSON outside dist)
+      - name: Copy JSON to gh-pages
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+          cp collector/watchlist.json .
+          git add watchlist.json
+          git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
+          git push origin gh-pages
