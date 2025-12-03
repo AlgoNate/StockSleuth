@@ -5,25 +5,19 @@ export default function StockTableWrapper() {
   const [stocks, setStocks] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
 
- useEffect(() => {
-  async function fetchWatchlist() {
-    try {
-      const response = await fetch("https://algonate.github.io/StockSleuth/collector/watchlist.json");
-      const data = await response.json();
-      setStocks(data.stocks || []);
-      setLastUpdated(data.last_updated || null);
-    } catch (err) {
-      console.error("Error loading watchlist:", err);
+  useEffect(() => {
+    async function fetchWatchlist() {
+      try {
+        const response = await fetch("https://algonate.github.io/StockSleuth/collector/watchlist.json");
+        const data = await response.json();
+        setStocks(data.stocks || []);
+        setLastUpdated(data.last_updated || null);
+      } catch (err) {
+        console.error("Error loading watchlist:", err);
+      }
     }
-  }
-
-  fetchWatchlist();
-}, []);
 
     fetchWatchlist();
-
-    const interval = setInterval(fetchWatchlist, 300000); // auto-refresh every 5 min
-    return () => clearInterval(interval);
   }, []);
 
   return <StockTable stocks={stocks} lastUpdated={lastUpdated} />;
