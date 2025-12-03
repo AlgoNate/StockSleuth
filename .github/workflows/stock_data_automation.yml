@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate_and_deploy:
+  stock_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout repository
+    # Step 1: Checkout repo
     - name: Checkout Repository
       uses: actions/checkout@v3
 
@@ -23,7 +23,7 @@ jobs:
         python-version: "3.10"
 
     # Step 3: Install Python dependencies
-    - name: Install Python dependencies
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
@@ -34,23 +34,24 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Setup Node for frontend
+    # Step 5: Copy JSON files to frontend for build
+    - name: Copy JSON to frontend
+      run: |
+        mkdir -p frontend/public/collector
+        cp collector/watchlist.json frontend/public/collector/
+        cp collector/daily_stock_data.json frontend/public/collector/
+
+    # Step 6: Setup Node for frontend
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 6: Install frontend dependencies
+    # Step 7: Install frontend dependencies
     - name: Install frontend packages
       run: |
         cd frontend
         npm install
-
-    # Step 7: Copy watchlist.json into frontend before build
-    - name: Copy watchlist.json to frontend
-      run: |
-        mkdir -p frontend/public/collector
-        cp collector/watchlist.json frontend/public/collector/ || echo "watchlist.json missing"
 
     # Step 8: Build frontend
     - name: Build frontend
@@ -59,10 +60,8 @@ jobs:
         npm run build
 
     # Step 9: Deploy frontend to GitHub Pages
-    - name: Deploy frontend to GitHub Pages
+    - name: Deploy frontend
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/dist
-        user_name: github-actions
-        user_email: github-actions@github.com
