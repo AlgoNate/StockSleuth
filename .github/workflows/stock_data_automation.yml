@@ -35,15 +35,12 @@ jobs:
         python collector/generate_watchlist.py
 
     # Step 5: Copy watchlist.json to frontend safely
-    - name: Copy watchlist for frontend
+    - name: Copy watchlist to frontend
       run: |
-        if [ -f collector/watchlist.json ]; then
-          mkdir -p frontend/public/collector
-          cp collector/watchlist.json frontend/public/collector/watchlist.json
-          echo "watchlist.json copied successfully"
-        else
-          echo "watchlist.json not found, skipping copy"
-        fi
+       # Ensure the target folder exists
+       mkdir -p frontend/public/collector
+       # Copy the watchlist from repo root to frontend/public/collector
+       cp collector/watchlist.json frontend/public/collector/
 
     # Step 6: Commit updated JSON files to main branch
     - name: Commit daily stock data and watchlist
