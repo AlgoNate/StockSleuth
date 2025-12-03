@@ -1,4 +1,4 @@
-name: Stock Data Automation (Single Job)
+name: Stock Data Automation & Deploy
 
 on:
   schedule:
@@ -8,54 +8,75 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  stock_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
-      - uses: actions/checkout@v3
+    # Step 1: Checkout repo
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      # 2️⃣ Setup Python environment
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
+    # Step 2: Setup Python
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
 
-      # 3️⃣ Install Python dependencies
-      - name: Install dependencies
-        run: pip install yfinance pandas
+    # Step 3: Install Python dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      # 4️⃣ Generate daily stock data and watchlist
-      - name: Generate Stock Data
-        run: |
-          python collector/clean_and_collect.py
-          python collector/generate_watchlist.py
+    # Step 4: Generate daily stock data and watchlist
+    - name: Generate Stock Data
+      run: |
+        python collector/clean_and_collect.py
+        python collector/generate_watchlist.py
 
-      # 5️⃣ Copy watchlist.json to frontend public folder
-      - name: Copy watchlist for frontend
-        run: |
+    # Step 5: Copy watchlist.json to frontend safely
+    - name: Copy watchlist for frontend
+      run: |
+        if [ -f collector/watchlist.json ]; then
           mkdir -p frontend/public/collector
           cp collector/watchlist.json frontend/public/collector/watchlist.json
+          echo "watchlist.json copied successfully"
+        else
+          echo "watchlist.json not found, skipping copy"
+        fi
 
-      # 6️⃣ Setup Node.js
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "20"
+    # Step 6: Commit updated JSON files to main branch
+    - name: Commit daily stock data and watchlist
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add collector/daily_stock_data.json collector/watchlist.json frontend/public/collector/watchlist.json
+        git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
+        git fetch origin main
+        git reset --hard origin/main
+        git push origin main --force
 
-      # 7️⃣ Install frontend dependencies
-      - name: Install frontend dependencies
-        run: |
-          cd frontend
-          npm install
+    # Step 7: Setup Node for frontend build
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: "20"
 
-      # 8️⃣ Build frontend
-      - name: Build frontend
-        run: |
-          cd frontend
-          npm run build
+    # Step 8: Install frontend dependencies
+    - name: Install frontend packages
+      run: |
+        cd frontend
+        npm install
 
-      # 9️⃣ Deploy to GitHub Pages
-      - name: Deploy frontend
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
+    # Step 9: Build frontend
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm run build
+
+    # Step 10: Deploy to GitHub Pages
+    - name: Deploy frontend
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend/dist
