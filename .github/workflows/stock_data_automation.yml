@@ -12,28 +12,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - uses: actions/checkout@v3
+
+      # Setup Python
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      # Install Python dependencies
       - name: Install Python dependencies
         run: pip install yfinance pandas
 
+      # Run Daily Stock Collector
       - name: Run Daily Stock Collector
         run: python collector/daily_stock_collector.py
 
+      # Generate Penny Stock Watchlist
       - name: Generate Penny Stock Watchlist
         run: python collector/generate_watchlist.py
 
+      # Copy watchlist to public folder for GitHub Pages
+      - name: Copy Watchlist to Public
+        run: mkdir -p public/collector && cp collector/watchlist.json public/collector/watchlist.json
+
+      # Install Node dependencies (react-sparklines)
       - name: Install Node dependencies
         run: npm install react-sparklines
 
+      # Commit and Push updated JSON
       - name: Commit and Push Updates
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add collector/daily_stock_data.json collector/watchlist.json
+          git add collector/daily_stock_data.json collector/watchlist.json public/collector/watchlist.json
           git diff-index --quiet HEAD || git commit -m "Update daily stock data and watchlist [skip ci]"
           git fetch origin main
           git rebase origin/main
