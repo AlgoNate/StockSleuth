@@ -1,13 +1,13 @@
-// Before (likely incorrect)
-fetch('collector/watchlist.json')
+// Fetch watchlist.json
+fetch(`${process.env.PUBLIC_URL}/collector/watchlist.json`)
   .then(response => response.json())
   .then(data => {
     setWatchlist(data);
   });
 
-// After (works for GitHub Pages deployment)
-fetch(`${process.env.PUBLIC_URL}/collector/watchlist.json`)
+// Fetch daily_stock_data.json
+fetch(`${process.env.PUBLIC_URL}/collector/daily_stock_data.json`)
   .then(response => response.json())
   .then(data => {
-    setWatchlist(data);
+    setStockData(data);
   });
