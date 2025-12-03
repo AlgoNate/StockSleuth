@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_deploy:
+  generate_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,25 +16,49 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    # Step 2: Setup Node
+    # Step 2: Setup Python
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    # Step 3: Install Python dependencies
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # Step 4: Generate daily stock data and watchlist
+    - name: Generate Stock Data
+      run: |
+        python collector/clean_and_collect.py
+        python collector/generate_watchlist.py
+
+    # Step 5: Setup Node for frontend
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 3: Install frontend dependencies
+    # Step 6: Install frontend dependencies
     - name: Install frontend packages
       run: |
         cd frontend
         npm install
 
-    # Step 4: Build frontend
+    # Step 7: Copy watchlist.json into frontend before build
+    - name: Copy watchlist.json to frontend
+      run: |
+        mkdir -p frontend/public/collector
+        cp collector/watchlist.json frontend/public/collector/ || echo "watchlist.json missing"
+
+    # Step 8: Build frontend
     - name: Build frontend
       run: |
         cd frontend
         npm run build
 
-    # Step 5: Deploy to GitHub Pages
+    # Step 9: Deploy frontend to GitHub Pages
     - name: Deploy frontend to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
