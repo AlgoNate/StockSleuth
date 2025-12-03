@@ -1,39 +1,33 @@
 import React, { useState, useEffect } from "react";
 import StockTable from "./stock_table";
-import "./stock_table.css";
 
 export default function StockTableWrapper() {
   const [stocks, setStocks] = useState([]);
-  const [lastUpdated, setLastUpdated] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState("");
 
   useEffect(() => {
     async function fetchWatchlist() {
       try {
-        // ✅ Use relative path for GitHub Pages
-        const response = await fetch("./collector/watchlist.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const response = await fetch("/collector/watchlist.json");
+        if (!response.ok) throw new Error("Watchlist not found");
         const data = await response.json();
         setStocks(data.stocks || []);
-        setLastUpdated(data.last_updated || null);
+        setLastUpdated(data.last_updated || "");
       } catch (error) {
-        console.error("Failed to fetch watchlist:", error);
+        console.error("Error fetching watchlist:", error);
         setStocks([]);
-        setLastUpdated(null);
-      } finally {
-        setLoading(false);
+        setLastUpdated("");
       }
     }
 
     fetchWatchlist();
   }, []);
 
-  if (loading) return <p>Loading penny-stock data...</p>;
-
-  if (!stocks || stocks.length === 0)
-    return <p>No penny‑stock data available.</p>;
-
-  return <StockTable stocks={stocks} lastUpdated={lastUpdated} />;
+  return (
+    <div>
+      <p>Last Updated: {lastUpdated}</p>
+      <StockTable stocks={stocks} />
+      {stocks.length === 0 && <p>No penny-stock data available.</p>}
+    </div>
+  );
 }
