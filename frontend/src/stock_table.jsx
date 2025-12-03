@@ -1,48 +1,44 @@
 import React, { useEffect, useState } from "react";
 
-function StockTable() {
+export default function StockTable() {
   const [watchlist, setWatchlist] = useState([]);
   const [stockData, setStockData] = useState({});
 
   useEffect(() => {
-    // Fetch watchlist.json
+    // Fetch watchlist
     fetch("/collector/watchlist.json")
       .then((res) => res.json())
       .then((data) => setWatchlist(data))
-      .catch(() => console.error("watchlist.json not found"));
+      .catch((err) => console.error("Error loading watchlist:", err));
 
-    // Fetch daily_stock_data.json
+    // Fetch daily stock data
     fetch("/collector/daily_stock_data.json")
       .then((res) => res.json())
       .then((data) => setStockData(data))
-      .catch(() => console.error("daily_stock_data.json not found"));
+      .catch((err) => console.error("Error loading stock data:", err));
   }, []);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        {watchlist.map((symbol) => {
-          const stock = stockData[symbol] || {};
-          return (
+    <div>
+      <h2>Stock Watchlist</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          {watchlist.map((symbol) => (
             <tr key={symbol}>
               <td>{symbol}</td>
-              <td>{stock.name || "-"}</td>
-              <td>{stock.price || "-"}</td>
-              <td>{stock.change || "-"}</td>
+              <td>{stockData[symbol]?.price ?? "N/A"}</td>
+              <td>{stockData[symbol]?.change ?? "N/A"}</td>
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
-
-export default StockTable;
