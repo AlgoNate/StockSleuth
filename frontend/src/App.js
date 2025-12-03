@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from "react";
 import StockTable from "./stock_table";
-import "./styles/globals.css";
 
-function App() {
+export default function App() {
   const [stocks, setStocks] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
-  const DATA_URL =
-    "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
   useEffect(() => {
-    fetch(DATA_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-          const latest = data[data.length - 1];
-          setStocks(latest.stocks || []);
-          setLastUpdated(latest.timestamp || null);
-        }
-      })
-      .catch((err) => console.error("Error fetching data:", err));
+    async function fetchData() {
+      const res = await fetch("/api/stocks"); // Replace with your API
+      const data = await res.json();
+      setStocks(data.stocks);
+      setLastUpdated(data.lastUpdated); // Must be ISO timestamp
+    }
+
+    fetchData();
+    const interval = setInterval(fetchData, 60000); // refresh every 1 minute
+    return () => clearInterval(interval);
   }, []);
 
-  return (
-    <div className="App container">
-      <h1>StockSleuth — Penny Stock Dashboard</h1>
-      <StockTable stocks={stocks} lastUpdated={lastUpdated} />
-    </div>
-  );
+  return <stock_table stocks={stocks} lastUpdated={lastUpdated} />;
 }
-
-export default App;
