@@ -1,43 +1,30 @@
 import React, { useState, useEffect } from "react";
-
-const DATA_URL =
-  "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
+import StockTable from "./StockTable";
+import "./styles/globals.css";
 
 function App() {
   const [stocks, setStocks] = useState([]);
+  const [lastUpdated, setLastUpdated] = useState(null);
+  const DATA_URL =
+    "https://raw.githubusercontent.com/AlgoNate/StockSleuth/main/collector/daily_stock_data.json";
 
   useEffect(() => {
     fetch(DATA_URL)
       .then((res) => res.json())
       .then((data) => {
-        if (data.length > 0) {
-          setStocks(data[data.length - 1].stocks);
+        if (Array.isArray(data) && data.length > 0) {
+          const latest = data[data.length - 1];
+          setStocks(latest.stocks || []);
+          setLastUpdated(latest.timestamp || null);
         }
       })
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
   return (
-    <div className="App">
-      <h1>Top Penny Stocks</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {stocks.map((s) => (
-            <tr key={s.symbol}>
-              <td>{s.symbol}</td>
-              <td>{s.name}</td>
-              <td>${s.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="App container">
+      <h1>StockSleuth — Penny Stock Dashboard</h1>
+      <StockTable stocks={stocks} lastUpdated={lastUpdated} />
     </div>
   );
 }
