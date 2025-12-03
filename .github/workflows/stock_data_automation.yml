@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout main branch
+    # Step 1: Checkout the repository
     - name: Checkout Repository
       uses: actions/checkout@v3
 
@@ -34,44 +34,34 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Copy watchlist.json to frontend safely
-    - name: Copy watchlist to frontend
+    # Step 5: Copy JSON files into frontend folder for deployment
+    - name: Copy JSON to frontend
       run: |
         mkdir -p frontend/public/collector
         cp collector/watchlist.json frontend/public/collector/
         cp collector/daily_stock_data.json frontend/public/collector/
 
-    # Step 6: Commit updated JSON files to main branch
-    - name: Commit daily stock data and watchlist
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add collector/daily_stock_data.json collector/watchlist.json frontend/public/collector/
-        git commit -m "Update daily stock data and watchlist [skip ci]" || echo "No changes to commit"
-        git push origin main
-
-    # Step 7: Setup Node for frontend build
+    # Step 6: Setup Node for frontend build
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 8: Install frontend dependencies
+    # Step 7: Install frontend dependencies
     - name: Install frontend packages
       run: |
         cd frontend
         npm install
 
-    # Step 9: Build frontend
+    # Step 8: Build frontend
     - name: Build frontend
       run: |
         cd frontend
         npm run build
 
-    # Step 10: Deploy frontend to GitHub Pages from main
+    # Step 9: Deploy frontend to GitHub Pages
     - name: Deploy frontend
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/dist
-        publish_branch: main  # deploy directly from main
