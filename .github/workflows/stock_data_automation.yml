@@ -35,9 +35,9 @@ jobs:
         python collector/generate_watchlist.py
 
     # Step 5: Copy JSON files into frontend folder for deployment
-    - name: Copy JSON to frontend
+    - name: Copy JSON files into frontend
       run: |
-        mkdir -p frontend/public/collector
+        mkdir -p frontend/public/collector || true
         cp collector/watchlist.json frontend/public/collector/
         cp collector/daily_stock_data.json frontend/public/collector/
 
