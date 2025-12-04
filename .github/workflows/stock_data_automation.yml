@@ -34,12 +34,11 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Copy JSON files into frontend public/collector folder
-    - name: Copy JSON to frontend public folder
+    # Step 5: Copy JSON files into frontend public/datafiles folder safely
+    - name: Copy JSON to frontend public/datafiles
       run: |
-        mkdir -p frontend/public/collector || true
-        cp collector/watchlist.json frontend/public/collector/
-        cp collector/daily_stock_data.json frontend/public/collector/
+        cp collector/watchlist.json frontend/public/datafiles/
+        cp collector/daily_stock_data.json frontend/public/datafiles/
 
     # Step 6: Setup Node
     - name: Setup Node
