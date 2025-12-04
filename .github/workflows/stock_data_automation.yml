@@ -1,6 +1,5 @@
 name: Stock Data Automation & Deploy
 
-# Scheduled and manual triggers
 on:
   schedule:
     # 9:30 AM ET => 14:30 UTC
@@ -38,32 +37,32 @@ jobs:
           python collector/clean_and_collect.py
           python collector/generate_watchlist.py
 
-      # Step 5: Copy JSON files safely into frontend public/datafiles
+      # Step 5: Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      # Step 6: Install frontend dependencies
+      - name: Install frontend packages
+        run: |
+          cd frontend
+          npm install
+
+      # Step 7: Build frontend with Parcel
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build  # Ensure "build": "parcel build public/index.html --dist-dir dist" in package.json
+
+      # Step 8: Copy JSON files into dist/datafiles
       - name: Copy JSON to frontend dist/datafiles
         run: |
           mkdir -p frontend/dist/datafiles
           cp collector/watchlist.json frontend/dist/datafiles/
           cp collector/daily_stock_data.json frontend/dist/datafiles/
 
-      # Step 6: Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
-
-      # Step 7: Install frontend dependencies
-      - name: Install frontend packages
-        run: |
-          cd frontend
-          npm install
-
-      # Step 8: Build frontend
-      - name: Build frontend
-        run: |
-          cd frontend
-          npm run build
-
-      # Step 9: Ensure .nojekyll exists in dist
+      # Step 9: Ensure .nojekyll exists
       - name: Add .nojekyll
         run: touch frontend/dist/.nojekyll
 
