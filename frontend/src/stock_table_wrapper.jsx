@@ -6,9 +6,7 @@ function StockTableWrapper() {
   useEffect(() => {
     async function loadData() {
       try {
-        // Use relative path based on current location
-        const basePath = window.location.pathname.replace(/\/$/, "");
-        const response = await fetch(`${basePath}/datafiles/watchlist.json`, {
+        const response = await fetch("/StockSleuth/datafiles/watchlist.json", {
           cache: "no-cache"
         });
 
