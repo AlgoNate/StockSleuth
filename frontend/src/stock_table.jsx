@@ -7,6 +7,7 @@ export default function StockTable() {
   const [watchlist, setWatchlist] = useState([]);
   const [stockData, setStockData] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: "symbol", direction: "asc" });
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   // Function to fetch both JSON files
   const fetchData = () => {
@@ -19,6 +20,8 @@ export default function StockTable() {
       .then((res) => res.json())
       .then((data) => setStockData(data))
       .catch((err) => console.error("Error fetching stock data:", err));
+
+    setLastUpdated(new Date()); // Update the timestamp after fetching
   };
 
   // Fetch initially and then set up interval
@@ -27,7 +30,7 @@ export default function StockTable() {
 
     const interval = setInterval(() => {
       fetchData();
-    }, 300000); // 300000 ms = 5 minutes
+    }, 300000); // 5 minutes
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
@@ -37,7 +40,6 @@ export default function StockTable() {
     return stock || { symbol, name: "-", price: "-", change: "-" };
   });
 
-  // Sorting function
   const sortedData = [...displayData].sort((a, b) => {
     if (a[sortConfig.key] === undefined) return 1;
     if (b[sortConfig.key] === undefined) return -1;
@@ -64,27 +66,35 @@ export default function StockTable() {
   };
 
   return (
-    <table style={{ borderCollapse: "collapse", width: "100%" }}>
-      <thead>
-        <tr>
-          <th style={{ cursor: "pointer" }} onClick={() => requestSort("symbol")}>Symbol</th>
-          <th style={{ cursor: "pointer" }} onClick={() => requestSort("name")}>Name</th>
-          <th style={{ cursor: "pointer" }} onClick={() => requestSort("price")}>Price</th>
-          <th style={{ cursor: "pointer" }} onClick={() => requestSort("change")}>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedData.map((stock) => (
-          <tr key={stock.symbol}>
-            <td>{stock.symbol}</td>
-            <td>{stock.name}</td>
-            <td>{stock.price}</td>
-            <td style={{ color: parseFloat(stock.change) > 0 ? "green" : parseFloat(stock.change) < 0 ? "red" : "black" }}>
-              {stock.change}
-            </td>
+    <div>
+      {lastUpdated && (
+        <p style={{ fontSize: "0.9em", fontStyle: "italic" }}>
+          Last updated: {lastUpdated.toLocaleString()}
+        </p>
+      )}
+
+      <table style={{ borderCollapse: "collapse", width: "100%" }}>
+        <thead>
+          <tr>
+            <th style={{ cursor: "pointer" }} onClick={() => requestSort("symbol")}>Symbol</th>
+            <th style={{ cursor: "pointer" }} onClick={() => requestSort("name")}>Name</th>
+            <th style={{ cursor: "pointer" }} onClick={() => requestSort("price")}>Price</th>
+            <th style={{ cursor: "pointer" }} onClick={() => requestSort("change")}>Change</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sortedData.map((stock) => (
+            <tr key={stock.symbol}>
+              <td>{stock.symbol}</td>
+              <td>{stock.name}</td>
+              <td>{stock.price}</td>
+              <td style={{ color: parseFloat(stock.change) > 0 ? "green" : parseFloat(stock.change) < 0 ? "red" : "black" }}>
+                {stock.change}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
