@@ -1,20 +1,15 @@
 {
-  "name": "penny-frontend",
+  "name": "frontend",
   "version": "1.0.0",
-  "private": true,
-  "source": "src/index.js",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build public/index.html --dist-dir dist"
+    "build": "parcel build public/index.html --dist-dir dist --public-url /StockSleuth/"
   },
   "dependencies": {
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "react-sparklines": "^1.7.0",
-  "parcel": "^2.9.3",
-  "other-dependencies": "..."
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.9.3"
   }
 }
