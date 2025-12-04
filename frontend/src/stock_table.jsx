@@ -6,6 +6,7 @@ const BASE_URL = "https://<username>.github.io/<repo-name>/datafiles/";
 export default function StockTable() {
   const [watchlist, setWatchlist] = useState([]);
   const [stockData, setStockData] = useState([]);
+  const [sortConfig, setSortConfig] = useState({ key: "symbol", direction: "asc" });
 
   useEffect(() => {
     // Fetch watchlist.json
@@ -21,29 +22,57 @@ export default function StockTable() {
       .catch((err) => console.error("Error fetching stock data:", err));
   }, []);
 
-  // Merge watchlist with stock data for display
   const displayData = watchlist.map((symbol) => {
     const stock = stockData.find((s) => s.symbol === symbol);
     return stock || { symbol, name: "-", price: "-", change: "-" };
   });
 
+  // Sorting function
+  const sortedData = [...displayData].sort((a, b) => {
+    if (a[sortConfig.key] === undefined) return 1;
+    if (b[sortConfig.key] === undefined) return -1;
+
+    let aValue = a[sortConfig.key];
+    let bValue = b[sortConfig.key];
+
+    // Convert price and change to number for sorting
+    if (sortConfig.key === "price" || sortConfig.key === "change") {
+      aValue = parseFloat(aValue) || 0;
+      bValue = parseFloat(bValue) || 0;
+    }
+
+    if (aValue < bValue) return sortConfig.direction === "asc" ? -1 : 1;
+    if (aValue > bValue) return sortConfig.direction === "asc" ? 1 : -1;
+    return 0;
+  });
+
+  const requestSort = (key) => {
+    let direction = "asc";
+    if (sortConfig.key === key && sortConfig.direction === "asc") {
+      direction = "desc";
+    }
+    setSortConfig({ key, direction });
+  };
+
   return (
-    <table>
+    <table style={{ borderCollapse: "collapse", width: "100%" }}>
       <thead>
         <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Change</th>
+          <th style={{ cursor: "pointer" }} onClick={() => requestSort("symbol")}>Symbol</th>
+          <th style={{ cursor: "pointer" }} onClick={() => requestSort("name")}>Name</th>
+          <th style={{ cursor: "pointer" }} onClick={() => requestSort("price")}>Price</th>
+          <th style={{ cursor: "pointer" }} onClick={() => requestSort("change")}>Change</th>
         </tr>
       </thead>
       <tbody>
-        {displayData.map((stock) => (
+        {sortedData.map((stock) => (
           <tr key={stock.symbol}>
             <td>{stock.symbol}</td>
             <td>{stock.name}</td>
             <td>{stock.price}</td>
-            <td>{stock.change}</td>
+            <td style={{ color: parseFloat(stock.change) > 0 ? "green" : parseFloat(stock.change) < 0 ? "red" : "black" }}>
+              {stock.change}
+            </td>
           </tr>
         ))}
       </tbody>
