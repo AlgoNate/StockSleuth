@@ -8,38 +8,44 @@ export default function StockTable() {
   const [stockData, setStockData] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: "symbol", direction: "asc" });
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  // Function to fetch both JSON files
-  const fetchData = () => {
-    fetch(BASE_URL + "watchlist.json", { cache: "no-cache" })
-      .then((res) => res.json())
-      .then((data) => setWatchlist(data))
-      .catch((err) => console.error("Error fetching watchlist:", err));
+  // Step 2 — Fetch data safely with loading indicator
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const [watchlistRes, stockRes] = await Promise.all([
+        fetch(BASE_URL + "watchlist.json", { cache: "no-cache" }),
+        fetch(BASE_URL + "daily_stock_data.json", { cache: "no-cache" })
+      ]);
 
-    fetch(BASE_URL + "daily_stock_data.json", { cache: "no-cache" })
-      .then((res) => res.json())
-      .then((data) => setStockData(data))
-      .catch((err) => console.error("Error fetching stock data:", err));
+      const watchlistJson = await watchlistRes.json();
+      const stockJson = await stockRes.json();
 
-    setLastUpdated(new Date()); // Update the timestamp after fetching
+      setWatchlist(watchlistJson);
+      setStockData(stockJson);
+      setLastUpdated(new Date()); // Set local timestamp
+    } catch (err) {
+      console.error("Error fetching data:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // Fetch initially and then set up interval
+  // Step 3 — Auto-refresh every 5 minutes
   useEffect(() => {
-    fetchData(); // Initial fetch
-
-    const interval = setInterval(() => {
-      fetchData();
-    }, 300000); // 5 minutes
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    fetchData(); // initial fetch
+    const interval = setInterval(fetchData, 5 * 60 * 1000); // 5 min
+    return () => clearInterval(interval); // cleanup
   }, []);
 
-  const displayData = watchlist.map((symbol) => {
-    const stock = stockData.find((s) => s.symbol === symbol);
+  // Step 4 — Merge watchlist with stock data
+  const displayData = watchlist.map(symbol => {
+    const stock = stockData.find(s => s.symbol === symbol);
     return stock || { symbol, name: "-", price: "-", change: "-" };
   });
 
+  // Step 5 — Sort function
   const sortedData = [...displayData].sort((a, b) => {
     if (a[sortConfig.key] === undefined) return 1;
     if (b[sortConfig.key] === undefined) return -1;
@@ -67,12 +73,12 @@ export default function StockTable() {
 
   return (
     <div>
-      {lastUpdated && (
-        <p style={{ fontSize: "0.9em", fontStyle: "italic" }}>
-          Last updated: {lastUpdated.toLocaleString()}
-        </p>
-      )}
+      {/* Step 6 — Display last updated and loading indicator */}
+      <p style={{ fontSize: "0.9em", fontStyle: "italic" }}>
+        {loading ? "Refreshing..." : lastUpdated ? `Last updated: ${lastUpdated.toLocaleString()}` : "Loading..."}
+      </p>
 
+      {/* Step 7 — Stock table */}
       <table style={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr>
@@ -83,7 +89,7 @@ export default function StockTable() {
           </tr>
         </thead>
         <tbody>
-          {sortedData.map((stock) => (
+          {sortedData.map(stock => (
             <tr key={stock.symbol}>
               <td>{stock.symbol}</td>
               <td>{stock.name}</td>
