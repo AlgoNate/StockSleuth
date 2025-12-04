@@ -11,7 +11,7 @@ const StockTableWrapper = () => {
       try {
         // Adjusted URL to fetch from GitHub Pages
         const response = await fetch(
-          "https://algonate.github.io/StockSleuth/collector/watchlist.json"
+          "https://algonate.github.io/StockSleuth/datafiles/watchlist.json"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
