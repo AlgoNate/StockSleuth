@@ -1,10 +1,14 @@
 name: Stock Data Automation & Deploy
 
+# Scheduled and manual triggers
 on:
   schedule:
-    - cron: "30 13 * * 1-5"  # 9:30 AM ET
-    - cron: "0 18 * * 1-5"   # 1:00 PM ET
-    - cron: "5 21 * * 1-5"   # 4:05 PM ET
+    # 9:30 AM ET => 14:30 UTC
+    - cron: "30 14 * * 1-5"
+    # 1:00 PM ET => 18:00 UTC
+    - cron: "0 18 * * 1-5"
+    # 4:05 PM ET => 21:05 UTC
+    - cron: "5 21 * * 1-5"
   workflow_dispatch:
 
 jobs:
@@ -34,7 +38,7 @@ jobs:
           python collector/clean_and_collect.py
           python collector/generate_watchlist.py
 
-      # Step 5: Copy JSON files into frontend public/datafiles safely
+      # Step 5: Copy JSON files safely into frontend public/datafiles
       - name: Copy JSON to frontend public/datafiles
         run: |
           mkdir -p frontend/public/datafiles || true
@@ -59,11 +63,11 @@ jobs:
           cd frontend
           npm run build
 
-      # Step 9: Add .nojekyll to dist
+      # Step 9: Ensure .nojekyll exists in dist
       - name: Add .nojekyll
         run: touch frontend/dist/.nojekyll
 
-      # Step 10: Deploy frontend to GitHub Pages safely
+      # Step 10: Deploy frontend to GitHub Pages
       - name: Deploy frontend
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -72,6 +76,6 @@ jobs:
           user_name: github-actions
           user_email: github-actions@github.com
           keep_files: true
-          commit_message: Deploy frontend + watchlist JSON [skip ci]
+          commit_message: "Deploy frontend + watchlist JSON [skip ci]"
           allow_empty_commit: true
           enable_jekyll: false
