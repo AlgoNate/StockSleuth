@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout repository
+    # Step 1: Checkout repo
     - name: Checkout Repository
       uses: actions/checkout@v3
 
@@ -28,48 +28,38 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # Step 4: Generate stock data
+    # Step 4: Generate daily stock data and watchlist
     - name: Generate Stock Data
       run: |
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Copy JSON into frontend in a CLEAN folder
-    - name: Place JSON into frontend/public/datafiles
+    # Step 5: Copy JSON files into frontend public/collector folder
+    - name: Copy JSON to frontend public folder
       run: |
-        rm -f frontend/public/collector || true
-        mkdir -p frontend/public/datafiles
-        cp collector/watchlist.json frontend/public/datafiles/
-        cp collector/daily_stock_data.json frontend/public/datafiles/
+        mkdir -p frontend/public/collector || true
+        cp collector/watchlist.json frontend/public/collector/
+        cp collector/daily_stock_data.json frontend/public/collector/
 
-    # Step 6: Commit JSON changes to main branch
-    - name: Commit JSON updates
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add collector/watchlist.json collector/daily_stock_data.json frontend/public/datafiles/
-        git commit -m "Update stock JSON files [skip ci]" || echo "No changes to commit"
-        git push origin main
-
-    # Step 7: Setup Node (for frontend)
+    # Step 6: Setup Node
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: "20"
 
-    # Step 8: Install frontend dependencies
+    # Step 7: Install frontend dependencies
     - name: Install frontend packages
       run: |
         cd frontend
         npm install
 
-    # Step 9: Build the frontend
+    # Step 8: Build frontend
     - name: Build frontend
       run: |
         cd frontend
         npm run build
 
-    # Step 10: Deploy to GitHub Pages
+    # Step 9: Deploy frontend to GitHub Pages
     - name: Deploy frontend
       uses: peaceiris/actions-gh-pages@v4
       with:
