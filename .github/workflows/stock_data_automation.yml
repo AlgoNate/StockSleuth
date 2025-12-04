@@ -34,9 +34,10 @@ jobs:
         python collector/clean_and_collect.py
         python collector/generate_watchlist.py
 
-    # Step 5: Copy JSON files into frontend public/datafiles folder safely
-    - name: Copy JSON to frontend public/datafiles
+    # Step 5: Move JSON files directly into frontend build folder
+    - name: Copy JSON files to frontend build folder
       run: |
+        mkdir -p frontend/public/datafiles || true
         cp collector/watchlist.json frontend/public/datafiles/
         cp collector/daily_stock_data.json frontend/public/datafiles/
 
@@ -52,14 +53,14 @@ jobs:
         cd frontend
         npm install
 
-    # Step 8: Build frontend
+    # Step 8: Build frontend (JSON files included)
     - name: Build frontend
       run: |
         cd frontend
         npm run build
 
-    # Step 9: Deploy frontend to GitHub Pages
-    - name: Deploy frontend
+    # Step 9: Deploy frontend + JSON to GitHub Pages
+    - name: Deploy frontend and JSON
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
