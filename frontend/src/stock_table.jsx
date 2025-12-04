@@ -8,18 +8,28 @@ export default function StockTable() {
   const [stockData, setStockData] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: "symbol", direction: "asc" });
 
-  useEffect(() => {
-    // Fetch watchlist.json
+  // Function to fetch both JSON files
+  const fetchData = () => {
     fetch(BASE_URL + "watchlist.json", { cache: "no-cache" })
       .then((res) => res.json())
       .then((data) => setWatchlist(data))
       .catch((err) => console.error("Error fetching watchlist:", err));
 
-    // Fetch daily_stock_data.json
     fetch(BASE_URL + "daily_stock_data.json", { cache: "no-cache" })
       .then((res) => res.json())
       .then((data) => setStockData(data))
       .catch((err) => console.error("Error fetching stock data:", err));
+  };
+
+  // Fetch initially and then set up interval
+  useEffect(() => {
+    fetchData(); // Initial fetch
+
+    const interval = setInterval(() => {
+      fetchData();
+    }, 300000); // 300000 ms = 5 minutes
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   const displayData = watchlist.map((symbol) => {
@@ -35,7 +45,6 @@ export default function StockTable() {
     let aValue = a[sortConfig.key];
     let bValue = b[sortConfig.key];
 
-    // Convert price and change to number for sorting
     if (sortConfig.key === "price" || sortConfig.key === "change") {
       aValue = parseFloat(aValue) || 0;
       bValue = parseFloat(bValue) || 0;
