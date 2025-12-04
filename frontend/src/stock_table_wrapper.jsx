@@ -9,7 +9,10 @@ function StockTableWrapper() {
     async function loadData() {
       try {
         // Fetch the JSON from the public folder
-        const response = await fetch("/datafiles/watchlist.json", { cache: "no-cache" });
+        const response = await fetch(
+          process.env.PUBLIC_URL + "/datafiles/watchlist.json",
+          { cache: "no-cache" }
+);
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
