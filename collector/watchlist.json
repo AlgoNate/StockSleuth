@@ -1,0 +1,31 @@
+{
+  "last_updated": "2025-12-04 15:49:59",
+  "stocks": [
+    {
+      "symbol": "ABC",
+      "name": "ABC Corp",
+      "price": 1.23,
+      "percent_change": 2.34,
+      "price_history": [
+        1.15,
+        1.18,
+        1.2,
+        1.22,
+        1.23
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "name": "XYZ Inc",
+      "price": 0.87,
+      "percent_change": -1.56,
+      "price_history": [
+        0.9,
+        0.88,
+        0.89,
+        0.87,
+        0.87
+      ]
+    }
+  ]
+}
