@@ -40,13 +40,3 @@ jobs:
           user_email: github-actions@github.com
           keep_files: true
           commit_message: "Deploy frontend + watchlist JSON [skip ci]"
-
-      # 6️⃣ Copy watchlist JSON to gh-pages root
-      - name: Copy watchlist JSON
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          cp collector/watchlist.json .
-          git add watchlist.json
-          git commit -m "Update watchlist JSON [skip ci]" || echo "No changes to commit"
-          git push origin gh-pages
