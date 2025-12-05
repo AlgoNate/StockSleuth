@@ -1803,5 +1803,100 @@
         "percent_change": 0.0
       }
     ]
+  },
+  {
+    "timestamp": "2025-12-05T21:33:49.043912",
+    "stocks": [
+      {
+        "symbol": "VKSC",
+        "name": "Viskase Companies, Inc.",
+        "price": 0.9300000071525574,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "UCLE",
+        "name": "US Nuclear Corp.",
+        "price": 0.05999999865889549,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "PPCB",
+        "name": "Propanc Biopharma, Inc.",
+        "price": 0.8392999768257141,
+        "percent_change": 1.73
+      },
+      {
+        "symbol": "BIEL",
+        "name": "BioElectronics Corp.",
+        "price": 0.0003000000142492354,
+        "percent_change": -14.29
+      },
+      {
+        "symbol": "CYAN",
+        "name": "Cyanotech Corp.",
+        "price": 0.4699999988079071,
+        "percent_change": 30.56
+      },
+      {
+        "symbol": "GLNLF",
+        "name": "GALAN LITHIUM LTD.",
+        "price": 0.17000000178813934,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "CPMD",
+        "name": "Cannapharmarx Inc.",
+        "price": 0.002099999925121665,
+        "percent_change": -46.15
+      },
+      {
+        "symbol": "DMIFF",
+        "name": "Diamcor Mining Inc.",
+        "price": 0.004000000189989805,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "NRXPW",
+        "name": "NRXPW",
+        "price": 0.08699999749660492,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "IDGC",
+        "name": "IDGLOBAL CORP",
+        "price": 9.999999747378752e-05,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "VHAI",
+        "name": "Vocodia Holdings Corp.",
+        "price": 9.999999747378752e-05,
+        "percent_change": -50.0
+      },
+      {
+        "symbol": "ARRRF",
+        "name": "Ardea Res Ltd.",
+        "price": 0.3659999966621399,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "BFYW",
+        "name": "Better For You Wellness Inc.",
+        "price": 9.999999747378752e-05,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "ANORF",
+        "name": "ANORTECH INC",
+        "price": 0.029999999329447746,
+        "percent_change": 0.0
+      },
+      {
+        "symbol": "AMHGQ",
+        "name": "Amergent Hospitality Group, Inc",
+        "price": 9.999999747378752e-06,
+        "percent_change": 0.0
+      }
+    ]
   }
 ]
