@@ -1,62 +1,31 @@
-[
-  {
-    "symbol": "VKSC",
-    "name": "Viskase Companies, Inc."
-  },
-  {
-    "symbol": "UCLE",
-    "name": "US Nuclear Corp."
-  },
-  {
-    "symbol": "PPCB",
-    "name": "Propanc Biopharma, Inc."
-  },
-  {
-    "symbol": "BIEL",
-    "name": "BioElectronics Corp."
-  },
-  {
-    "symbol": "CYAN",
-    "name": "Cyanotech Corp."
-  },
-  {
-    "symbol": "GLNLF",
-    "name": "GALAN LITHIUM LTD."
-  },
-  {
-    "symbol": "CPMD",
-    "name": "Cannapharmarx Inc."
-  },
-  {
-    "symbol": "DMIFF",
-    "name": "Diamcor Mining Inc."
-  },
-  {
-    "symbol": "NRXPW",
-    "name": "NRXPW"
-  },
-  {
-    "symbol": "IDGC",
-    "name": "IDGLOBAL CORP"
-  },
-  {
-    "symbol": "VHAI",
-    "name": "Vocodia Holdings Corp."
-  },
-  {
-    "symbol": "ARRRF",
-    "name": "Ardea Res Ltd."
-  },
-  {
-    "symbol": "BFYW",
-    "name": "Better For You Wellness Inc."
-  },
-  {
-    "symbol": "ANORF",
-    "name": "ANORTECH INC"
-  },
-  {
-    "symbol": "AMHGQ",
-    "name": "Amergent Hospitality Group, Inc"
-  }
-]
+{
+  "last_updated": "2025-12-08 18:54:55",
+  "stocks": [
+    {
+      "symbol": "ABC",
+      "name": "ABC Corp",
+      "price": 1.23,
+      "percent_change": 2.34,
+      "price_history": [
+        1.15,
+        1.18,
+        1.2,
+        1.22,
+        1.23
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "name": "XYZ Inc",
+      "price": 0.87,
+      "percent_change": -1.56,
+      "price_history": [
+        0.9,
+        0.88,
+        0.89,
+        0.87,
+        0.87
+      ]
+    }
+  ]
+}
