@@ -1,0 +1,42 @@
+name: Deploy Frontend to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1️⃣ Checkout repository
+      - uses: actions/checkout@v3
+
+      # 2️⃣ Setup Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      # 4️⃣ Build frontend
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
+
+      # 5️⃣ Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          user_name: github-actions
+          user_email: github-actions@github.com
+          keep_files: true
+          commit_message: "Deploy frontend + watchlist JSON [skip ci]"

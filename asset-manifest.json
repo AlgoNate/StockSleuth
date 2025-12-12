@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/StockSleuth/static/css/main.364620ac.css",
+    "main.js": "/StockSleuth/static/js/main.eef449d4.js",
+    "index.html": "/StockSleuth/index.html",
+    "main.364620ac.css.map": "/StockSleuth/static/css/main.364620ac.css.map",
+    "main.eef449d4.js.map": "/StockSleuth/static/js/main.eef449d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.364620ac.css",
+    "static/js/main.eef449d4.js"
+  ]
+}
